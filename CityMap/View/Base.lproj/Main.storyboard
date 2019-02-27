@@ -23,14 +23,13 @@
                                 <rect key="frame" x="0.0" y="111" width="320" height="408"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yoD-Mb-1CW">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="yoD-Mb-1CW" secondAttribute="height" multiplier="16:9" constant="129.7777777777778" id="9ck-Ui-vM1"/>
+                                            <constraint firstAttribute="width" secondItem="yoD-Mb-1CW" secondAttribute="height" multiplier="16:9" constant="250.66666666666669" id="9ck-Ui-vM1"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-pD-XU6" customClass="BarChartView" customModule="Charts">
-                                        <rect key="frame" x="13" y="129" width="294" height="224"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-pD-XU6" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="13" y="81" width="294" height="272"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <viewLayoutGuide key="safeArea" id="DcS-1z-iUR"/>
                                     </view>
@@ -45,9 +44,13 @@
                                     <constraint firstItem="tE2-mW-LKg" firstAttribute="trailing" secondItem="yoD-Mb-1CW" secondAttribute="trailing" constant="-8" id="1AH-kS-ZMf"/>
                                     <constraint firstItem="tE2-mW-LKg" firstAttribute="leading" secondItem="yoD-Mb-1CW" secondAttribute="leading" constant="8" id="6yi-wx-UtJ"/>
                                     <constraint firstAttribute="trailing" secondItem="yoD-Mb-1CW" secondAttribute="trailing" id="TnY-rN-b0w"/>
+                                    <constraint firstItem="gOD-pD-XU6" firstAttribute="leading" secondItem="NZd-rC-OIQ" secondAttribute="leading" constant="13" id="hZy-Jp-QyG"/>
                                     <constraint firstAttribute="bottom" secondItem="tE2-mW-LKg" secondAttribute="bottom" constant="18.5" id="lvL-zv-4T7"/>
+                                    <constraint firstItem="tE2-mW-LKg" firstAttribute="top" secondItem="gOD-pD-XU6" secondAttribute="bottom" constant="15" id="mYv-R5-zLn"/>
+                                    <constraint firstItem="gOD-pD-XU6" firstAttribute="centerX" secondItem="tE2-mW-LKg" secondAttribute="centerX" id="mgd-Ne-EyH"/>
                                     <constraint firstItem="yoD-Mb-1CW" firstAttribute="leading" secondItem="NZd-rC-OIQ" secondAttribute="leading" id="mok-8Z-ufF"/>
-                                    <constraint firstItem="tE2-mW-LKg" firstAttribute="top" secondItem="yoD-Mb-1CW" secondAttribute="bottom" constant="261" id="vEx-Mx-Ipa"/>
+                                    <constraint firstItem="gOD-pD-XU6" firstAttribute="top" secondItem="yoD-Mb-1CW" secondAttribute="bottom" constant="42" id="r3V-5P-wvx"/>
+                                    <constraint firstItem="tE2-mW-LKg" firstAttribute="top" secondItem="yoD-Mb-1CW" secondAttribute="bottom" constant="329" id="vEx-Mx-Ipa"/>
                                     <constraint firstItem="yoD-Mb-1CW" firstAttribute="top" secondItem="NZd-rC-OIQ" secondAttribute="top" id="x0Z-ss-Otr"/>
                                 </constraints>
                             </scrollView>
@@ -63,7 +66,7 @@
                         <viewLayoutGuide key="safeArea" id="jS0-iv-jDb"/>
                     </view>
                     <connections>
-                        <outlet property="barChartView" destination="gOD-pD-XU6" id="TBr-He-pIl"/>
+                        <outlet property="chartView" destination="gOD-pD-XU6" id="AP6-eK-CYI"/>
                         <outlet property="cityImage" destination="yoD-Mb-1CW" id="GCJ-hU-9LE"/>
                         <outlet property="descriptionLabel" destination="tE2-mW-LKg" id="geZ-4i-rzh"/>
                     </connections>
