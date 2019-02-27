@@ -28,7 +28,7 @@ class CityViewCell: UICollectionViewCell {
 
     private func update() {
        // cityLabel.text = city?.name
-        cityLabel.text = "Shostka25_2"
+        cityLabel.text = "Shostka25_5"
 
         // Set image using url to the image view using kingfisher extension.
         //cityImage.kf.setImage(with: city?.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
