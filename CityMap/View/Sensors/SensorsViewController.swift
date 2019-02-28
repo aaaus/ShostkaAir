@@ -83,7 +83,7 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let capitalToDisplay = cities[indexPath.row]
         cityCell.city = capitalToDisplay
-        
+        //print("cities \(cities)")
         return cityCell
     }
 }

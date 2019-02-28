@@ -1,5 +1,7 @@
 import UIKit
 
+//var testtt: Int = 0
+
 private enum Segues: String {
     // Segue name that navigates to city detail page (has the same value as the segue in storyboard).
     case showCityDetail = "ShowCityDetail"
@@ -31,11 +33,14 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
             }
         }
     }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupData()
+        
     }
 
     private func setupData() {
@@ -72,8 +77,20 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     // MARK: UICollectionViewDataSource
 
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return cities.count - 10
+     
+        let testSString = String(describing: cities.description)
+        print("cityArray \(testSString)")
+        
+
+        
+        if cities.count == 0 {  // проверем если 0, бывает первый раз, возвращаем 0
+            return 0
+        }
+        
+        return 2    // Нужное количество лабараторий
+       //return cities.count
        // _ = cities.count
        // return 2
     }
@@ -83,9 +100,10 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
             return UICollectionViewCell()
         }
 
+        
         let capitalToDisplay = cities[indexPath.row]
         cityCell.city = capitalToDisplay
-
+        
         return cityCell
     }
 }

@@ -343,7 +343,7 @@
             </objects>
             <point key="canvasLocation" x="-1228.125" y="105.63380281690141"/>
         </scene>
-        <!--Cities-->
+        <!--Параметри-->
         <scene sceneID="87O-RR-3TL">
             <objects>
                 <viewController id="tYv-pJ-EMd" customClass="SensorsViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
@@ -428,7 +428,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2rr-5B-MSV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cities" id="TFT-AW-iaO">
+                    <navigationItem key="navigationItem" title="Параметри" id="TFT-AW-iaO">
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="gQc-wV-4c3">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>

@@ -16,7 +16,7 @@ final class CityDetailViewController: UIViewController {
     
     @IBOutlet weak var chartView: LineChartView!
     
-    var months: [String]!
+   // var months: [String]!
     
     /**
      Get currently represented city or set the new city to update detail page information.
