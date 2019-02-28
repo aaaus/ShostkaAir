@@ -34,7 +34,7 @@ final class CityDetailViewController: UIViewController {
         
         //chartView.delegate = self
         
-        self.title = "Line Chart 1"
+        self.title = "Лабораторія  №1"
         
         chartView.chartDescription?.enabled = false
         chartView.dragEnabled = true

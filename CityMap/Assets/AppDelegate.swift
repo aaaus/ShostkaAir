@@ -8,6 +8,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        sleep(3)
+        // Override point for customization after application launch.
+        
+    /*     UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+         UINavigationBar.appearance().tintColor = .white
+         
+         UITabBar.appearance().tintColor = .white
+         UITabBar.appearance().barTintColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
+         UITabBar.appearance().selectionIndicatorImage = UIImage(named: "tabSelectBG")
+         
+         let statusBarView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 20))
+         statusBarView.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+         self.window?.rootViewController?.view.insertSubview(statusBarView, at: 0)
+         
+         if let barFont = UIFont(name: "AppleSDGothicNeo-Light", size: 24) {
+         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: barFont]
+         }*/
+        
         return true
     }
 
