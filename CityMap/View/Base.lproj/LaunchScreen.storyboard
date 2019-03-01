@@ -41,7 +41,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SH" width="1024" height="1024"/>
+        <image name="SH" width="16" height="16"/>
         <namedColor name="ColorAccent">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
