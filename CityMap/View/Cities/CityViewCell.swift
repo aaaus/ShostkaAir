@@ -28,6 +28,7 @@ class CityViewCell: UICollectionViewCell {
 
     private func update() {
        // cityLabel.text = city?.name
+        var testLbl = city?.id
         cityLabel.text = "Shostka1"
 
         // Set image using url to the image view using kingfisher extension.

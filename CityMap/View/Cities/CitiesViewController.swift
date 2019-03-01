@@ -80,7 +80,7 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
      
-        let testSString = String(describing: cities.description)
+        let testSString: String = String(describing: cities.description)
         print("cityArray \(testSString)")
         
 

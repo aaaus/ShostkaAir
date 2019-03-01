@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="2400" y="883.09859154929575"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Новини-->
         <scene sceneID="4UM-oY-j3j">
             <objects>
                 <tableViewController id="X4S-y6-2C4" sceneMemberID="viewController">
@@ -146,7 +146,7 @@
                             <outlet property="delegate" destination="X4S-y6-2C4" id="hcS-ge-ev2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="2dz-fZ-NAg"/>
+                    <navigationItem key="navigationItem" title="Новини" id="2dz-fZ-NAg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxa-kn-nmv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
