@@ -19,19 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SH" translatesAutoresizingMaskIntoConstraints="NO" id="pGS-4b-gaD">
-                                <rect key="frame" x="59.5" y="205.5" width="256" height="256"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="256" id="4gA-Mh-QyK"/>
-                                    <constraint firstAttribute="width" secondItem="pGS-4b-gaD" secondAttribute="height" multiplier="1:1" id="P0O-kQ-60X"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ShostkaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="pGK-kJ-aBX">
+                                <rect key="frame" x="67" y="230" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="ColorAccent"/>
-                        <constraints>
-                            <constraint firstItem="pGS-4b-gaD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="YZF-nb-awC"/>
-                            <constraint firstItem="pGS-4b-gaD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eoJ-o2-u8Z"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -41,7 +34,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SH" width="16" height="16"/>
+        <image name="ShostkaLogo" width="400" height="241"/>
         <namedColor name="ColorAccent">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

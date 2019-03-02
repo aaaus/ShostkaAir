@@ -75,7 +75,7 @@
             </objects>
             <point key="canvasLocation" x="2396" y="864"/>
         </scene>
-        <!--City News-->
+        <!--Шостка News-->
         <scene sceneID="9Mb-34-ZKO">
             <objects>
                 <viewController id="sxS-jk-cyf" customClass="cityNews" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,7 +97,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b7U-1Y-4KZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wi8-pc-37d"/>
+                    <navigationItem key="navigationItem" title="Шостка News" id="wi8-pc-37d"/>
                     <connections>
                         <outlet property="newsWebViev" destination="jA5-4l-zxm" id="NhY-3c-7Ln"/>
                     </connections>
@@ -105,6 +105,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzc-zA-SvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-232.5" y="864.08450704225356"/>
+        </scene>
+        <!--Інформація-->
+        <scene sceneID="JBN-2g-L7K">
+            <objects>
+                <viewController id="WbI-v1-ffB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l88-xm-7ob">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8dN-49-zZk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Інформація" id="5Ud-e1-4GQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWj-3D-daC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233" y="1539"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="UTr-WV-aSk">
@@ -139,7 +155,7 @@
         <scene sceneID="F2G-aQ-JZW">
             <objects>
                 <navigationController id="x1k-GY-jIR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Лабораторії" image="about" id="wjl-Lu-DmM"/>
+                    <tabBarItem key="tabBarItem" title="Лабораторії" image="Laboratory" id="wjl-Lu-DmM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="e05-Ss-T1v">
                         <rect key="frame" x="0.0" y="20" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -274,6 +290,7 @@
                     <connections>
                         <segue destination="NKm-oP-7aO" kind="relationship" relationship="viewControllers" id="sS4-Rz-esO"/>
                         <segue destination="x1k-GY-jIR" kind="relationship" relationship="viewControllers" id="0CQ-OL-KeY"/>
+                        <segue destination="fD1-vr-mD6" kind="relationship" relationship="viewControllers" id="rLT-4r-0i7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUR-K2-Mc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -383,7 +400,7 @@
         <scene sceneID="9vx-24-jvl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NKm-oP-7aO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Новини" id="GPp-8d-r7a"/>
+                    <tabBarItem key="tabBarItem" title="Новини" image="News" id="GPp-8d-r7a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1XJ-yr-rNe">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -398,9 +415,30 @@
             </objects>
             <point key="canvasLocation" x="-1228" y="864"/>
         </scene>
+        <!--Інформація-->
+        <scene sceneID="d2t-J5-8WF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fD1-vr-mD6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Інформація" image="More" id="KZ9-VL-L5F"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RcT-eS-HTh">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WbI-v1-ffB" kind="relationship" relationship="rootViewController" id="wWe-4k-Zg0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5n0-4p-z0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1228" y="1539"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="about" width="25" height="24"/>
+        <image name="Laboratory" width="25" height="24"/>
+        <image name="More" width="25" height="24"/>
+        <image name="News" width="25" height="24"/>
         <namedColor name="ColorAccent">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
