@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obu-a8-eVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2396" y="864"/>
+            <point key="canvasLocation" x="3294" y="108"/>
         </scene>
         <!--Шостка News-->
         <scene sceneID="9Mb-34-ZKO">
@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWj-3D-daC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-233" y="1539"/>
+            <point key="canvasLocation" x="-234" y="1593"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="UTr-WV-aSk">
@@ -149,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3x-zG-Xpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="864"/>
+            <point key="canvasLocation" x="1545" y="108"/>
         </scene>
         <!--Лабораторії-->
         <scene sceneID="F2G-aQ-JZW">
@@ -394,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3V-3E-KHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="863"/>
+            <point key="canvasLocation" x="2406" y="107"/>
         </scene>
         <!--Новини-->
         <scene sceneID="9vx-24-jvl">
@@ -432,7 +432,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5n0-4p-z0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1228" y="1539"/>
+            <point key="canvasLocation" x="-1228" y="1593"/>
         </scene>
     </scenes>
     <resources>
