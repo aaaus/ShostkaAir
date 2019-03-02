@@ -28,10 +28,45 @@
 		0E69DA70202F84AC00999974 /* CityEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69DA6B202F84AC00999974 /* CityEntity+CoreDataClass.swift */; };
 		2B482DDB22240CAD003246E6 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B482DDA22240CAD003246E6 /* Charts.framework */; };
 		2B482DDE22241DCE003246E6 /* SensorsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B482DDD22241DCE003246E6 /* SensorsViewCell.swift */; };
-		2BF4844A22297F310052FE97 /* cityNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF4844922297F310052FE97 /* cityNews.swift */; };
+		2B9049A7222AA63300530633 /* WordPress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9049A5222AA62700530633 /* WordPress.framework */; };
+		2B9049A8222AA63300530633 /* WordPress.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9049A5222AA62700530633 /* WordPress.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2B9049AD222AA8CD00530633 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9049AC222AA8CD00530633 /* PostViewController.swift */; };
+		2B9049AF222AA8E500530633 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9049AE222AA8E500530633 /* String+Convenience.swift */; };
+		2BF4844A22297F310052FE97 /* СityNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF4844922297F310052FE97 /* СityNewsViewController.swift */; };
 		436E0E6C222460F5003B0E9C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E0E6B222460F5003B0E9C /* SensorsViewController.swift */; };
 		F6F25B299D18C98B301CD5C3 /* Pods_CityMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC66C1C4F0513E2A324313C /* Pods_CityMap.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B9049A4222AA62700530633 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B9049A0222AA62700530633 /* WordPress.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8F53210D1EC60DBF00CBF049;
+			remoteInfo = WordPress;
+		};
+		2B9049A9222AA63300530633 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B9049A0222AA62700530633 /* WordPress.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F53210C1EC60DBF00CBF049;
+			remoteInfo = WordPress;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B9049AB222AA63300530633 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2B9049A8222AA63300530633 /* WordPress.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E06CAEC202884A8002E9650 /* CityMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +93,11 @@
 		0F596EF00E414900B379394D /* Pods-CityMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityMap/Pods-CityMap.release.xcconfig"; sourceTree = "<group>"; };
 		2B482DDA22240CAD003246E6 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B482DDD22241DCE003246E6 /* SensorsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsViewCell.swift; sourceTree = "<group>"; };
-		2BF4844922297F310052FE97 /* cityNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cityNews.swift; sourceTree = "<group>"; };
+		2B90499E222AA61B00530633 /* WordPress */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WordPress; sourceTree = "<group>"; };
+		2B9049A0222AA62700530633 /* WordPress.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WordPress.xcodeproj; path = WordPress/WordPress.xcodeproj; sourceTree = "<group>"; };
+		2B9049AC222AA8CD00530633 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		2B9049AE222AA8E500530633 /* String+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Convenience.swift"; sourceTree = "<group>"; };
+		2BF4844922297F310052FE97 /* СityNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СityNewsViewController.swift"; sourceTree = "<group>"; };
 		3BC66C1C4F0513E2A324313C /* Pods_CityMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E0E6B222460F5003B0E9C /* SensorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsViewController.swift; sourceTree = "<group>"; };
 		AD4CC2633A246E1136BFD3C0 /* Pods-CityMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMap/Pods-CityMap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B9049A7222AA63300530633 /* WordPress.framework in Frameworks */,
 				2B482DDB22240CAD003246E6 /* Charts.framework in Frameworks */,
 				F6F25B299D18C98B301CD5C3 /* Pods_CityMap.framework in Frameworks */,
 			);
@@ -222,10 +262,20 @@
 			path = Sensors;
 			sourceTree = "<group>";
 		};
+		2B9049A1222AA62700530633 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B9049A5222AA62700530633 /* WordPress.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2BF4844822297F130052FE97 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				2BF4844922297F310052FE97 /* cityNews.swift */,
+				2BF4844922297F310052FE97 /* СityNewsViewController.swift */,
+				2B9049AC222AA8CD00530633 /* PostViewController.swift */,
+				2B9049AE222AA8E500530633 /* String+Convenience.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -233,6 +283,8 @@
 		EA411E728FE11043634EC324 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B9049A0222AA62700530633 /* WordPress.xcodeproj */,
+				2B90499E222AA61B00530633 /* WordPress */,
 				2B482DDA22240CAD003246E6 /* Charts.framework */,
 				3BC66C1C4F0513E2A324313C /* Pods_CityMap.framework */,
 			);
@@ -251,10 +303,12 @@
 				0E06CAE9202884A8002E9650 /* Frameworks */,
 				0E06CAEA202884A8002E9650 /* Resources */,
 				B312B5DD242057A1B32DC135 /* [CP] Embed Pods Frameworks */,
+				2B9049AB222AA63300530633 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2B9049AA222AA63300530633 /* PBXTargetDependency */,
 			);
 			name = CityMap;
 			productName = CityMap;
@@ -289,12 +343,28 @@
 			mainGroup = 0E06CAE3202884A8002E9650;
 			productRefGroup = 0E06CAED202884A8002E9650 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2B9049A1222AA62700530633 /* Products */;
+					ProjectRef = 2B9049A0222AA62700530633 /* WordPress.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0E06CAEB202884A8002E9650 /* CityMap */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2B9049A5222AA62700530633 /* WordPress.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WordPress.framework;
+			remoteRef = 2B9049A4222AA62700530633 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0E06CAEA202884A8002E9650 /* Resources */ = {
@@ -359,6 +429,8 @@
 				0E69DA6F202F84AC00999974 /* CityMap.xcdatamodeld in Sources */,
 				0E69DA60202F7A8F00999974 /* CityViewCell.swift in Sources */,
 				0E06CB282028DB17002E9650 /* CitiesViewController.swift in Sources */,
+				2B9049AD222AA8CD00530633 /* PostViewController.swift in Sources */,
+				2B9049AF222AA8E500530633 /* String+Convenience.swift in Sources */,
 				436E0E6C222460F5003B0E9C /* SensorsViewController.swift in Sources */,
 				0E06CB2E2028DDEF002E9650 /* Location.swift in Sources */,
 				0E06CB222028DAB0002E9650 /* CityService.swift in Sources */,
@@ -373,11 +445,19 @@
 				0E69DA6D202F84AC00999974 /* CoreDataProvider.swift in Sources */,
 				0E2F8BFD202F8A1E00A94BD4 /* CityWebService.swift in Sources */,
 				0E2F8C00202F8DDF00A94BD4 /* MapViewController.swift in Sources */,
-				2BF4844A22297F310052FE97 /* cityNews.swift in Sources */,
+				2BF4844A22297F310052FE97 /* СityNewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2B9049AA222AA63300530633 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WordPress;
+			targetProxy = 2B9049A9222AA63300530633 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0E06CAF3202884A8002E9650 /* Main.storyboard */ = {
@@ -514,6 +594,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AD4CC2633A246E1136BFD3C0 /* Pods-CityMap.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CX5GQ6RWH;
@@ -531,6 +612,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F596EF00E414900B379394D /* Pods-CityMap.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4CX5GQ6RWH;
