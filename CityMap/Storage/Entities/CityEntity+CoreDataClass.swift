@@ -51,5 +51,6 @@ private extension City {
         self.imageUrl = URL(string: url)
         self.description = entity.cityDescription ?? ""
         self.location = Location(latitude: entity.latitude, longitude: entity.longitude)
+        
     }
 }

@@ -8,4 +8,5 @@ extension CityEntity {
     @NSManaged public var cityDescription: String?
     @NSManaged public var longitude: Double
     @NSManaged public var latitude: Double
+   // @NSManaged public var myData: String
 }

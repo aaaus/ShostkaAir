@@ -34,33 +34,28 @@ final class CityWebService {
         - parameter callback: The completion handler to call when the cities are loaded and parsed. Could return an empty array of cities. Also, if error occured it's also provided in the callback.
     */
     func cities(callback: @escaping CitiesLoadedCallback) {
-
         // If city endpoint url is incorrect - return empty array.
         guard let url = URL(string: Constants.citiesUrl) else {
             callback([], nil)
             return
         }
-
         let urlRequest = URLRequest(url: url)
-
         let task = session.dataTask(with: urlRequest) { [weak self] (data, response, error) in
             guard let strongSelf = self else {
                 callback([], nil)
                 return
             }
-
             if let error = error {
                 callback([], error)
                 return
             }
-
             guard let data = data else {
                 callback([], nil)
                 return
             }
-
             do {
                 let allCities = try strongSelf.jsonDecoder.decode(Cities.self, from: data)
+               // print("allCities \(allCities)")
                 callback(allCities.cities, nil)
             } catch(let decodeError) {
                 print("Can't decode cities with error: \(decodeError)")

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import WordPress
+//import WordPress
 
 class PostViewController: UIViewController {
 
