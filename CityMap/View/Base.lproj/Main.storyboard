@@ -236,7 +236,7 @@
                                         <connections>
                                             <outlet property="cityImage" destination="OkT-gs-DCm" id="VAB-fN-BF1"/>
                                             <outlet property="cityLabel" destination="Yk8-59-cxm" id="wvS-a2-sV5"/>
-                                            <segue destination="tYv-pJ-EMd" kind="show" id="CD9-zw-7aY"/>
+                                            <segue destination="tYv-pJ-EMd" kind="show" identifier="ShowParameters" id="CD9-zw-7aY"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

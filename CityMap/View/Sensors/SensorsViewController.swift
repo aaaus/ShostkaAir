@@ -73,7 +73,23 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
     // MARK: UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cities.count
+        var citiesCount = 0
+        
+        for city in cities {
+            if city.id >= 100{
+                citiesCount += 1
+                print(city.id)
+            }
+        }
+        
+        if cities.count == 0 {  // проверем если 0, бывает первый раз, возвращаем 0
+            return 0
+        }
+        
+        return citiesCount    // Нужное количество лабараторий
+        
+        
+       // return cities.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -81,9 +97,9 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
             return UICollectionViewCell()
         }
         
-        let capitalToDisplay = cities[indexPath.row]
+        let capitalToDisplay = cities[indexPath.row + 2]
         cityCell.city = capitalToDisplay
-        //print("cities \(cities)")
+        print("indexPath.row \(indexPath.row)")
         return cityCell
     }
 }

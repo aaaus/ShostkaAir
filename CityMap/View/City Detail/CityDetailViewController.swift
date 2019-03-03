@@ -96,7 +96,8 @@ final class CityDetailViewController: UIViewController {
         self.setDataCount(5, range: 5)
     }
     
-      private func setupData() {
+    
+     private func setupData() {
      guard let city = city else {
      return
      }

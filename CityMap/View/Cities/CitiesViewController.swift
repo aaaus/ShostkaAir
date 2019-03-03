@@ -4,7 +4,7 @@ import UIKit
 
 private enum Segues: String {
     // Segue name that navigates to city detail page (has the same value as the segue in storyboard).
-    case showCityDetail = "ShowCityDetail"
+    case ShowParameters = "ShowParameters"
     // Segue name that navigates to the map page (has the same value as the segue in storyboard).
     case showMap = "ShowMap"
 }
@@ -35,7 +35,8 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     
-
+    var city: City?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,7 +58,7 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
 
         switch segueIdentifier {
-        case Segues.showCityDetail.rawValue:
+        case Segues.ShowParameters.rawValue:
             guard let cityCell = sender as? CityViewCell,
                 let detailsController = segue.destination as? CityDetailViewController else {
                 return
@@ -79,17 +80,22 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-     
-        let testSString: String = String(describing: cities.description)
-      //  print("cityArray: \(testSString)")
+       // let testSString: String = String(describing: cities.description)
+        var citiesCount = 0
         
-
+        for city in cities {
+            if city.id < 100{
+            citiesCount += 1
+            print(city.id)
+            }
+        }
+        
         
         if cities.count == 0 {  // проверем если 0, бывает первый раз, возвращаем 0
             return 0
         }
         
-        return 2    // Нужное количество лабараторий
+        return citiesCount    // Нужное количество лабараторий
        //return cities.count
        // _ = cities.count
        // return 2
@@ -103,6 +109,7 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         let capitalToDisplay = cities[indexPath.row]
         cityCell.city = capitalToDisplay
+        //print("capitalToDisplay: \(capitalToDisplay)")
         
         return cityCell
     }
