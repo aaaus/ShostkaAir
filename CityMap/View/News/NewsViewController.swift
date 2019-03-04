@@ -66,12 +66,12 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         switch segueIdentifier {
         case Segues.showNews.rawValue:
             guard let cityCell = sender as? NewsViewCell,
-                let detailsController = segue.destination as? CityDetailViewController else {
+                let detailsController = segue.destination as? DetailNewsViewController else {
                     return
             }
             
             detailsController.city = cityCell.city
-            detailsController.sensorStationNumber = sensorStationNumber
+            //detailsController.sensorStationNumber = sensorStationNumber
         case Segues.showMap.rawValue:
             guard let mapController = segue.destination as? MapViewController else {
                 return
@@ -91,11 +91,11 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         for city in cities {
             
-            if (city.id >= (sensorStationNumber + 1) * 100) && (city.id < (sensorStationNumber + 2) * 100){  // Сколько датчиков у лаборатории
+            if (city.id >= 10000 && city.id < 10100){  // Сколько плиток сайтов
                 citiesCount += 1
                 print(city.id)
             }
-            if city.id < (sensorStationNumber + 1) * 100{  // Сколько объектов в массиве до текущей лаборатории
+            if city.id < 10000 {  // Сколько объектов в массиве до сайтов
                 sensorsArrayCountBeforeCurentSensors += 1
             }
         }
@@ -104,7 +104,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
             return 0
         }
         
-        return 2    // Нужное количество лабараторий
+        return citiesCount    // Нужное количество лабараторий
         
         
         // return cities.count
@@ -115,7 +115,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
             return UICollectionViewCell()
         }
         
-        let capitalToDisplay = cities[indexPath.row + 0]
+        let capitalToDisplay = cities[indexPath.row + sensorsArrayCountBeforeCurentSensors]
         cityCell.city = capitalToDisplay
         print("cityCell\(cityCell)")
         return cityCell
