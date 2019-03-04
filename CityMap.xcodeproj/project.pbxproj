@@ -28,6 +28,8 @@
 		0E69DA70202F84AC00999974 /* CityEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E69DA6B202F84AC00999974 /* CityEntity+CoreDataClass.swift */; };
 		2B482DDB22240CAD003246E6 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B482DDA22240CAD003246E6 /* Charts.framework */; };
 		2B482DDE22241DCE003246E6 /* SensorsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B482DDD22241DCE003246E6 /* SensorsViewCell.swift */; };
+		2B765B54222D493B00118477 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B765B53222D493B00118477 /* NewsViewController.swift */; };
+		2B765B56222D494E00118477 /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B765B55222D494E00118477 /* NewsViewCell.swift */; };
 		2B9049A7222AA63300530633 /* WordPress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9049A5222AA62700530633 /* WordPress.framework */; };
 		2B9049A8222AA63300530633 /* WordPress.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9049A5222AA62700530633 /* WordPress.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B9049AD222AA8CD00530633 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9049AC222AA8CD00530633 /* PostViewController.swift */; };
@@ -93,6 +95,8 @@
 		0F596EF00E414900B379394D /* Pods-CityMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityMap/Pods-CityMap.release.xcconfig"; sourceTree = "<group>"; };
 		2B482DDA22240CAD003246E6 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B482DDD22241DCE003246E6 /* SensorsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsViewCell.swift; sourceTree = "<group>"; };
+		2B765B53222D493B00118477 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		2B765B55222D494E00118477 /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
 		2B90499E222AA61B00530633 /* WordPress */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WordPress; sourceTree = "<group>"; };
 		2B9049A0222AA62700530633 /* WordPress.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WordPress.xcodeproj; path = WordPress/WordPress.xcodeproj; sourceTree = "<group>"; };
 		2B9049AC222AA8CD00530633 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 		0E06CB042028871B002E9650 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2B765B52222D48CF00118477 /* News */,
 				2B482DDC22241D9F003246E6 /* Sensors */,
 				0E06CB232028DB17002E9650 /* Cities */,
 				0E06CB262028DB17002E9650 /* City Detail */,
@@ -260,6 +265,15 @@
 				436E0E6B222460F5003B0E9C /* SensorsViewController.swift */,
 			);
 			path = Sensors;
+			sourceTree = "<group>";
+		};
+		2B765B52222D48CF00118477 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				2B765B55222D494E00118477 /* NewsViewCell.swift */,
+				2B765B53222D493B00118477 /* NewsViewController.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		2B9049A1222AA62700530633 /* Products */ = {
@@ -427,6 +441,7 @@
 			files = (
 				0E06CB202028DAB0002E9650 /* City.swift in Sources */,
 				0E69DA6F202F84AC00999974 /* CityMap.xcdatamodeld in Sources */,
+				2B765B56222D494E00118477 /* NewsViewCell.swift in Sources */,
 				0E69DA60202F7A8F00999974 /* CityViewCell.swift in Sources */,
 				0E06CB282028DB17002E9650 /* CitiesViewController.swift in Sources */,
 				2B9049AD222AA8CD00530633 /* PostViewController.swift in Sources */,
@@ -440,6 +455,7 @@
 				0E06CB2D2028DDEF002E9650 /* Cities.swift in Sources */,
 				2B482DDE22241DCE003246E6 /* SensorsViewCell.swift in Sources */,
 				0E06CB2A2028DB18002E9650 /* CityDetailViewController.swift in Sources */,
+				2B765B54222D493B00118477 /* NewsViewController.swift in Sources */,
 				0E06CAF0202884A8002E9650 /* AppDelegate.swift in Sources */,
 				0E69DA61202F7A8F00999974 /* CitiesCollectionLayout.swift in Sources */,
 				0E69DA6D202F84AC00999974 /* CoreDataProvider.swift in Sources */,

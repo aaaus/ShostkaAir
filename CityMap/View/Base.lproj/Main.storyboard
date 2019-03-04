@@ -78,33 +78,38 @@
         <!--Шостка News-->
         <scene sceneID="9Mb-34-ZKO">
             <objects>
-                <viewController id="sxS-jk-cyf" customClass="cityNews" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sxS-jk-cyf" customClass="СityNewsViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x6z-ZZ-c6j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jA5-4l-zxm">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LmN-5D-JyG">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jA5-4l-zxm" secondAttribute="trailing" id="A9W-hY-EEu"/>
-                            <constraint firstItem="jA5-4l-zxm" firstAttribute="top" secondItem="b7U-1Y-4KZ" secondAttribute="top" id="FVV-Lf-UwQ"/>
-                            <constraint firstItem="jA5-4l-zxm" firstAttribute="leading" secondItem="x6z-ZZ-c6j" secondAttribute="leading" id="mz2-pm-cCz"/>
-                            <constraint firstItem="jA5-4l-zxm" firstAttribute="bottom" secondItem="b7U-1Y-4KZ" secondAttribute="bottom" id="yBI-Uo-Jk6"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="b7U-1Y-4KZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Шостка News" id="wi8-pc-37d"/>
+                    <navigationItem key="navigationItem" title="Шостка News" id="wi8-pc-37d">
+                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="Y6p-Pq-XK7">
+                            <connections>
+                                <action selector="backUrlWebView:" destination="sxS-jk-cyf" id="6NW-Li-dCy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="newsWebViev" destination="jA5-4l-zxm" id="NhY-3c-7Ln"/>
+                        <outlet property="newsWebView" destination="LmN-5D-JyG" id="Slh-pt-Rv9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzc-zA-SvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-232.5" y="864.08450704225356"/>
+            <point key="canvasLocation" x="645" y="861.97183098591552"/>
         </scene>
         <!--Інформація-->
         <scene sceneID="JBN-2g-L7K">
@@ -149,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3x-zG-Xpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="108"/>
+            <point key="canvasLocation" x="1524" y="106"/>
         </scene>
         <!--Лабораторії-->
         <scene sceneID="F2G-aQ-JZW">
@@ -408,7 +413,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="sxS-jk-cyf" kind="relationship" relationship="rootViewController" id="euN-f5-bnc"/>
+                        <segue destination="2or-dB-hgt" kind="relationship" relationship="rootViewController" id="EVj-oD-nMq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bbw-pj-SXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -433,6 +438,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5n0-4p-z0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1228" y="1593"/>
+        </scene>
+        <!--Шостка News-->
+        <scene sceneID="lQD-tV-Fqf">
+            <objects>
+                <viewController id="2or-dB-hgt" customClass="NewsViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qdg-hh-vaF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h2O-ti-030">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="GNA-MV-AFB" customClass="CitiesCollectionLayout" customModule="CityMap" customModuleProvider="target">
+                                    <size key="itemSize" width="120" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="4"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCellIdentifier" id="n4a-Mr-5cq" customClass="CityViewCell" customModule="CityMap" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="4" width="120" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mCV-My-UqC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="160"/>
+                                                </imageView>
+                                                <view userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Elr-7C-9zH">
+                                                    <rect key="frame" x="0.0" y="128" width="120" height="32"/>
+                                                    <color key="backgroundColor" name="ColorPrimaryDark"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="BuO-U6-OeY"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pq-MM-VG1">
+                                                    <rect key="frame" x="0.0" y="128" width="120" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="g2S-kO-NJV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="ColorAccent"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="mCV-My-UqC" firstAttribute="top" secondItem="n4a-Mr-5cq" secondAttribute="top" id="AKX-zV-wIH"/>
+                                            <constraint firstAttribute="bottom" secondItem="2pq-MM-VG1" secondAttribute="bottom" id="AxJ-Xt-Z1k"/>
+                                            <constraint firstAttribute="trailing" secondItem="Elr-7C-9zH" secondAttribute="trailing" id="DI8-Et-vVJ"/>
+                                            <constraint firstItem="2pq-MM-VG1" firstAttribute="leading" secondItem="n4a-Mr-5cq" secondAttribute="leading" id="JPE-aQ-GOX"/>
+                                            <constraint firstAttribute="bottom" secondItem="mCV-My-UqC" secondAttribute="bottom" id="Z79-AS-dxs"/>
+                                            <constraint firstAttribute="trailing" secondItem="mCV-My-UqC" secondAttribute="trailing" id="eyx-OL-YsA"/>
+                                            <constraint firstAttribute="trailing" secondItem="2pq-MM-VG1" secondAttribute="trailing" id="fsB-mB-06s"/>
+                                            <constraint firstAttribute="bottom" secondItem="Elr-7C-9zH" secondAttribute="bottom" id="fwv-9Z-Xe1"/>
+                                            <constraint firstItem="Elr-7C-9zH" firstAttribute="leading" secondItem="n4a-Mr-5cq" secondAttribute="leading" id="hff-9y-NQw"/>
+                                            <constraint firstItem="mCV-My-UqC" firstAttribute="leading" secondItem="n4a-Mr-5cq" secondAttribute="leading" id="ngG-dv-ITp"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cityImage" destination="mCV-My-UqC" id="JRt-8e-isk"/>
+                                            <outlet property="cityLabel" destination="2pq-MM-VG1" id="YWk-0a-3xT"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2or-dB-hgt" id="ZlI-z3-4dQ"/>
+                                    <outlet property="delegate" destination="2or-dB-hgt" id="3nT-QQ-uHi"/>
+                                </connections>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="s9d-8w-u21">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h2O-ti-030" firstAttribute="leading" secondItem="7nv-F6-WSo" secondAttribute="leading" id="F00-L3-bb6"/>
+                            <constraint firstItem="s9d-8w-u21" firstAttribute="centerX" secondItem="Qdg-hh-vaF" secondAttribute="centerX" id="KDk-Db-Qu2"/>
+                            <constraint firstItem="7nv-F6-WSo" firstAttribute="trailing" secondItem="h2O-ti-030" secondAttribute="trailing" id="MCS-Av-Ykr"/>
+                            <constraint firstItem="s9d-8w-u21" firstAttribute="centerY" secondItem="Qdg-hh-vaF" secondAttribute="centerY" id="ae1-7S-3eD"/>
+                            <constraint firstItem="h2O-ti-030" firstAttribute="top" secondItem="7nv-F6-WSo" secondAttribute="top" id="pcx-ux-Unu"/>
+                            <constraint firstItem="7nv-F6-WSo" firstAttribute="bottom" secondItem="h2O-ti-030" secondAttribute="bottom" id="wiC-C2-HZT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7nv-F6-WSo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Шостка News" id="yE5-um-Wdg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Xwc-du-Kq0">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="s9d-8w-u21" id="cK2-Fw-bae"/>
+                        <outlet property="collectionView" destination="h2O-ti-030" id="bTF-te-wd9"/>
+                        <segue destination="sxS-jk-cyf" kind="show" id="Qdz-8z-AcV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IO6-o9-SZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="863"/>
         </scene>
     </scenes>
     <resources>
