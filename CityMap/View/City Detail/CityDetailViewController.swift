@@ -23,6 +23,7 @@ final class CityDetailViewController: UIViewController {
      If you set nil value, city information will be cleared from page.
      */
     var city: City?
+    var sensorStationNumber: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,29 +86,29 @@ final class CityDetailViewController: UIViewController {
         marker.chartView = chartView
         marker.minimumSize = CGSize(width: 80, height: 40)
         chartView.marker = marker*/
-        
         chartView.legend.form = .line
-        
        /* sliderX.value = 45
         sliderY.value = 100
         slidersValueChanged(nil)*/
-        
         chartView.animate(xAxisDuration: 2.5)
         self.setDataCount(5, range: 5)
     }
     
     
-     private func setupData() {
+    
+    
+  private func setupData() {
      guard let city = city else {
      return
      }
-     
      title = city.name
      descriptionLabel.text = city.description
-     
+    
      // Set image using url to the image view using kingfisher extension.
      cityImage.kf.setImage(with: city.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
      }
+    
+    
     
     func setDataCount(_ count: Int, range: UInt32) {
        /* let values = (0..<count).map { (i) -> ChartDataEntry in

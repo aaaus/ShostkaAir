@@ -20,6 +20,16 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    var city: City? {
+        didSet {
+          //  update()
+        }
+    }
+    var sensorStationNumber: Int = 0
+   // var laboratoryCount: Int = 0
+    
+    var sensorsArrayCountBeforeCurentSensors: Int = 0
+    
     private let cityService = CityService.shared
     private var cities: [City] = [] {
         didSet {
@@ -34,7 +44,11 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        guard let city = city else {
+            return
+        }
+        print("city.id: \(city.id)")
+        sensorStationNumber = city.id
         setupData()
     }
     
@@ -59,6 +73,7 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
             }
             
             detailsController.city = cityCell.city
+            detailsController.sensorStationNumber = sensorStationNumber
         case Segues.showMap.rawValue:
             guard let mapController = segue.destination as? MapViewController else {
                 return
@@ -74,11 +89,16 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var citiesCount = 0
+        sensorsArrayCountBeforeCurentSensors = 0
         
         for city in cities {
-            if city.id >= 100{
+            
+            if (city.id >= (sensorStationNumber + 1) * 100) && (city.id < (sensorStationNumber + 2) * 100){  // Сколько датчиков у лаборатории
                 citiesCount += 1
                 print(city.id)
+            }
+            if city.id < (sensorStationNumber + 1) * 100{  // Сколько объектов в массиве до текущей лаборатории
+                sensorsArrayCountBeforeCurentSensors += 1
             }
         }
         
@@ -97,9 +117,9 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
             return UICollectionViewCell()
         }
         
-        let capitalToDisplay = cities[indexPath.row + 2]
+        let capitalToDisplay = cities[indexPath.row + sensorsArrayCountBeforeCurentSensors]
         cityCell.city = capitalToDisplay
-        print("indexPath.row \(indexPath.row)")
+        //print("indexPath.row \(indexPath.row)")
         return cityCell
     }
 }

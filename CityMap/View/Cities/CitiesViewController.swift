@@ -36,6 +36,7 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     
     var city: City?
+    var laboratoryCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,11 +61,14 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
         switch segueIdentifier {
         case Segues.ShowParameters.rawValue:
             guard let cityCell = sender as? CityViewCell,
-                let detailsController = segue.destination as? CityDetailViewController else {
+                let detailsController = segue.destination as? SensorsViewController else {
                 return
             }
 
+            //detailsController.city = cityCell.city
+           // print("cityCell.city: \(cityCell.city)")
             detailsController.city = cityCell.city
+          //  detailsController.laboratoryCount = laboratoryCount
         case Segues.showMap.rawValue:
             guard let mapController = segue.destination as? MapViewController else {
                 return
@@ -88,6 +92,7 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
             citiesCount += 1
             print(city.id)
             }
+        laboratoryCount = citiesCount
         }
         
         
