@@ -2,7 +2,7 @@ import UIKit
 
 private enum Segues: String {
     // Segue name that navigates to city detail page (has the same value as the segue in storyboard).
-    case showCityDetail = "ShowCityDetail"
+    case showNews = "showNews"
     // Segue name that navigates to the map page (has the same value as the segue in storyboard).
     case showMap = "ShowMap"
 }
@@ -32,11 +32,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
     }
     
-    var city: City? {
-        didSet {
-            //  update()
-        }
-    }
+    var city: City?
     var sensorStationNumber: Int = 0
     // var laboratoryCount: Int = 0
     
@@ -45,9 +41,9 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         print("123")
-        guard let city = city else {
+      /*  guard let city = city else {
             return
-        }
+        }*/
         print("4567")
        // print("city.id: \(city.id)")
        // sensorStationNumber = city.id
@@ -68,8 +64,8 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         
         switch segueIdentifier {
-        case Segues.showCityDetail.rawValue:
-            guard let cityCell = sender as? SensorsViewCell,
+        case Segues.showNews.rawValue:
+            guard let cityCell = sender as? NewsViewCell,
                 let detailsController = segue.destination as? CityDetailViewController else {
                     return
             }
@@ -115,7 +111,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cityCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cityCellIdentifier, for: indexPath) as? SensorsViewCell else {
+        guard let cityCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cityCellIdentifier, for: indexPath) as? NewsViewCell else {
             return UICollectionViewCell()
         }
         

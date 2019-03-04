@@ -93,11 +93,11 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         for city in cities {
             
-            if (city.id >= (sensorStationNumber + 1) * 100) && (city.id < (sensorStationNumber + 2) * 100){  // Сколько датчиков у лаборатории
+            if (city.id >= (sensorStationNumber) * 100) && (city.id < (sensorStationNumber + 1) * 100){  // Сколько датчиков у лаборатории
                 citiesCount += 1
                 print(city.id)
             }
-            if city.id < (sensorStationNumber + 1) * 100{  // Сколько объектов в массиве до текущей лаборатории
+            if city.id < (sensorStationNumber) * 100{  // Сколько объектов в массиве до текущей лаборатории
                 sensorsArrayCountBeforeCurentSensors += 1
             }
         }

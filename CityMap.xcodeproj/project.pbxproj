@@ -34,7 +34,7 @@
 		2B9049A8222AA63300530633 /* WordPress.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9049A5222AA62700530633 /* WordPress.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B9049AD222AA8CD00530633 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9049AC222AA8CD00530633 /* PostViewController.swift */; };
 		2B9049AF222AA8E500530633 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9049AE222AA8E500530633 /* String+Convenience.swift */; };
-		2BF4844A22297F310052FE97 /* СityNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF4844922297F310052FE97 /* СityNewsViewController.swift */; };
+		2BF4844A22297F310052FE97 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF4844922297F310052FE97 /* DetailNewsViewController.swift */; };
 		436E0E6C222460F5003B0E9C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E0E6B222460F5003B0E9C /* SensorsViewController.swift */; };
 		F6F25B299D18C98B301CD5C3 /* Pods_CityMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC66C1C4F0513E2A324313C /* Pods_CityMap.framework */; };
 /* End PBXBuildFile section */
@@ -101,7 +101,7 @@
 		2B9049A0222AA62700530633 /* WordPress.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WordPress.xcodeproj; path = WordPress/WordPress.xcodeproj; sourceTree = "<group>"; };
 		2B9049AC222AA8CD00530633 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		2B9049AE222AA8E500530633 /* String+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Convenience.swift"; sourceTree = "<group>"; };
-		2BF4844922297F310052FE97 /* СityNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СityNewsViewController.swift"; sourceTree = "<group>"; };
+		2BF4844922297F310052FE97 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewController.swift; sourceTree = "<group>"; };
 		3BC66C1C4F0513E2A324313C /* Pods_CityMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E0E6B222460F5003B0E9C /* SensorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsViewController.swift; sourceTree = "<group>"; };
 		AD4CC2633A246E1136BFD3C0 /* Pods-CityMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMap/Pods-CityMap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +270,7 @@
 		2B765B52222D48CF00118477 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				2BF4844922297F310052FE97 /* DetailNewsViewController.swift */,
 				2B765B55222D494E00118477 /* NewsViewCell.swift */,
 				2B765B53222D493B00118477 /* NewsViewController.swift */,
 			);
@@ -287,7 +288,6 @@
 		2BF4844822297F130052FE97 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				2BF4844922297F310052FE97 /* СityNewsViewController.swift */,
 				2B9049AC222AA8CD00530633 /* PostViewController.swift */,
 				2B9049AE222AA8E500530633 /* String+Convenience.swift */,
 			);
@@ -461,7 +461,7 @@
 				0E69DA6D202F84AC00999974 /* CoreDataProvider.swift in Sources */,
 				0E2F8BFD202F8A1E00A94BD4 /* CityWebService.swift in Sources */,
 				0E2F8C00202F8DDF00A94BD4 /* MapViewController.swift in Sources */,
-				2BF4844A22297F310052FE97 /* СityNewsViewController.swift in Sources */,
+				2BF4844A22297F310052FE97 /* DetailNewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
