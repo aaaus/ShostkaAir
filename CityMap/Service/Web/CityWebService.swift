@@ -39,7 +39,7 @@ final class CityWebService {
             callback([], nil)
             return
         }
-        let urlRequest = URLRequest(url: url)
+        let urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30)
         let task = session.dataTask(with: urlRequest) { [weak self] (data, response, error) in
             guard let strongSelf = self else {
                 callback([], nil)
@@ -55,7 +55,7 @@ final class CityWebService {
             }
             do {
                 let allCities = try strongSelf.jsonDecoder.decode(Cities.self, from: data)
-               // print("allCities \(allCities)")
+                //print("allCities \(allCities)")
                 callback(allCities.cities, nil)
             } catch(let decodeError) {
                 print("Can't decode cities with error: \(decodeError)")

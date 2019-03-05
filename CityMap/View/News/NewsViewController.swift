@@ -40,13 +40,6 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("123")
-      /*  guard let city = city else {
-            return
-        }*/
-        print("4567")
-       // print("city.id: \(city.id)")
-       // sensorStationNumber = city.id
         setupData()
     }
     

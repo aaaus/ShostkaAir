@@ -272,6 +272,7 @@
                         <viewLayoutGuide key="safeArea" id="T4I-DZ-7pm"/>
                     </view>
                     <navigationItem key="navigationItem" title="Лабораторії" id="LYh-qI-2ys">
+                        <barButtonItem key="backBarButtonItem" title="Лабораторії" id="TNa-mc-9tv"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="M1G-n1-HTt">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -394,6 +395,7 @@
                         <viewLayoutGuide key="safeArea" id="2rr-5B-MSV"/>
                     </view>
                     <navigationItem key="navigationItem" title="Параметри" id="TFT-AW-iaO">
+                        <barButtonItem key="backBarButtonItem" title="Параметри" id="0nH-A1-o8P"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="gQc-wV-4c3">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>

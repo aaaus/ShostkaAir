@@ -20,11 +20,8 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    var city: City? {
-        didSet {
-          //  update()
-        }
-    }
+    var city: City?
+    
     var sensorStationNumber: Int = 0
    // var laboratoryCount: Int = 0
     
@@ -42,14 +39,71 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
     }
     
+
+    
+  /// Timer Area
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Load")
+        startTimer()
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("UnLoad")
+        stopTimer()
+
+    }
+    
+    
+    weak var timer: Timer?
+    
+    deinit {
+        timer?.invalidate()
+    }
+    
+    func timerHandler(_ timer: Timer) {
+        let hola = "hola"
+        print(">>>> \(hola)")
+        setupData()
+        self.collectionView.reloadData()
+       // SensorsViewCell
+    }
+    
+    func startTimer() {
+        timer?.invalidate()   // stops previous timer, if any
+        
+        let seconds = 5.0
+        timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] timer in
+            self?.timerHandler(timer)
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+    }
+ 
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let city = city else {
             return
         }
-        print("city.id: \(city.id)")
+       // print("city.id: \(city.id)")
         sensorStationNumber = city.id
         setupData()
+        
+    }
+    
+    func myObserverMethod(notification : NSNotification) {
+        print("Observer method called")
+        
+        //You may call your action method here, when the application did enter background.
+        //ie., self.pauseTimer() in your case.
     }
     
     private func setupData() {
@@ -74,6 +128,7 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             detailsController.city = cityCell.city
             detailsController.sensorStationNumber = sensorStationNumber
+
         case Segues.showMap.rawValue:
             guard let mapController = segue.destination as? MapViewController else {
                 return
@@ -95,7 +150,7 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
             
             if (city.id >= (sensorStationNumber) * 100) && (city.id < (sensorStationNumber + 1) * 100){  // Сколько датчиков у лаборатории
                 citiesCount += 1
-                print(city.id)
+               // print(city.id)
             }
             if city.id < (sensorStationNumber) * 100{  // Сколько объектов в массиве до текущей лаборатории
                 sensorsArrayCountBeforeCurentSensors += 1

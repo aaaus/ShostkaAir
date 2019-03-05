@@ -57,6 +57,7 @@ final class CityService {
             // Add new cities to the context.
             for city in cities {
                 _ = CityEntity.create(from: city, in: context)
+               // print("Data: \(String(describing: CityEntity.create(from: city, in: context)))")
             }
 
             try? context.save()
