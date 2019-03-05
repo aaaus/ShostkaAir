@@ -31,7 +31,7 @@ class DetailNewsViewController: UIViewController {
         print("city.d \(city.description)")
         self.navigationItem.title = city.name
         
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        //self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         loadHtmlCode()
     }
     

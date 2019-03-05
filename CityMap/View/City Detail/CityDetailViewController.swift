@@ -27,7 +27,7 @@ final class CityDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+  
           setupData()
         
         // Do any additional setup after loading the view.
@@ -35,7 +35,7 @@ final class CityDetailViewController: UIViewController {
         
         //chartView.delegate = self
         
-        self.title = "Лабораторія  №1"
+        self.title = city?.name
         
         chartView.chartDescription?.enabled = false
         chartView.dragEnabled = true
@@ -52,23 +52,23 @@ final class CityDetailViewController: UIViewController {
         chartView.xAxis.gridLineDashLengths = [10, 10]
         chartView.xAxis.gridLineDashPhase = 0
         
-        let ll1 = ChartLimitLine(limit: 150, label: "Upper Limit")
+        let ll1 = ChartLimitLine(limit: 150, label: "Верхня межа")
         ll1.lineWidth = 4
         ll1.lineDashLengths = [5, 5]
         ll1.labelPosition = .rightTop
         ll1.valueFont = .systemFont(ofSize: 10)
         
-        let ll2 = ChartLimitLine(limit: -30, label: "Lower Limit")
+      /*  let ll2 = ChartLimitLine(limit: -30, label: "Нижня межа")
         ll2.lineWidth = 4
         ll2.lineDashLengths = [5,5]
         ll2.labelPosition = .rightBottom
         ll2.valueFont = .systemFont(ofSize: 10)
-        ll2.lineColor = ChartColorTemplates.colorFromString("#0000ff")
+        ll2.lineColor = ChartColorTemplates.colorFromString("#0000ff") */
         
         let leftAxis = chartView.leftAxis
         leftAxis.removeAllLimitLines()
         leftAxis.addLimitLine(ll1)
-        leftAxis.addLimitLine(ll2)
+      //  leftAxis.addLimitLine(ll2)
         leftAxis.axisMaximum = 200
         leftAxis.axisMinimum = -50
         leftAxis.gridLineDashLengths = [5, 5]
@@ -105,7 +105,7 @@ final class CityDetailViewController: UIViewController {
      descriptionLabel.text = city.description
     
      // Set image using url to the image view using kingfisher extension.
-     cityImage.kf.setImage(with: city.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
+     //cityImage.kf.setImage(with: city.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
      }
     
     
@@ -124,11 +124,17 @@ final class CityDetailViewController: UIViewController {
         
         let values = stride(from: from, to: to, by: hourSeconds).map { (x) -> ChartDataEntry in
             let y = arc4random_uniform(range) + 50
-            return ChartDataEntry(x: x, y: Double(y))
+            print("ChartDataEntry(x: x, y: Double(y)): \(ChartDataEntry(x: x, y: Double(y)))")
+           // print("value: \(values)")
+             return ChartDataEntry(x: x, y: Double(y))
         }
         
         
-        let set1 = LineChartDataSet(values: values, label: "DataSet 1")
+       // let set1 = LineChartDataSet(values: values, label: "Графік 1")
+        let set1 = LineChartDataSet(values: values, label: "Графік 1")
+        print("set: \(set1)")
+        
+       // let set2 = LineChartDataSet(values: values, label: "Графік 2")
         set1.drawIconsEnabled = false
         
         set1.lineDashLengths = [5, 2.5]
@@ -152,9 +158,14 @@ final class CityDetailViewController: UIViewController {
         set1.fillAlpha = 1
         set1.fill = Fill(linearGradient: gradient, angle: 90) //.linearGradient(gradient, angle: 90)
         set1.drawFilledEnabled = true
+  
+       // LineChartData(dataSets: set1.ad)
         
         let data = LineChartData(dataSet: set1)
-        
+       // let
+        let chartTest = ChartDataEntry(x: 1551797984, y: 55)
+        data.addEntry(chartTest, dataSetIndex: 5)
+        print("data: \(data)")
         chartView.data = data
     }
 }

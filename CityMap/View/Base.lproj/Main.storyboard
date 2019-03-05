@@ -23,18 +23,18 @@
                                 <rect key="frame" x="0.0" y="111" width="320" height="408"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yoD-Mb-1CW">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="yoD-Mb-1CW" secondAttribute="height" multiplier="16:9" constant="250.66666666666669" id="9ck-Ui-vM1"/>
+                                            <constraint firstAttribute="width" secondItem="yoD-Mb-1CW" secondAttribute="height" multiplier="16:9" constant="311.11111111111109" id="9ck-Ui-vM1"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-pD-XU6" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="13" y="81" width="294" height="272"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="272"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <viewLayoutGuide key="safeArea" id="DcS-1z-iUR"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tE2-mW-LKg">
-                                        <rect key="frame" x="8" y="368" width="304" height="21.5"/>
+                                        <rect key="frame" x="8" y="280" width="304" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" name="ColorPrimaryDark"/>
                                         <nil key="highlightedColor"/>
@@ -43,15 +43,15 @@
                                 <constraints>
                                     <constraint firstItem="tE2-mW-LKg" firstAttribute="trailing" secondItem="yoD-Mb-1CW" secondAttribute="trailing" constant="-8" id="1AH-kS-ZMf"/>
                                     <constraint firstItem="tE2-mW-LKg" firstAttribute="leading" secondItem="yoD-Mb-1CW" secondAttribute="leading" constant="8" id="6yi-wx-UtJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="gOD-pD-XU6" secondAttribute="trailing" constant="13" id="KNd-Xc-Q1S"/>
+                                    <constraint firstAttribute="trailing" secondItem="gOD-pD-XU6" secondAttribute="trailing" id="KNd-Xc-Q1S"/>
                                     <constraint firstAttribute="trailing" secondItem="yoD-Mb-1CW" secondAttribute="trailing" id="TnY-rN-b0w"/>
-                                    <constraint firstItem="gOD-pD-XU6" firstAttribute="leading" secondItem="NZd-rC-OIQ" secondAttribute="leading" constant="13" id="hZy-Jp-QyG"/>
-                                    <constraint firstAttribute="bottom" secondItem="tE2-mW-LKg" secondAttribute="bottom" constant="18.5" id="lvL-zv-4T7"/>
-                                    <constraint firstItem="tE2-mW-LKg" firstAttribute="top" secondItem="gOD-pD-XU6" secondAttribute="bottom" constant="15" id="mYv-R5-zLn"/>
+                                    <constraint firstItem="gOD-pD-XU6" firstAttribute="leading" secondItem="NZd-rC-OIQ" secondAttribute="leading" id="hZy-Jp-QyG"/>
+                                    <constraint firstAttribute="bottom" secondItem="tE2-mW-LKg" secondAttribute="bottom" constant="106.5" id="lvL-zv-4T7"/>
+                                    <constraint firstItem="tE2-mW-LKg" firstAttribute="top" secondItem="gOD-pD-XU6" secondAttribute="bottom" constant="8" id="mYv-R5-zLn"/>
                                     <constraint firstItem="gOD-pD-XU6" firstAttribute="centerX" secondItem="tE2-mW-LKg" secondAttribute="centerX" id="mgd-Ne-EyH"/>
                                     <constraint firstItem="yoD-Mb-1CW" firstAttribute="leading" secondItem="NZd-rC-OIQ" secondAttribute="leading" id="mok-8Z-ufF"/>
-                                    <constraint firstItem="gOD-pD-XU6" firstAttribute="top" secondItem="yoD-Mb-1CW" secondAttribute="bottom" constant="42" id="r3V-5P-wvx"/>
-                                    <constraint firstItem="tE2-mW-LKg" firstAttribute="top" secondItem="yoD-Mb-1CW" secondAttribute="bottom" constant="329" id="vEx-Mx-Ipa"/>
+                                    <constraint firstItem="gOD-pD-XU6" firstAttribute="top" secondItem="yoD-Mb-1CW" secondAttribute="bottom" constant="-5" id="r3V-5P-wvx"/>
+                                    <constraint firstItem="tE2-mW-LKg" firstAttribute="top" secondItem="yoD-Mb-1CW" secondAttribute="bottom" constant="275" id="vEx-Mx-Ipa"/>
                                     <constraint firstItem="yoD-Mb-1CW" firstAttribute="top" secondItem="NZd-rC-OIQ" secondAttribute="top" id="x0Z-ss-Otr"/>
                                 </constraints>
                             </scrollView>
@@ -74,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obu-a8-eVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3294" y="108"/>
+            <point key="canvasLocation" x="3292.5" y="107.74647887323944"/>
         </scene>
         <!--Новини-->
         <scene sceneID="9Mb-34-ZKO">
@@ -318,7 +318,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yjf-Sf-wpC">
-                                <rect key="frame" x="0.0" y="111" width="320" height="408"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="V9L-Kj-6Gd" customClass="CitiesCollectionLayout" customModule="CityMap" customModuleProvider="target">
                                     <size key="itemSize" width="120" height="160"/>
@@ -396,7 +396,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Параметри" id="TFT-AW-iaO">
                         <barButtonItem key="backBarButtonItem" title="Параметри" id="0nH-A1-o8P"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="gQc-wV-4c3">
+                        <barButtonItem key="rightBarButtonItem" title="..." id="gQc-wV-4c3">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
