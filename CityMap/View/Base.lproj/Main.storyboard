@@ -19,56 +19,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZd-rC-OIQ">
-                                <rect key="frame" x="0.0" y="111" width="320" height="408"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yoD-Mb-1CW">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="yoD-Mb-1CW" secondAttribute="height" multiplier="16:9" constant="311.11111111111109" id="9ck-Ui-vM1"/>
-                                        </constraints>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-pD-XU6" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="272"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <viewLayoutGuide key="safeArea" id="DcS-1z-iUR"/>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tE2-mW-LKg">
-                                        <rect key="frame" x="8" y="280" width="304" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" name="ColorPrimaryDark"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-pD-XU6" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="111" width="320" height="331"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <viewLayoutGuide key="safeArea" id="DcS-1z-iUR"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27A-bR-TC2">
+                                <rect key="frame" x="137" y="480" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dataChange:" destination="Uyt-9q-BeH" eventType="touchUpInside" id="Dqp-Vy-F5U"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tE2-mW-LKg">
+                                <rect key="frame" x="0.0" y="452" width="320" height="22"/>
                                 <constraints>
-                                    <constraint firstItem="tE2-mW-LKg" firstAttribute="trailing" secondItem="yoD-Mb-1CW" secondAttribute="trailing" constant="-8" id="1AH-kS-ZMf"/>
-                                    <constraint firstItem="tE2-mW-LKg" firstAttribute="leading" secondItem="yoD-Mb-1CW" secondAttribute="leading" constant="8" id="6yi-wx-UtJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="gOD-pD-XU6" secondAttribute="trailing" id="KNd-Xc-Q1S"/>
-                                    <constraint firstAttribute="trailing" secondItem="yoD-Mb-1CW" secondAttribute="trailing" id="TnY-rN-b0w"/>
-                                    <constraint firstItem="gOD-pD-XU6" firstAttribute="leading" secondItem="NZd-rC-OIQ" secondAttribute="leading" id="hZy-Jp-QyG"/>
-                                    <constraint firstAttribute="bottom" secondItem="tE2-mW-LKg" secondAttribute="bottom" constant="106.5" id="lvL-zv-4T7"/>
-                                    <constraint firstItem="tE2-mW-LKg" firstAttribute="top" secondItem="gOD-pD-XU6" secondAttribute="bottom" constant="8" id="mYv-R5-zLn"/>
-                                    <constraint firstItem="gOD-pD-XU6" firstAttribute="centerX" secondItem="tE2-mW-LKg" secondAttribute="centerX" id="mgd-Ne-EyH"/>
-                                    <constraint firstItem="yoD-Mb-1CW" firstAttribute="leading" secondItem="NZd-rC-OIQ" secondAttribute="leading" id="mok-8Z-ufF"/>
-                                    <constraint firstItem="gOD-pD-XU6" firstAttribute="top" secondItem="yoD-Mb-1CW" secondAttribute="bottom" constant="-5" id="r3V-5P-wvx"/>
-                                    <constraint firstItem="tE2-mW-LKg" firstAttribute="top" secondItem="yoD-Mb-1CW" secondAttribute="bottom" constant="275" id="vEx-Mx-Ipa"/>
-                                    <constraint firstItem="yoD-Mb-1CW" firstAttribute="top" secondItem="NZd-rC-OIQ" secondAttribute="top" id="x0Z-ss-Otr"/>
+                                    <constraint firstAttribute="width" constant="320" id="zBa-iP-FVw"/>
                                 </constraints>
-                            </scrollView>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="ColorPrimaryDark"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jS0-iv-jDb" firstAttribute="trailing" secondItem="NZd-rC-OIQ" secondAttribute="trailing" id="385-Sw-DZb"/>
-                            <constraint firstItem="yoD-Mb-1CW" firstAttribute="width" secondItem="wkm-Al-bTJ" secondAttribute="width" id="6sg-GQ-YFV"/>
-                            <constraint firstItem="NZd-rC-OIQ" firstAttribute="leading" secondItem="jS0-iv-jDb" secondAttribute="leading" id="RCV-UV-uWI"/>
-                            <constraint firstItem="NZd-rC-OIQ" firstAttribute="top" secondItem="jS0-iv-jDb" secondAttribute="top" id="XAy-c5-dfX"/>
-                            <constraint firstItem="jS0-iv-jDb" firstAttribute="bottom" secondItem="NZd-rC-OIQ" secondAttribute="bottom" id="nH7-o1-CG4"/>
+                            <constraint firstItem="tE2-mW-LKg" firstAttribute="leading" secondItem="jS0-iv-jDb" secondAttribute="leading" id="5c3-mw-dmW"/>
+                            <constraint firstItem="gOD-pD-XU6" firstAttribute="top" secondItem="jS0-iv-jDb" secondAttribute="top" id="Juu-OJ-MKM"/>
+                            <constraint firstItem="jS0-iv-jDb" firstAttribute="bottom" secondItem="27A-bR-TC2" secondAttribute="bottom" constant="9" id="KfO-nF-qMq"/>
+                            <constraint firstItem="jS0-iv-jDb" firstAttribute="trailing" secondItem="tE2-mW-LKg" secondAttribute="trailing" id="L4r-VN-y97"/>
+                            <constraint firstItem="27A-bR-TC2" firstAttribute="leading" secondItem="jS0-iv-jDb" secondAttribute="leading" constant="137" id="Lhl-Vg-UB6"/>
+                            <constraint firstItem="gOD-pD-XU6" firstAttribute="leading" secondItem="jS0-iv-jDb" secondAttribute="leading" id="NzH-HV-Od2"/>
+                            <constraint firstItem="27A-bR-TC2" firstAttribute="top" secondItem="tE2-mW-LKg" secondAttribute="bottom" constant="6" id="Zon-cB-gJc"/>
+                            <constraint firstItem="gOD-pD-XU6" firstAttribute="centerY" secondItem="wkm-Al-bTJ" secondAttribute="centerY" constant="-7.5" id="eKb-HA-5zX"/>
+                            <constraint firstItem="jS0-iv-jDb" firstAttribute="trailing" secondItem="27A-bR-TC2" secondAttribute="trailing" constant="137" id="hvK-8X-ArS"/>
+                            <constraint firstItem="gOD-pD-XU6" firstAttribute="trailing" secondItem="jS0-iv-jDb" secondAttribute="trailing" id="oUi-Pq-YUS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jS0-iv-jDb"/>
                     </view>
                     <connections>
                         <outlet property="chartView" destination="gOD-pD-XU6" id="AP6-eK-CYI"/>
-                        <outlet property="cityImage" destination="yoD-Mb-1CW" id="GCJ-hU-9LE"/>
                         <outlet property="descriptionLabel" destination="tE2-mW-LKg" id="geZ-4i-rzh"/>
                     </connections>
                 </viewController>

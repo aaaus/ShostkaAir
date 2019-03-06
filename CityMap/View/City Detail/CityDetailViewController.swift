@@ -108,30 +108,37 @@ final class CityDetailViewController: UIViewController {
      //cityImage.kf.setImage(with: city.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
      }
     
-    
-    
-    func setDataCount(_ count: Int, range: UInt32) {
-       /* let values = (0..<count).map { (i) -> ChartDataEntry in
-            let val = Double(arc4random_uniform(range) + 3)
-            return ChartDataEntry(x: Double(i), y: val, icon: #imageLiteral(resourceName: "icon"))
-        }*/
+     func updateChartData() {
+
+        //    chartView.data = nil
         
-        let now = Date().timeIntervalSince1970
+        self.setDataCount(10, range: 1)
+    }
+    
+    
+    func setDataCount(_ count: Int, range: UInt32) {        
+     /*   let now = Date().timeIntervalSince1970
         let hourSeconds: TimeInterval = 3600
         
         let from = now - (Double(count) / 2) * hourSeconds
         let to = now + (Double(count) / 2) * hourSeconds
-        
+        var y = 1 + range
         let values = stride(from: from, to: to, by: hourSeconds).map { (x) -> ChartDataEntry in
-            let y = arc4random_uniform(range) + 50
-            print("ChartDataEntry(x: x, y: Double(y)): \(ChartDataEntry(x: x, y: Double(y)))")
+           // let y = arc4random_uniform(range) + 50
+            y = 1 + y
+           // print("ChartDataEntry(x: x, y: Double(y)): \(ChartDataEntry(x: x, y: Double(y)))")
            // print("value: \(values)")
              return ChartDataEntry(x: x, y: Double(y))
+        }*/
+        
+        let values2 = (0..<count).map { (i) -> ChartDataEntry in
+            let val = Double(arc4random_uniform(range) + 3)
+            return ChartDataEntry(x: Double(i), y: val)
         }
         
         
        // let set1 = LineChartDataSet(values: values, label: "Графік 1")
-        let set1 = LineChartDataSet(values: values, label: "Графік 1")
+        let set1 = LineChartDataSet(values: values2, label: "Графік 1")
         print("set: \(set1)")
         
        // let set2 = LineChartDataSet(values: values, label: "Графік 2")
@@ -162,10 +169,13 @@ final class CityDetailViewController: UIViewController {
        // LineChartData(dataSets: set1.ad)
         
         let data = LineChartData(dataSet: set1)
-       // let
-        let chartTest = ChartDataEntry(x: 1551797984, y: 55)
-        data.addEntry(chartTest, dataSetIndex: 5)
-        print("data: \(data)")
         chartView.data = data
     }
+    
+    
+    
+    @IBAction func dataChange(_ sender: UIButton) {
+        self.updateChartData()
+    }
+    
 }
