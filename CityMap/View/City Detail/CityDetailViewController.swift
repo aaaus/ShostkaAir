@@ -91,7 +91,8 @@ final class CityDetailViewController: UIViewController {
         sliderY.value = 100
         slidersValueChanged(nil)*/
         chartView.animate(xAxisDuration: 2.5)
-        self.setDataCount(5, range: 5)
+        //self.setDataCount(5, range: 5, curentPoint: 5)
+        myDataChart()
     }
     
     
@@ -108,15 +109,15 @@ final class CityDetailViewController: UIViewController {
      //cityImage.kf.setImage(with: city.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
      }
     
-     func updateChartData() {
+     func updateChartData(_ set3: LineChartDataSet) {
 
         //    chartView.data = nil
         
-        self.setDataCount(10, range: 1)
+        //self.setDataCount(10, range: 1, set3: LineChartDataSet)
     }
     
     
-    func setDataCount(_ count: Int, range: UInt32) {        
+    func setDataCount(_ count: Int, range: UInt32, set1: LineChartDataSet) {
      /*   let now = Date().timeIntervalSince1970
         let hourSeconds: TimeInterval = 3600
         
@@ -134,11 +135,13 @@ final class CityDetailViewController: UIViewController {
         let values2 = (0..<count).map { (i) -> ChartDataEntry in
             let val = Double(arc4random_uniform(range) + 3)
             return ChartDataEntry(x: Double(i), y: val)
+          //  return ChartDataEntry(x: Double(i), y: Double(curentPoint))
         }
         
+        print("values2: \(values2)")
         
        // let set1 = LineChartDataSet(values: values, label: "Графік 1")
-        let set1 = LineChartDataSet(values: values2, label: "Графік 1")
+       // let set1 = LineChartDataSet(values: values2, label: "Графік 1")
         print("set: \(set1)")
         
        // let set2 = LineChartDataSet(values: values, label: "Графік 2")
@@ -172,10 +175,96 @@ final class CityDetailViewController: UIViewController {
         chartView.data = data
     }
     
+    var values3: [ChartDataEntry]?
+    
+    func myDataChart() {
+    
+        
+        
+        DispatchQueue.main.async {
+            // Set up the URL request
+            let todoEndpoint: String = "http://sun.shostka.in/gps.php/?getFromApp=data"
+            guard let url = URL(string: todoEndpoint) else {
+                print("Error: cannot create URL")
+                return
+            }
+            let urlRequest = URLRequest(url: url)
+            // set up the session
+            let config = URLSessionConfiguration.default
+            let session = URLSession(configuration: config)
+            // make the request
+            let task = session.dataTask(with: urlRequest) {
+                (data, response, error) in
+                // check for any errors
+                guard error == nil else {
+                    print("error calling GET on /todos/1")
+                    print(error!)
+                    return
+                }
+                // make sure we got data
+                guard let responseData = data else {
+                    print("Error: did not receive data")
+                    return
+                }
+                // parse the result as JSON, since that's what the API provides
+                do {
+                    guard let todo = try JSONSerialization.jsonObject(with: responseData, options: [])
+                        as? [String: Any] else {
+                            print("error trying to convert data to JSON")
+                            return
+                    }
+                    // now we have the todo
+                    // let's just print it to prove we can access it
+                    print("The todo is: " + todo.description)
+                    // the todo object is a dictionary
+                    // so we just access the title using the "title" key
+                    // so check for a title and print it if we have one
+                    
+                    
+                    guard let todoTitle = todo["4"] as? Float else {
+                        print("Could not get todo title from JSON")
+                        return
+                    }
+                    
+                    //  self.updateChartData(todoTitle!)
+                    ////
+                    
+                    self.values3 = (0..<9).map { (i) -> ChartDataEntry in
+                        // let val = Double(arc4random_uniform(range) + 3)
+                        // return ChartDataEntry(x: Double(i), y: val)
+                        return ChartDataEntry(x: Double(i), y: todo[String(i)] as? Double ?? 0)
+                    }
+                    print("values3_12345: \(String(describing: self.values3))")
+                    
+                    
+                    print("The title is: \(String(describing: todoTitle))")
+                } catch  {
+                    print("error trying to convert data to JSON")
+                    return
+                }
+                
+            }
+            task.resume()
+            
+        }
+        
+        
+
+    }
     
     
     @IBAction func dataChange(_ sender: UIButton) {
-        self.updateChartData()
+        
+        
+        //let todoTitle: Float? = 0
+        let set3 = LineChartDataSet(values: values3, label: "Графік 3")
+        
+        print("values3_11111: \(String(describing: self.values3))")
+        print("set3_11111: \(set3))")
+        
+        self.setDataCount(10, range: 1, set1: set3)
+        
+        
     }
     
 }
