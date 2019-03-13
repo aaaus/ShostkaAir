@@ -25,14 +25,14 @@
                                 <viewLayoutGuide key="safeArea" id="DcS-1z-iUR"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27A-bR-TC2">
-                                <rect key="frame" x="137" y="480" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="89" y="480" width="133" height="30"/>
+                                <state key="normal" title="Оновити"/>
                                 <connections>
                                     <action selector="dataChange:" destination="Uyt-9q-BeH" eventType="touchUpInside" id="Dqp-Vy-F5U"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tE2-mW-LKg">
-                                <rect key="frame" x="0.0" y="452" width="320" height="22"/>
+                                <rect key="frame" x="0.0" y="452.5" width="320" height="21.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="zBa-iP-FVw"/>
                                 </constraints>
@@ -47,11 +47,11 @@
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="top" secondItem="jS0-iv-jDb" secondAttribute="top" id="Juu-OJ-MKM"/>
                             <constraint firstItem="jS0-iv-jDb" firstAttribute="bottom" secondItem="27A-bR-TC2" secondAttribute="bottom" constant="9" id="KfO-nF-qMq"/>
                             <constraint firstItem="jS0-iv-jDb" firstAttribute="trailing" secondItem="tE2-mW-LKg" secondAttribute="trailing" id="L4r-VN-y97"/>
-                            <constraint firstItem="27A-bR-TC2" firstAttribute="leading" secondItem="jS0-iv-jDb" secondAttribute="leading" constant="137" id="Lhl-Vg-UB6"/>
+                            <constraint firstItem="27A-bR-TC2" firstAttribute="leading" secondItem="jS0-iv-jDb" secondAttribute="leading" constant="89" id="Lhl-Vg-UB6"/>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="leading" secondItem="jS0-iv-jDb" secondAttribute="leading" id="NzH-HV-Od2"/>
                             <constraint firstItem="27A-bR-TC2" firstAttribute="top" secondItem="tE2-mW-LKg" secondAttribute="bottom" constant="6" id="Zon-cB-gJc"/>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="centerY" secondItem="wkm-Al-bTJ" secondAttribute="centerY" constant="-7.5" id="eKb-HA-5zX"/>
-                            <constraint firstItem="jS0-iv-jDb" firstAttribute="trailing" secondItem="27A-bR-TC2" secondAttribute="trailing" constant="137" id="hvK-8X-ArS"/>
+                            <constraint firstItem="jS0-iv-jDb" firstAttribute="trailing" secondItem="27A-bR-TC2" secondAttribute="trailing" constant="98" id="hvK-8X-ArS"/>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="trailing" secondItem="jS0-iv-jDb" secondAttribute="trailing" id="oUi-Pq-YUS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jS0-iv-jDb"/>

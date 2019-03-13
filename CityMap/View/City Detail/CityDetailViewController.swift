@@ -25,6 +25,55 @@ final class CityDetailViewController: UIViewController {
     var city: City?
     var sensorStationNumber: Int = 0
     
+    
+    /// Timer Area
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("Load")
+        startTimer()
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("UnLoad")
+        stopTimer()
+        
+    }
+    
+    
+    weak var timer: Timer?
+    
+    deinit {
+        timer?.invalidate()
+    }
+    
+    func timerHandler(_ timer: Timer) {
+        let hola = "myDataChartTimer"
+        print(">>>> \(hola)")
+
+        let set3 = LineChartDataSet(values: values3, label: "Графік 3")
+        print("values3_11111: \(String(describing: self.values3))")
+        print("set3_11111: \(set3))")
+        self.setDataCount(10, range: 1, set1: set3)
+        myDataChart();
+    }
+    
+    func startTimer() {
+        timer?.invalidate()   // stops previous timer, if any
+        
+        let seconds = 5.0
+        timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] timer in
+            self?.timerHandler(timer)
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
   
@@ -138,11 +187,11 @@ final class CityDetailViewController: UIViewController {
           //  return ChartDataEntry(x: Double(i), y: Double(curentPoint))
         }
         
-        print("values2: \(values2)")
+     //   print("values2: \(values2)")
         
        // let set1 = LineChartDataSet(values: values, label: "Графік 1")
        // let set1 = LineChartDataSet(values: values2, label: "Графік 1")
-        print("set: \(set1)")
+       // print("set: \(set1)")
         
        // let set2 = LineChartDataSet(values: values, label: "Графік 2")
         set1.drawIconsEnabled = false
@@ -209,7 +258,7 @@ final class CityDetailViewController: UIViewController {
                 // parse the result as JSON, since that's what the API provides
                 do {
                     guard let todo = try JSONSerialization.jsonObject(with: responseData, options: [])
-                        as? [String: Any] else {
+                        as? [Int: Any] else {
                             print("error trying to convert data to JSON")
                             return
                     }
@@ -221,23 +270,23 @@ final class CityDetailViewController: UIViewController {
                     // so check for a title and print it if we have one
                     
                     
-                    guard let todoTitle = todo["4"] as? Float else {
+             /*       guard let todoTitle = todo["4"] as? Float else {
                         print("Could not get todo title from JSON")
                         return
                     }
-                    
+                 */
                     //  self.updateChartData(todoTitle!)
                     ////
                     
-                    self.values3 = (0..<9).map { (i) -> ChartDataEntry in
+                    self.values3 = (1..<(todo.count + 1)).map { (i) -> ChartDataEntry in
                         // let val = Double(arc4random_uniform(range) + 3)
                         // return ChartDataEntry(x: Double(i), y: val)
-                        return ChartDataEntry(x: Double(i), y: todo[String(i)] as? Double ?? 0)
+                        return ChartDataEntry(x: Double(i), y: todo[i] as? Double ?? 0)
                     }
                     print("values3_12345: \(String(describing: self.values3))")
                     
                     
-                    print("The title is: \(String(describing: todoTitle))")
+                   // print("The title is: \(String(describing: todoTitle))")
                 } catch  {
                     print("error trying to convert data to JSON")
                     return
