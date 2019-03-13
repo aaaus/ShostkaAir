@@ -2,6 +2,22 @@ import UIKit
 import Kingfisher
 import Charts
 
+struct MyGitHub: Codable {
+    
+    let one: [Double?]
+    let two: [Double?]
+    let three: Int?
+    let four: Int?
+    
+    
+    private enum CodingKeys: String, CodingKey {
+        case one
+        case two
+        case three
+        case four
+    }
+}
+
 private enum Constants {
     // Placeholder image for the cities that don't have photo (has the same name as appropriate image in assets folder).
      static let cityImagePlaceholder = "CityPlaceholder"
@@ -98,8 +114,18 @@ final class CityDetailViewController: UIViewController {
         llXAxis.labelPosition = .rightBottom
         llXAxis.valueFont = .systemFont(ofSize: 10)
         
+       // llXAxis.granularity = 3600
+       // xAxis.valueFormatter = DateValueFormatter()
+        
         chartView.xAxis.gridLineDashLengths = [10, 10]
         chartView.xAxis.gridLineDashPhase = 0
+       // chartView.xAxis.valueFormatter = DateValueFormatter()
+      //  chartView.xAxis.labelTextColor = UIColor(red: 255/255, green: 192/255, blue: 56/255, alpha: 1)
+       // xAxis.granularity = 3600
+        chartView.xAxis.valueFormatter = DateValueFormatter() as IAxisValueFormatter
+       // chartView.xAxis.avoidFirstLastClippingEnabled = true
+       // chartView.xAxis.spaceMax = 100
+        
         
         let ll1 = ChartLimitLine(limit: 150, label: "Верхня межа")
         ll1.lineWidth = 4
@@ -118,8 +144,27 @@ final class CityDetailViewController: UIViewController {
         leftAxis.removeAllLimitLines()
         leftAxis.addLimitLine(ll1)
       //  leftAxis.addLimitLine(ll2)
+        
         leftAxis.axisMaximum = 200
-        leftAxis.axisMinimum = -50
+        
+        if city?.id == 100 {
+            leftAxis.axisMaximum = 100
+        }
+        
+        if city?.id == 101 {
+            leftAxis.axisMaximum = 100
+        }
+        
+        if city?.id == 102 {
+            leftAxis.axisMaximum = 1000
+        }
+        
+        if city?.id == 106 {
+            leftAxis.axisMaximum = 100
+        }
+        
+        
+        leftAxis.axisMinimum = 0
         leftAxis.gridLineDashLengths = [5, 5]
         leftAxis.drawLimitLinesBehindDataEnabled = true
         
@@ -230,73 +275,97 @@ final class CityDetailViewController: UIViewController {
     
         
         
-        DispatchQueue.main.async {
-            // Set up the URL request
-            let todoEndpoint: String = "http://sun.shostka.in/gps.php/?getFromApp=data"
-            guard let url = URL(string: todoEndpoint) else {
-                print("Error: cannot create URL")
-                return
-            }
-            let urlRequest = URLRequest(url: url)
-            // set up the session
-            let config = URLSessionConfiguration.default
-            let session = URLSession(configuration: config)
-            // make the request
-            let task = session.dataTask(with: urlRequest) {
-                (data, response, error) in
-                // check for any errors
-                guard error == nil else {
-                    print("error calling GET on /todos/1")
-                    print(error!)
-                    return
-                }
-                // make sure we got data
-                guard let responseData = data else {
-                    print("Error: did not receive data")
-                    return
-                }
-                // parse the result as JSON, since that's what the API provides
-                do {
-                    guard let todo = try JSONSerialization.jsonObject(with: responseData, options: [])
-                        as? [Int: Any] else {
-                            print("error trying to convert data to JSON")
-                            return
+        var getParametr = "data"
+        
+        if city?.id == 100 {
+            getParametr = "temp"
+        }
+        
+        if city?.id == 101 {
+            getParametr = "humidity"
+        }
+        
+        if city?.id == 102 {
+            getParametr = "pressure"
+        }
+        
+        if city?.id == 106 {
+            getParametr = "pm2"
+        }
+
+       // var gname1: Array<Int>
+        guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?getFromApp=\(getParametr)") else { return }
+        
+        URLSession.shared.dataTask(with: gitUrl) { (data, response
+            , error) in
+            
+            guard let data = data else { return }
+            do {
+                
+                let decoder = JSONDecoder()
+                let gitData = try decoder.decode(MyGitHub.self, from: data)
+                
+                print("gitData: \(gitData)")
+                
+                
+                
+                DispatchQueue.main.sync {
+                    
+                    
+                    guard var gname1: Array<Double> = gitData.one as? Array<Double> else { return }
+                        print(gname1 as Any)
+                        // self.name.text = gname
+                    
+                    guard var gname2: Array<Double> = gitData.two as? Array<Double>  else { return }
+                        print(gname2 as Any)
+                        // self.name.text = gname
+
+                    if let gname3 = gitData.three {
+                        print(gname3)
+                        // self.name.text = gname
                     }
-                    // now we have the todo
-                    // let's just print it to prove we can access it
-                    print("The todo is: " + todo.description)
-                    // the todo object is a dictionary
-                    // so we just access the title using the "title" key
-                    // so check for a title and print it if we have one
-                    
-                    
-             /*       guard let todoTitle = todo["4"] as? Float else {
-                        print("Could not get todo title from JSON")
-                        return
+                    if let gname4 = gitData.four {
+                        print(gname4)
+                        // self.name.text = gname
                     }
-                 */
-                    //  self.updateChartData(todoTitle!)
-                    ////
                     
-                    self.values3 = (1..<(todo.count + 1)).map { (i) -> ChartDataEntry in
-                        // let val = Double(arc4random_uniform(range) + 3)
-                        // return ChartDataEntry(x: Double(i), y: val)
-                        return ChartDataEntry(x: Double(i), y: todo[i] as? Double ?? 0)
+
+                    gname1 = gname1.reversed()
+                    gname2 = gname2.reversed()
+                    
+                    print(gname1 as Any)
+    
+                    self.values3 = (0..<(gname1.count)).map { (i) -> ChartDataEntry in
+                        return ChartDataEntry(x: gname1[i], y: gname2[i])
                     }
                     print("values3_12345: \(String(describing: self.values3))")
                     
                     
-                   // print("The title is: \(String(describing: todoTitle))")
-                } catch  {
-                    print("error trying to convert data to JSON")
-                    return
                 }
                 
+            } catch let err {
+                print("Err", err)
             }
-            task.resume()
-            
-        }
+            }.resume()
         
+        
+        
+       
+                    
+               /*    self.values3 = (1..<(gname1.count + 1)).map { (i) -> ChartDataEntry in
+                        // let val = Double(arc4random_uniform(range) + 3)
+                        // return ChartDataEntry(x: Double(i), y: val)
+                    //    print("ChartDataEntry_x: \(todo[String(i)] as? Double ?? 0)")
+                      //i print("ChartDataEntry_y: \(todo[String(i + 1)] as? Double ?? 0)")
+                        
+                        
+                        return ChartDataEntry(x: gname1[i] as? Double ?? 0, y: gname1[i + 1] as? Double ?? 0)
+                    }
+                    print("values3_12345: \(String(describing: self.values3))")
+        
+                    */
+
+       
         
 
     }
