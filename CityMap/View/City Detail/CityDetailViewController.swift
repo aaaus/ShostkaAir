@@ -4,16 +4,16 @@ import Charts
 
 struct MyGitHub: Codable {
     
-    let one: [Double?]
-    let two: [Double?]
-    let three: Int?
+    let arrXAxis: [Double?]
+    let arrValue: [Double?]
+    let arrValueName: [String?]
     let four: Int?
     
     
     private enum CodingKeys: String, CodingKey {
-        case one
-        case two
-        case three
+        case arrXAxis
+        case arrValue
+        case arrValueName
         case four
     }
 }
@@ -28,7 +28,7 @@ private enum Constants {
  */
 final class CityDetailViewController: UIViewController {
     @IBOutlet private weak var cityImage: UIImageView!
-    @IBOutlet private weak var descriptionLabel: UILabel!
+   // @IBOutlet private weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var chartView: LineChartView!
     
@@ -66,12 +66,7 @@ final class CityDetailViewController: UIViewController {
     func timerHandler(_ timer: Timer) {
         let hola = "myDataChartTimer"
         print(">>>> \(hola)")
-
-        let set3 = LineChartDataSet(values: values3, label: "Графік 3")
-        print("values3_11111: \(String(describing: self.values3))")
-        print("set3_11111: \(set3))")
-        self.setDataCount(10, range: 1, set1: set3)
-        myDataChart();
+        myDataChart()
     }
     
     func startTimer() {
@@ -89,6 +84,7 @@ final class CityDetailViewController: UIViewController {
     
     
     
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,7 +96,7 @@ final class CityDetailViewController: UIViewController {
         
         //chartView.delegate = self
         
-        self.title = city?.name
+       // self.title = city?.name
         
         chartView.chartDescription?.enabled = false
         chartView.dragEnabled = true
@@ -187,17 +183,18 @@ final class CityDetailViewController: UIViewController {
         chartView.animate(xAxisDuration: 2.5)
         //self.setDataCount(5, range: 5, curentPoint: 5)
         myDataChart()
+        
     }
     
     
     
     
   private func setupData() {
-     guard let city = city else {
+   /*  guard let city = city else {
      return
-     }
-     title = city.name
-     descriptionLabel.text = city.description
+     }*/
+     title = "..."
+     //descriptionLabel.text = city.description
     
      // Set image using url to the image view using kingfisher extension.
      //cityImage.kf.setImage(with: city.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
@@ -212,35 +209,13 @@ final class CityDetailViewController: UIViewController {
     
     
     func setDataCount(_ count: Int, range: UInt32, set1: LineChartDataSet) {
-     /*   let now = Date().timeIntervalSince1970
-        let hourSeconds: TimeInterval = 3600
         
-        let from = now - (Double(count) / 2) * hourSeconds
-        let to = now + (Double(count) / 2) * hourSeconds
-        var y = 1 + range
-        let values = stride(from: from, to: to, by: hourSeconds).map { (x) -> ChartDataEntry in
-           // let y = arc4random_uniform(range) + 50
-            y = 1 + y
-           // print("ChartDataEntry(x: x, y: Double(y)): \(ChartDataEntry(x: x, y: Double(y)))")
-           // print("value: \(values)")
-             return ChartDataEntry(x: x, y: Double(y))
-        }*/
-        
-        let values2 = (0..<count).map { (i) -> ChartDataEntry in
+     /*   let values2 = (0..<count).map { (i) -> ChartDataEntry in
             let val = Double(arc4random_uniform(range) + 3)
             return ChartDataEntry(x: Double(i), y: val)
-          //  return ChartDataEntry(x: Double(i), y: Double(curentPoint))
-        }
+        }*/
         
-     //   print("values2: \(values2)")
-        
-       // let set1 = LineChartDataSet(values: values, label: "Графік 1")
-       // let set1 = LineChartDataSet(values: values2, label: "Графік 1")
-       // print("set: \(set1)")
-        
-       // let set2 = LineChartDataSet(values: values, label: "Графік 2")
         set1.drawIconsEnabled = false
-        
         set1.lineDashLengths = [5, 2.5]
         set1.highlightLineDashLengths = [5, 2.5]
         set1.setColor(.black)
@@ -270,11 +245,11 @@ final class CityDetailViewController: UIViewController {
     }
     
     var values3: [ChartDataEntry]?
+  
+    
     
     func myDataChart() {
     
-        
-        
         var getParametr = "data"
         
         if city?.id == 100 {
@@ -288,12 +263,14 @@ final class CityDetailViewController: UIViewController {
         if city?.id == 102 {
             getParametr = "pressure"
         }
+        if city?.id == 105 {
+            getParametr = "tvoc"
+        }
         
         if city?.id == 106 {
             getParametr = "pm2"
         }
 
-       // var gname1: Array<Int>
         guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?getFromApp=\(getParametr)") else { return }
         
         URLSession.shared.dataTask(with: gitUrl) { (data, response
@@ -312,20 +289,21 @@ final class CityDetailViewController: UIViewController {
                 DispatchQueue.main.sync {
                     
                     
-                    guard var gname1: Array<Double> = gitData.one as? Array<Double> else { return }
-                        print(gname1 as Any)
+                    guard var gname1: Array<Double> = gitData.arrXAxis as? Array<Double> else { return }
+                       // print(gname1 as Any)
                         // self.name.text = gname
                     
-                    guard var gname2: Array<Double> = gitData.two as? Array<Double>  else { return }
-                        print(gname2 as Any)
+                    guard var gname2: Array<Double> = gitData.arrValue as? Array<Double>  else { return }
+                      //  print(gname2 as Any)
                         // self.name.text = gname
 
-                    if let gname3 = gitData.three {
+                    guard let gname3: Array<String> = gitData.arrValueName as? Array<String>  else { return }
+                          self.title = gname3[0] + String(Int(gname2[0])) + gname3[1]
                         print(gname3)
                         // self.name.text = gname
-                    }
+    
                     if let gname4 = gitData.four {
-                        print(gname4)
+                         print(gname4)
                         // self.name.text = gname
                     }
                     
@@ -333,39 +311,28 @@ final class CityDetailViewController: UIViewController {
                     gname1 = gname1.reversed()
                     gname2 = gname2.reversed()
                     
-                    print(gname1 as Any)
+                  //  print(gname1 as Any)
     
                     self.values3 = (0..<(gname1.count)).map { (i) -> ChartDataEntry in
                         return ChartDataEntry(x: gname1[i], y: gname2[i])
                     }
                     print("values3_12345: \(String(describing: self.values3))")
-                    
+
+                   // self.dataChartUpdate()
+                    let set3 = LineChartDataSet(values: self.values3, label: gname3[2])
+                    // print("values3_11111: \(String(describing: self.values3))")
+                    // print("set3_11111: \(set3))")
+                    self.setDataCount(10, range: 1, set1: set3)
                     
                 }
+                
+                
                 
             } catch let err {
                 print("Err", err)
             }
             }.resume()
-        
-        
-        
-       
-                    
-               /*    self.values3 = (1..<(gname1.count + 1)).map { (i) -> ChartDataEntry in
-                        // let val = Double(arc4random_uniform(range) + 3)
-                        // return ChartDataEntry(x: Double(i), y: val)
-                    //    print("ChartDataEntry_x: \(todo[String(i)] as? Double ?? 0)")
-                      //i print("ChartDataEntry_y: \(todo[String(i + 1)] as? Double ?? 0)")
-                        
-                        
-                        return ChartDataEntry(x: gname1[i] as? Double ?? 0, y: gname1[i + 1] as? Double ?? 0)
-                    }
-                    print("values3_12345: \(String(describing: self.values3))")
-        
-                    */
 
-       
         
 
     }
@@ -375,13 +342,13 @@ final class CityDetailViewController: UIViewController {
         
         
         //let todoTitle: Float? = 0
-        let set3 = LineChartDataSet(values: values3, label: "Графік 3")
+     /*   let set3 = LineChartDataSet(values: values3, label: "Графік 3")
         
         print("values3_11111: \(String(describing: self.values3))")
         print("set3_11111: \(set3))")
         
         self.setDataCount(10, range: 1, set1: set3)
-        
+        */
         
     }
     
