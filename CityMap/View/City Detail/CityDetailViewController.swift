@@ -524,19 +524,4 @@ final class CityDetailViewController: UIViewController {
     
     
     
-    
-    @IBAction func dataChange(_ sender: UIButton) {
-        
-        
-        //let todoTitle: Float? = 0
-     /*   let set3 = LineChartDataSet(values: values3, label: "Графік 3")
-        
-        print("values3_11111: \(String(describing: self.values3))")
-        print("set3_11111: \(set3))")
-        
-        self.setDataCount(10, range: 1, set1: set3)
-        */
-        
-    }
-    
 }
