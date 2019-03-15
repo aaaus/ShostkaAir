@@ -32,7 +32,8 @@ final class CityDetailViewController: UIViewController {
     
     @IBOutlet weak var chartView: LineChartView!
     
-   // var months: [String]!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    // var months: [String]!
     
     /**
      Get currently represented city or set the new city to update detail page information.
@@ -40,6 +41,8 @@ final class CityDetailViewController: UIViewController {
      */
     var city: City?
     var sensorStationNumber: Int = 0
+    var xAxisDotsCountToGet: Int = 8
+    var timeFormat: String = "HH:mm"
     
     
     /// Timer Area
@@ -90,77 +93,208 @@ final class CityDetailViewController: UIViewController {
         super.viewDidLoad()
   
           setupData()
+          setupChartFromJSON()
+        
+        }
+    
+    
+    
+    func setupChartFromJSON() {
         
         // Do any additional setup after loading the view.
-   //     self.title = "Time Line Chart"
+        //     self.title = "Time Line Chart"
         
         //chartView.delegate = self
         
-       // self.title = city?.name
+        // self.title = city?.name
         
         chartView.chartDescription?.enabled = false
         chartView.dragEnabled = true
         chartView.setScaleEnabled(true)
         chartView.pinchZoomEnabled = true
         
-        // x-axis limit line
-        let llXAxis = ChartLimitLine(limit: 10, label: "Index 10")
-        llXAxis.lineWidth = 4
-        llXAxis.lineDashLengths = [10, 10, 0]
-        llXAxis.labelPosition = .rightBottom
-        llXAxis.valueFont = .systemFont(ofSize: 10)
-        
-       // llXAxis.granularity = 3600
-       // xAxis.valueFormatter = DateValueFormatter()
+        // llXAxis.granularity = 3600
+        // xAxis.valueFormatter = DateValueFormatter()
         
         chartView.xAxis.gridLineDashLengths = [10, 10]
         chartView.xAxis.gridLineDashPhase = 0
-       // chartView.xAxis.valueFormatter = DateValueFormatter()
-      //  chartView.xAxis.labelTextColor = UIColor(red: 255/255, green: 192/255, blue: 56/255, alpha: 1)
-       // xAxis.granularity = 3600
-        chartView.xAxis.valueFormatter = DateValueFormatter() as IAxisValueFormatter
-       // chartView.xAxis.avoidFirstLastClippingEnabled = true
-       // chartView.xAxis.spaceMax = 100
+        // chartView.xAxis.valueFormatter = DateValueFormatter()
+        //  chartView.xAxis.labelTextColor = UIColor(red: 255/255, green: 192/255, blue: 56/255, alpha: 1)
+        // xAxis.granularity = 3600
+        let testDateFormater = DateValueFormatter()
+        testDateFormater.dateFormatter.dateFormat = timeFormat
         
         
-        let ll1 = ChartLimitLine(limit: 150, label: "Верхня межа")
+        chartView.xAxis.valueFormatter = testDateFormater as IAxisValueFormatter
+        // chartView.xAxis.avoidFirstLastClippingEnabled = true
+        // chartView.xAxis.spaceMax = 100
+        
+        
+
+        
+        /*  let ll2 = ChartLimitLine(limit: -30, label: "Нижня межа")
+         ll2.lineWidth = 4
+         ll2.lineDashLengths = [5,5]
+         ll2.labelPosition = .rightBottom
+         ll2.valueFont = .systemFont(ofSize: 10)
+         ll2.lineColor = ChartColorTemplates.colorFromString("#0000ff") */
+        
+        let leftAxis = chartView.leftAxis
+        leftAxis.removeAllLimitLines()
+        
+        //  leftAxis.addLimitLine(ll2)
+        
+        leftAxis.axisMaximum = 200
+        leftAxis.axisMinimum = 0
+        
+        if city?.id == 100 { //Температура
+            leftAxis.axisMaximum = 80
+            leftAxis.axisMinimum = -40
+            let ll1 = ChartLimitLine(limit: 0, label: "")
+            ll1.lineWidth = 4
+            ll1.lineDashLengths = [5, 5]
+            ll1.labelPosition = .rightTop
+            ll1.valueFont = .systemFont(ofSize: 10)
+            ll1.lineColor = .black
+            leftAxis.addLimitLine(ll1)
+        }
+        if city?.id == 101 { //Влажность
+            leftAxis.axisMaximum = 100
+        }
+        if city?.id == 102 { //Атмосферное давление
+            leftAxis.axisMaximum = 1000
+        }
+        if city?.id == 103 { //TVOC
+            leftAxis.axisMaximum = 1200
+            let ll1 = ChartLimitLine(limit: 600, label: "Задовільно")
+            ll1.lineWidth = 4
+            ll1.lineDashLengths = [5, 5]
+            ll1.labelPosition = .rightTop
+            ll1.valueFont = .systemFont(ofSize: 10)
+            ll1.lineColor = .orange
+            leftAxis.addLimitLine(ll1)
+            let ll2 = ChartLimitLine(limit: 1100, label: "Верхня межа")
+            ll2.lineWidth = 4
+            ll2.lineDashLengths = [5, 5]
+            ll2.labelPosition = .rightTop
+            ll2.valueFont = .systemFont(ofSize: 10)
+            ll2.lineColor = .red
+            leftAxis.addLimitLine(ll2)
+        }
+        
+        if city?.id == 104 { //Формальдегид
+            leftAxis.axisMaximum = 0.4
+            let ll1 = ChartLimitLine(limit: 0.1, label: "Задовільно")
+            ll1.lineWidth = 4
+            ll1.lineDashLengths = [5, 5]
+            ll1.labelPosition = .rightTop
+            ll1.valueFont = .systemFont(ofSize: 10)
+            ll1.lineColor = .orange
+            leftAxis.addLimitLine(ll1)
+            let ll2 = ChartLimitLine(limit: 0.3, label: "Верхня межа")
+            ll2.lineWidth = 4
+            ll2.lineDashLengths = [5, 5]
+            ll2.labelPosition = .rightTop
+            ll2.valueFont = .systemFont(ofSize: 10)
+            ll2.lineColor = .red
+            leftAxis.addLimitLine(ll2)
+        }
+        
+        if city?.id == 105 { //ECO2
+            leftAxis.axisMaximum = 10000
+        }
+        
+        if city?.id == 106 { //PM1
+            leftAxis.axisMaximum = 400
+            let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
+            ll1.lineWidth = 4
+            ll1.lineDashLengths = [5, 5]
+            ll1.labelPosition = .rightTop
+            ll1.valueFont = .systemFont(ofSize: 10)
+            ll1.lineColor = .orange
+            leftAxis.addLimitLine(ll1)
+            let ll2 = ChartLimitLine(limit: 300, label: "Верхня межа")
+            ll2.lineWidth = 4
+            ll2.lineDashLengths = [5, 5]
+            ll2.labelPosition = .rightTop
+            ll2.valueFont = .systemFont(ofSize: 10)
+            ll2.lineColor = .red
+            leftAxis.addLimitLine(ll2)
+        }
+        
+        if city?.id == 107 { //PM2
+            leftAxis.axisMaximum = 400
+            let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
+            ll1.lineWidth = 4
+            ll1.lineDashLengths = [5, 5]
+            ll1.labelPosition = .rightTop
+            ll1.valueFont = .systemFont(ofSize: 10)
+            ll1.lineColor = .orange
+            leftAxis.addLimitLine(ll1)
+            let ll2 = ChartLimitLine(limit: 300, label: "Верхня межа")
+            ll2.lineWidth = 4
+            ll2.lineDashLengths = [5, 5]
+            ll2.labelPosition = .rightTop
+            ll2.valueFont = .systemFont(ofSize: 10)
+            ll2.lineColor = .red
+            leftAxis.addLimitLine(ll2)
+        }
+        
+        if city?.id == 108 { //PM10
+            leftAxis.axisMaximum = 400
+            let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
+            ll1.lineWidth = 4
+            ll1.lineDashLengths = [5, 5]
+            ll1.labelPosition = .rightTop
+            ll1.valueFont = .systemFont(ofSize: 10)
+            ll1.lineColor = .orange
+            leftAxis.addLimitLine(ll1)
+            let ll2 = ChartLimitLine(limit: 300, label: "Верхня межа")
+            ll2.lineWidth = 4
+            ll2.lineDashLengths = [5, 5]
+            ll2.labelPosition = .rightTop
+            ll2.valueFont = .systemFont(ofSize: 10)
+            ll2.lineColor = .red
+            leftAxis.addLimitLine(ll2)
+        }
+        
+        if city?.id == 109 { //Дождь
+            leftAxis.axisMaximum = 1
+        }
+        
+        if city?.id == 110 { //Напрвление ветра
+            leftAxis.axisMaximum = 1
+        }
+        
+        if city?.id == 111 { //Скорость ветра
+            leftAxis.axisMaximum = 30
+            let ll1 = ChartLimitLine(limit: 15, label: "Задовільно")
+            ll1.lineWidth = 4
+            ll1.lineDashLengths = [5, 5]
+            ll1.labelPosition = .rightTop
+            ll1.valueFont = .systemFont(ofSize: 10)
+            ll1.lineColor = .orange
+            leftAxis.addLimitLine(ll1)
+            let ll2 = ChartLimitLine(limit: 25, label: "Верхня межа")
+            ll2.lineWidth = 4
+            ll2.lineDashLengths = [5, 5]
+            ll2.labelPosition = .rightTop
+            ll2.valueFont = .systemFont(ofSize: 10)
+            ll2.lineColor = .red
+            leftAxis.addLimitLine(ll2)
+        }
+        
+
+        
+        
+       /* let ll1 = ChartLimitLine(limit: 150, label: "Верхня межа")
         ll1.lineWidth = 4
         ll1.lineDashLengths = [5, 5]
         ll1.labelPosition = .rightTop
         ll1.valueFont = .systemFont(ofSize: 10)
-        
-      /*  let ll2 = ChartLimitLine(limit: -30, label: "Нижня межа")
-        ll2.lineWidth = 4
-        ll2.lineDashLengths = [5,5]
-        ll2.labelPosition = .rightBottom
-        ll2.valueFont = .systemFont(ofSize: 10)
-        ll2.lineColor = ChartColorTemplates.colorFromString("#0000ff") */
-        
-        let leftAxis = chartView.leftAxis
-        leftAxis.removeAllLimitLines()
-        leftAxis.addLimitLine(ll1)
-      //  leftAxis.addLimitLine(ll2)
-        
-        leftAxis.axisMaximum = 200
-        
-        if city?.id == 100 {
-            leftAxis.axisMaximum = 100
-        }
-        
-        if city?.id == 101 {
-            leftAxis.axisMaximum = 100
-        }
-        
-        if city?.id == 102 {
-            leftAxis.axisMaximum = 1000
-        }
-        
-        if city?.id == 106 {
-            leftAxis.axisMaximum = 100
-        }
+        leftAxis.addLimitLine(ll1)*/
         
         
-        leftAxis.axisMinimum = 0
         leftAxis.gridLineDashLengths = [5, 5]
         leftAxis.drawLimitLinesBehindDataEnabled = true
         
@@ -169,25 +303,22 @@ final class CityDetailViewController: UIViewController {
         //[_chartView.viewPortHandler setMaximumScaleY: 2.f];
         //[_chartView.viewPortHandler setMaximumScaleX: 2.f];
         
-       /* let marker = BalloonMarker(color: UIColor(white: 180/255, alpha: 1),
-                                   font: .systemFont(ofSize: 12),
-                                   textColor: .white,
-                                   insets: UIEdgeInsets(top: 8, left: 8, bottom: 20, right: 8))
-        marker.chartView = chartView
-        marker.minimumSize = CGSize(width: 80, height: 40)
-        chartView.marker = marker*/
+        /* let marker = BalloonMarker(color: UIColor(white: 180/255, alpha: 1),
+         font: .systemFont(ofSize: 12),
+         textColor: .white,
+         insets: UIEdgeInsets(top: 8, left: 8, bottom: 20, right: 8))
+         marker.chartView = chartView
+         marker.minimumSize = CGSize(width: 80, height: 40)
+         chartView.marker = marker*/
         chartView.legend.form = .line
-       /* sliderX.value = 45
-        sliderY.value = 100
-        slidersValueChanged(nil)*/
+        /* sliderX.value = 45
+         sliderY.value = 100
+         slidersValueChanged(nil)*/
         chartView.animate(xAxisDuration: 2.5)
         //self.setDataCount(5, range: 5, curentPoint: 5)
         myDataChart()
         
     }
-    
-    
-    
     
   private func setupData() {
    /*  guard let city = city else {
@@ -251,27 +382,47 @@ final class CityDetailViewController: UIViewController {
     func myDataChart() {
     
         var getParametr = "data"
-        
         if city?.id == 100 {
             getParametr = "temp"
         }
-        
         if city?.id == 101 {
             getParametr = "humidity"
         }
-        
         if city?.id == 102 {
             getParametr = "pressure"
         }
-        if city?.id == 105 {
+        if city?.id == 103 {
             getParametr = "tvoc"
         }
-        
+        if city?.id == 104 {
+            getParametr = "ch2o"
+        }
+        if city?.id == 105 {
+            getParametr = "co2"
+        }
         if city?.id == 106 {
+            getParametr = "pm1"
+        }
+        if city?.id == 107 {
             getParametr = "pm2"
         }
+        if city?.id == 108 {
+            getParametr = "pm10"
+        }
+        if city?.id == 109 {
+            getParametr = "rain"
+        }
+        if city?.id == 110 {
+            getParametr = "winddirect"
+        }
+        if city?.id == 111 {
+            getParametr = "windspeed"
+        }
+        
+        
+        //".$_GET[$co2].", ".$_GET[$tvoc].", ".$_GET[$pm1].", ".$_GET[$pm2].", ".$_GET[$pm10]
 
-        guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?getFromApp=\(getParametr)") else { return }
+        guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?&getFromApp=\(getParametr)&xAxis=\(xAxisDotsCountToGet)") else { return }
         
         URLSession.shared.dataTask(with: gitUrl) { (data, response
             , error) in
@@ -336,6 +487,42 @@ final class CityDetailViewController: UIViewController {
         
 
     }
+    
+    
+    
+    
+
+    
+
+    @IBAction func indexChanged(_ sender: Any) {
+        
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            print("1")
+            xAxisDotsCountToGet = 8
+            timeFormat = "HH:mm"
+        case 1:
+            print("2")
+            xAxisDotsCountToGet = 300
+            timeFormat = "dd MMM"
+        case 2:
+            print("3")
+            xAxisDotsCountToGet = 1000
+            timeFormat = "dd MMM"
+        case 3:
+            print("4")
+            xAxisDotsCountToGet = 2000
+            timeFormat = "dd MMM"
+        default:
+            break
+        }
+        setupChartFromJSON()
+        myDataChart()
+    }
+    
+    
+    
     
     
     @IBAction func dataChange(_ sender: UIButton) {

@@ -24,28 +24,33 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <viewLayoutGuide key="safeArea" id="DcS-1z-iUR"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27A-bR-TC2">
-                                <rect key="frame" x="50" y="480" width="220" height="30"/>
-                                <state key="normal" title="Хвилини Години Дні Місяць"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QL0-7l-YEK">
+                                <rect key="frame" x="28.5" y="486" width="263" height="29"/>
+                                <segments>
+                                    <segment title="Хвилини" width="65"/>
+                                    <segment title="Години" width="65"/>
+                                    <segment title="Дні" width="65"/>
+                                    <segment title="Місяці" width="65"/>
+                                </segments>
                                 <connections>
-                                    <action selector="dataChange:" destination="Uyt-9q-BeH" eventType="touchUpInside" id="Dqp-Vy-F5U"/>
+                                    <action selector="indexChanged:" destination="Uyt-9q-BeH" eventType="valueChanged" id="ctI-7h-jNa"/>
                                 </connections>
-                            </button>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="top" secondItem="jS0-iv-jDb" secondAttribute="top" id="Juu-OJ-MKM"/>
-                            <constraint firstItem="jS0-iv-jDb" firstAttribute="bottom" secondItem="27A-bR-TC2" secondAttribute="bottom" constant="9" id="KfO-nF-qMq"/>
-                            <constraint firstItem="27A-bR-TC2" firstAttribute="leading" secondItem="jS0-iv-jDb" secondAttribute="leading" constant="50" id="Lhl-Vg-UB6"/>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="leading" secondItem="jS0-iv-jDb" secondAttribute="leading" id="NzH-HV-Od2"/>
+                            <constraint firstItem="QL0-7l-YEK" firstAttribute="centerX" secondItem="jS0-iv-jDb" secondAttribute="centerX" id="e5r-Ln-SMV"/>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="centerY" secondItem="wkm-Al-bTJ" secondAttribute="centerY" constant="-7.5" id="eKb-HA-5zX"/>
-                            <constraint firstItem="jS0-iv-jDb" firstAttribute="trailing" secondItem="27A-bR-TC2" secondAttribute="trailing" constant="50" id="hvK-8X-ArS"/>
+                            <constraint firstItem="jS0-iv-jDb" firstAttribute="bottom" secondItem="QL0-7l-YEK" secondAttribute="bottom" constant="5" id="fI8-pe-1c7"/>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="trailing" secondItem="jS0-iv-jDb" secondAttribute="trailing" id="oUi-Pq-YUS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jS0-iv-jDb"/>
                     </view>
                     <connections>
                         <outlet property="chartView" destination="gOD-pD-XU6" id="AP6-eK-CYI"/>
+                        <outlet property="segmentedControl" destination="QL0-7l-YEK" id="fXZ-Xx-tx9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obu-a8-eVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
