@@ -30,7 +30,21 @@ class SensorsViewCell: UICollectionViewCell {
     }
     
     private func update() {
+        
+        let parametrStatus = city?.location.latitude
         cityLabel.text = city?.name
+        
+        cityLabel.backgroundColor = UIColor(red: 135/255, green: 135/255, blue: 135/255, alpha: 0.5)
+        if (parametrStatus == 1) {
+            cityLabel.backgroundColor = UIColor(red: 67/255, green: 227/255, blue: 27/255, alpha: 0.5)
+        }
+        if (parametrStatus == 2) {
+            cityLabel.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 12/255, alpha: 0.4)
+        }
+        if (parametrStatus == 3) {
+            cityLabel.backgroundColor = UIColor(red: 245/255, green: 63/255, blue: 12/255, alpha: 0.5)
+        }
+        
         
         // Set image using url to the image view using kingfisher extension.
         cityImage.kf.setImage(with: city?.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))

@@ -18,6 +18,9 @@ private enum Constants {
     All cities controller to show all available cities as a collection.
 */
 class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
+    
 
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -38,11 +41,58 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     var city: City?
     var laboratoryCount: Int = 0
     
+
+    
+    
+    /// Timer Area
+    override func viewWillAppear(_ animated: Bool) {  
+        print("Load")
+        startTimer()
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("UnLoad")
+        stopTimer()
+        
+    }
+    
+    
+    weak var timer: Timer?
+    
+    deinit {
+        timer?.invalidate()
+    }
+    
+    func timerHandler(_ timer: Timer) {
+        let hola = "CitiesViewController"
+        print(">>>> \(hola)")
+        setupData()
+        self.collectionView.reloadData()
+        // SensorsViewCell
+    }
+    
+    func startTimer() {
+        timer?.invalidate()   // stops previous timer, if any
+        
+        let seconds = 5.0
+        timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] timer in
+            self?.timerHandler(timer)
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+    }
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupData()
-        
     }
 
     private func setupData() {

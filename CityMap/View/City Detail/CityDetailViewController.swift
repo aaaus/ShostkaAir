@@ -183,15 +183,15 @@ final class CityDetailViewController: UIViewController {
         }
         
         if city?.id == 104 { //Формальдегид
-            leftAxis.axisMaximum = 0.4
-            let ll1 = ChartLimitLine(limit: 0.1, label: "Задовільно")
+            leftAxis.axisMaximum = 2
+            let ll1 = ChartLimitLine(limit: 0.4, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
             ll1.labelPosition = .rightTop
             ll1.valueFont = .systemFont(ofSize: 10)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
-            let ll2 = ChartLimitLine(limit: 0.3, label: "Верхня межа")
+            let ll2 = ChartLimitLine(limit: 0.8, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
             ll2.labelPosition = .rightTop
@@ -201,7 +201,21 @@ final class CityDetailViewController: UIViewController {
         }
         
         if city?.id == 105 { //ECO2
-            leftAxis.axisMaximum = 10000
+            leftAxis.axisMaximum = 1000
+            let ll1 = ChartLimitLine(limit: 400, label: "Задовільно")
+            ll1.lineWidth = 4
+            ll1.lineDashLengths = [5, 5]
+            ll1.labelPosition = .rightTop
+            ll1.valueFont = .systemFont(ofSize: 10)
+            ll1.lineColor = .orange
+            leftAxis.addLimitLine(ll1)
+            let ll2 = ChartLimitLine(limit: 800, label: "Верхня межа")
+            ll2.lineWidth = 4
+            ll2.lineDashLengths = [5, 5]
+            ll2.labelPosition = .rightTop
+            ll2.valueFont = .systemFont(ofSize: 10)
+            ll2.lineColor = .red
+            leftAxis.addLimitLine(ll2)
         }
         
         if city?.id == 106 { //PM1
@@ -416,7 +430,8 @@ final class CityDetailViewController: UIViewController {
             getParametr = "winddirect"
         }
         if city?.id == 111 {
-            getParametr = "windspeed"
+           // getParametr = "windspeed"
+           getParametr = "uvlevel" 
         }
         
         
@@ -449,7 +464,12 @@ final class CityDetailViewController: UIViewController {
                         // self.name.text = gname
 
                     guard let gname3: Array<String> = gitData.arrValueName as? Array<String>  else { return }
-                          self.title = gname3[0] + String(Int(gname2[0])) + gname3[1]
+                    
+                    if ((gname2[0] < 1) && (gname2[0] > -1)) { //Если меньше 1 показывать дробное число в шапке
+                    self.title = gname3[0] + String(Float(gname2[0])) + gname3[1]
+                    } else {
+                    self.title = gname3[0] + String(Int(gname2[0])) + gname3[1]
+                    }
                         print(gname3)
                         // self.name.text = gname
     
@@ -504,7 +524,7 @@ final class CityDetailViewController: UIViewController {
             timeFormat = "HH:mm"
         case 1:
             print("2")
-            xAxisDotsCountToGet = 300
+            xAxisDotsCountToGet = 100
             timeFormat = "dd MMM"
         case 2:
             print("3")

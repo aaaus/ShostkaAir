@@ -29,6 +29,7 @@
 		2B1BCF4122396AAD00CEF0B8 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1BCF4022396AAD00CEF0B8 /* DateValueFormatter.swift */; };
 		2B482DDB22240CAD003246E6 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B482DDA22240CAD003246E6 /* Charts.framework */; };
 		2B482DDE22241DCE003246E6 /* SensorsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B482DDD22241DCE003246E6 /* SensorsViewCell.swift */; };
+		2B5B67B022427B800003EA1B /* HeatmapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5B67AF22427B800003EA1B /* HeatmapViewController.swift */; };
 		2B765B54222D493B00118477 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B765B53222D493B00118477 /* NewsViewController.swift */; };
 		2B765B56222D494E00118477 /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B765B55222D494E00118477 /* NewsViewCell.swift */; };
 		2B9049A7222AA63300530633 /* WordPress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B9049A5222AA62700530633 /* WordPress.framework */; };
@@ -97,6 +98,8 @@
 		2B1BCF4022396AAD00CEF0B8 /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		2B482DDA22240CAD003246E6 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B482DDD22241DCE003246E6 /* SensorsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsViewCell.swift; sourceTree = "<group>"; };
+		2B5B67AF22427B800003EA1B /* HeatmapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapViewController.swift; sourceTree = "<group>"; };
+		2B5B67B322427D990003EA1B /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Pods/GoogleMaps/Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		2B765B53222D493B00118477 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		2B765B55222D494E00118477 /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
 		2B90499E222AA61B00530633 /* WordPress */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WordPress; sourceTree = "<group>"; };
@@ -237,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				0E2F8BFF202F8DDF00A94BD4 /* MapViewController.swift */,
+				2B5B67AF22427B800003EA1B /* HeatmapViewController.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -300,6 +304,7 @@
 		EA411E728FE11043634EC324 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B5B67B322427D990003EA1B /* GoogleMapsBase.framework */,
 				2B9049A0222AA62700530633 /* WordPress.xcodeproj */,
 				2B90499E222AA61B00530633 /* WordPress */,
 				2B482DDA22240CAD003246E6 /* Charts.framework */,
@@ -462,6 +467,7 @@
 				2B765B54222D493B00118477 /* NewsViewController.swift in Sources */,
 				0E06CAF0202884A8002E9650 /* AppDelegate.swift in Sources */,
 				0E69DA61202F7A8F00999974 /* CitiesCollectionLayout.swift in Sources */,
+				2B5B67B022427B800003EA1B /* HeatmapViewController.swift in Sources */,
 				0E69DA6D202F84AC00999974 /* CoreDataProvider.swift in Sources */,
 				0E2F8BFD202F8A1E00A94BD4 /* CityWebService.swift in Sources */,
 				0E2F8C00202F8DDF00A94BD4 /* MapViewController.swift in Sources */,

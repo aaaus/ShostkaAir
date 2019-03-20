@@ -94,7 +94,8 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
             return
         }
        // print("city.id: \(city.id)")
-        title = city.name
+        
+        title = (city.name.components(separatedBy: "#"))[0]
         sensorStationNumber = city.id
         setupData()
         
