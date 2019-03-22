@@ -397,7 +397,7 @@ final class CityDetailViewController: UIViewController {
     
         var getParametr = "data"
         if city?.id == 100 {
-            getParametr = "temp"
+            getParametr = "tempDS"
         }
         if city?.id == 101 {
             getParametr = "humidity"
@@ -412,7 +412,7 @@ final class CityDetailViewController: UIViewController {
             getParametr = "ch2o"
         }
         if city?.id == 105 {
-            getParametr = "co2"
+            getParametr = "oaq"
         }
         if city?.id == 106 {
             getParametr = "pm1"
@@ -430,8 +430,8 @@ final class CityDetailViewController: UIViewController {
             getParametr = "winddirect"
         }
         if city?.id == 111 {
-           // getParametr = "windspeed"
-           getParametr = "uvlevel" 
+            getParametr = "windspeed"
+          // getParametr = "uvlevel"
         }
         
         
