@@ -7,11 +7,11 @@
 //
 
 import Foundation
-//import GoogleMaps
+import GoogleMaps
 import UIKit
 
-class HeatmapViewController: UIViewController {
-  /*  private var mapView: GMSMapView!
+class HeatmapViewController: UIViewController, GMSMapViewDelegate {
+    private var mapView: GMSMapView!
     private var heatmapLayer: GMUHeatmapTileLayer!
     private var button: UIButton!
     
@@ -19,22 +19,37 @@ class HeatmapViewController: UIViewController {
     private var gradientStartPoints = [0.2, 1.0] as [NSNumber]
     
     override func loadView() {
-        let camera = GMSCameraPosition.camera(withLatitude: -37.848, longitude: 145.001, zoom: 10)
+        let camera = GMSCameraPosition.camera(withLatitude: 51.868849, longitude: 33.473487, zoom: 14)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        mapView.settings.compassButton = true
+        mapView.settings.myLocationButton = true
+        //mapView.accessibilityElementsHidden = false
+        //mapView.isMyLocationEnabled = true
+        mapView.setMinZoom(13, maxZoom: 14)
         mapView.delegate = self
         self.view = mapView
-        makeButton()
+       // makeButton()
+        
+        let position = CLLocationCoordinate2D(latitude: 51.869846, longitude: 33.461001)
+        let london = GMSMarker(position: position)
+        london.title = "Лаборатория 1"
+        london.snippet = "Измерение базовых параметров"
+        //london.tracksInfoWindowChanges = true
+        //london.tracksViewChanges = true
+        
+        london.map = mapView
     }
     
     override func viewDidLoad() {
         // Set heatmap options.
         heatmapLayer = GMUHeatmapTileLayer()
-        heatmapLayer.radius = 80
-        heatmapLayer.opacity = 0.8
+        heatmapLayer.radius = 120
+        heatmapLayer.opacity = 0.7
         heatmapLayer.gradient = GMUGradient(colors: gradientColors,
                                             startPoints: gradientStartPoints,
                                             colorMapSize: 256)
         addHeatmap()
+        print("addHeatmap")
         
         // Set the heatmap to the mapview.
         heatmapLayer.map = mapView
@@ -45,7 +60,7 @@ class HeatmapViewController: UIViewController {
         var list = [GMUWeightedLatLng]()
         do {
             // Get the data: latitude/longitude positions of police stations.
-            if let path = Bundle.main.url(forResource: "police_stations", withExtension: "json") {
+            if let path = Bundle.main.url(forResource: "stations", withExtension: "json") {
                 let data = try Data(contentsOf: path)
                 let json = try JSONSerialization.jsonObject(with: data, options: [])
                 if let object = json as? [[String: Any]] {
@@ -66,7 +81,7 @@ class HeatmapViewController: UIViewController {
         heatmapLayer.weightedData = list
     }
     
-    func removeHeatmap() {
+    @objc func removeHeatmap() {
         heatmapLayer.map = nil
         heatmapLayer = nil
         // Disable the button to prevent subsequent calls, since heatmapLayer is now nil.
@@ -78,14 +93,14 @@ class HeatmapViewController: UIViewController {
     }
     
     // Add a button to the view.
-    func makeButton() {
+   /* func makeButton() {
         // A button to test removing the heatmap.
         button = UIButton(frame: CGRect(x: 5, y: 150, width: 200, height: 35))
         button.backgroundColor = .blue
         button.alpha = 0.5
-        button.setTitle("Remove heatmap", for: .normal)
+        button.setTitle("Очистити карту", for: .normal)
         button.addTarget(self, action: #selector(removeHeatmap), for: .touchUpInside)
         self.mapView.addSubview(button)
+ 
     }*/
 }
-

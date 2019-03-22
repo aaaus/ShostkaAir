@@ -1,12 +1,16 @@
 import UIKit
 
 @UIApplicationMain
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        GMSServices.provideAPIKey("AIzaSyAoiHutAlBWJoTob_5y-Gbh85F1L-nwQWM")
         // Override point for customization after application launch.
         //sleep(10)
         // Override point for customization after application launch.

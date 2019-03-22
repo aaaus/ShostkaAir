@@ -254,12 +254,19 @@
                     </view>
                     <navigationItem key="navigationItem" title="Лабораторії" id="LYh-qI-2ys">
                         <barButtonItem key="backBarButtonItem" title="Лабораторії" id="TNa-mc-9tv"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="M1G-n1-HTt">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="UCa-HJ-Twx" kind="show" identifier="ShowMap" id="UaI-2J-c2W"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="bookmarks" id="M1G-n1-HTt">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="UCa-HJ-Twx" kind="show" identifier="ShowMap" id="UaI-2J-c2W"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Map" id="NK6-Xu-DsM">
+                                <connections>
+                                    <segue destination="fCa-Qg-WXj" kind="show" id="YpI-Xf-2kF"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="MMG-mp-x5a" id="yzz-s6-B9u"/>
@@ -269,6 +276,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjr-Y8-4q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="645" y="106.69014084507042"/>
+        </scene>
+        <!--Heatmap View Controller-->
+        <scene sceneID="hLn-hx-rKO">
+            <objects>
+                <viewController id="fCa-Qg-WXj" customClass="HeatmapViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0tG-Os-WuH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wSg-gT-54C"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6F-d6-MgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1579" y="-279"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="me7-bh-RaK">

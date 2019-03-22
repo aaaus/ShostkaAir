@@ -207,6 +207,10 @@ Apache License
 
 
 
+## GoogleMaps
+
+Copyright 2018 Google
+
 ## Kingfisher
 
 The MIT License (MIT)

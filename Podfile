@@ -6,7 +6,9 @@ target 'CityMap' do
   use_frameworks!
 
   # Pods for CityMap
-  pod 'Kingfisher', '~> 4.0'
+  pod 'Kingfisher'
   pod 'Charts'
+  pod 'GoogleMaps'
+  pod 'Google-Maps-iOS-Utils', :path => '../..'
 end
 
