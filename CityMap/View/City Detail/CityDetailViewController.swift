@@ -201,8 +201,8 @@ final class CityDetailViewController: UIViewController {
         }
         
         if city?.id == 105 { //ECO2
-            leftAxis.axisMaximum = 1000
-            let ll1 = ChartLimitLine(limit: 400, label: "Задовільно")
+            leftAxis.axisMaximum = 50
+           /* let ll1 = ChartLimitLine(limit: 400, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
             ll1.labelPosition = .rightTop
@@ -215,7 +215,7 @@ final class CityDetailViewController: UIViewController {
             ll2.labelPosition = .rightTop
             ll2.valueFont = .systemFont(ofSize: 10)
             ll2.lineColor = .red
-            leftAxis.addLimitLine(ll2)
+            leftAxis.addLimitLine(ll2)*/
         }
         
         if city?.id == 106 { //PM1
