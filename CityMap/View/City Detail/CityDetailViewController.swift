@@ -201,7 +201,7 @@ final class CityDetailViewController: UIViewController {
         }
         
         if city?.id == 105 { //ECO2
-            leftAxis.axisMaximum = 50
+            leftAxis.axisMaximum = 80
            /* let ll1 = ChartLimitLine(limit: 400, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
