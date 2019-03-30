@@ -2,6 +2,10 @@ import UIKit
 import Kingfisher
 import Charts
 
+private enum Segues: String {
+    case showInfo = "showInfo"
+}
+
 struct MyGitHub: Codable {
     
     let arrXAxis: [Double?]
@@ -91,11 +95,36 @@ final class CityDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-  
           setupData()
           setupChartFromJSON()
-        
         }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueIdentifier = segue.identifier else {
+            return
+        }
+        
+        switch segueIdentifier {
+        case Segues.showInfo.rawValue:
+          guard let infoController = segue.destination as? LocalInfoController else {
+                return
+            }
+            
+           // detailsController.city = cityCell.city
+            infoController.id = city?.id
+    /*    //detailsController.sensorStationNumber = sensorStationNumber
+        case Segues.showMap.rawValue:
+            guard let mapController = segue.destination as? MapViewController else {
+                return
+            }
+            
+            mapController.cities = cities*/
+        default:
+            break
+        }
+    }
     
     
     
@@ -201,21 +230,21 @@ final class CityDetailViewController: UIViewController {
         }
         
         if city?.id == 105 { //ECO2
-            leftAxis.axisMaximum = 80
-           /* let ll1 = ChartLimitLine(limit: 400, label: "Задовільно")
+            leftAxis.axisMaximum = 500
+            let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
             ll1.labelPosition = .rightTop
             ll1.valueFont = .systemFont(ofSize: 10)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
-            let ll2 = ChartLimitLine(limit: 800, label: "Верхня межа")
+            let ll2 = ChartLimitLine(limit: 300, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
             ll2.labelPosition = .rightTop
             ll2.valueFont = .systemFont(ofSize: 10)
             ll2.lineColor = .red
-            leftAxis.addLimitLine(ll2)*/
+            leftAxis.addLimitLine(ll2)
         }
         
         if city?.id == 106 { //PM1

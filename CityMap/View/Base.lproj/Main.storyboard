@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--City Detail View Controller-->
+        <!--...-->
         <scene sceneID="F7G-mB-CEp">
             <objects>
                 <viewController id="Uyt-9q-BeH" customClass="CityDetailViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,6 +48,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jS0-iv-jDb"/>
                     </view>
+                    <navigationItem key="navigationItem" title="..." id="kHe-6a-mE6">
+                        <barButtonItem key="rightBarButtonItem" title="Справка" id="oqW-Qf-3In">
+                            <connections>
+                                <segue destination="RNs-Ed-DAh" kind="show" identifier="showInfo" id="qnj-LZ-AxD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="chartView" destination="gOD-pD-XU6" id="AP6-eK-CYI"/>
                         <outlet property="segmentedControl" destination="QL0-7l-YEK" id="fXZ-Xx-tx9"/>
@@ -56,6 +63,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="obu-a8-eVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3292.5" y="107.74647887323944"/>
+        </scene>
+        <!--Local Info Controller-->
+        <scene sceneID="YCB-14-Ie5">
+            <objects>
+                <viewController id="RNs-Ed-DAh" customClass="LocalInfoController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zEZ-2B-cL0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCF-23-pj3">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bCF-23-pj3" firstAttribute="bottom" secondItem="ptY-X4-6xk" secondAttribute="bottom" id="A4v-qf-KdR"/>
+                            <constraint firstItem="bCF-23-pj3" firstAttribute="trailing" secondItem="ptY-X4-6xk" secondAttribute="trailing" id="EcY-DT-XKg"/>
+                            <constraint firstItem="bCF-23-pj3" firstAttribute="leading" secondItem="ptY-X4-6xk" secondAttribute="leading" id="wOu-s9-6mI"/>
+                            <constraint firstItem="bCF-23-pj3" firstAttribute="top" secondItem="ptY-X4-6xk" secondAttribute="top" id="wqy-4K-KAP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ptY-X4-6xk"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="sZG-EF-CBZ"/>
+                    <connections>
+                        <outlet property="WebViewInfo" destination="bCF-23-pj3" id="vY1-iF-Y24"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRu-nc-zhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4192.5" y="107.74647887323944"/>
         </scene>
         <!--Новини-->
         <scene sceneID="9Mb-34-ZKO">
