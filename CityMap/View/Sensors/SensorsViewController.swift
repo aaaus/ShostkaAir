@@ -4,7 +4,7 @@ private enum Segues: String {
     // Segue name that navigates to city detail page (has the same value as the segue in storyboard).
     case showCityDetail = "ShowCityDetail"
     // Segue name that navigates to the map page (has the same value as the segue in storyboard).
-    case showMap = "ShowMap"
+    case showInfoLab = "showInfoLab"
 }
 
 private enum Constants {
@@ -131,12 +131,12 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
             detailsController.city = cityCell.city
             detailsController.sensorStationNumber = sensorStationNumber
 
-        case Segues.showMap.rawValue:
-            guard let mapController = segue.destination as? MapViewController else {
+        case Segues.showInfoLab.rawValue:
+            guard let infoLabController = segue.destination as? LabInfoController else {
                 return
             }
             
-            mapController.cities = cities
+            infoLabController.id = city?.id
         default:
             break
         }

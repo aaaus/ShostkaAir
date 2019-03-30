@@ -11,6 +11,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Lab Info Controller-->
+        <scene sceneID="wxN-f0-M4n">
+            <objects>
+                <viewController id="s9u-S7-Wpf" customClass="LabInfoController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H2P-MN-Zqn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qoo-gh-Ddr">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qoo-gh-Ddr" firstAttribute="bottom" secondItem="REP-ej-LIm" secondAttribute="bottom" id="Jju-1E-qyC"/>
+                            <constraint firstItem="Qoo-gh-Ddr" firstAttribute="trailing" secondItem="REP-ej-LIm" secondAttribute="trailing" id="LlC-7h-zbc"/>
+                            <constraint firstItem="Qoo-gh-Ddr" firstAttribute="top" secondItem="REP-ej-LIm" secondAttribute="top" id="XNv-iE-Aop"/>
+                            <constraint firstItem="Qoo-gh-Ddr" firstAttribute="leading" secondItem="REP-ej-LIm" secondAttribute="leading" id="sYC-eo-0AE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="REP-ej-LIm"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="i3k-SE-hXQ"/>
+                    <connections>
+                        <outlet property="WebViewLabInfo" destination="Qoo-gh-Ddr" id="yPN-71-nfx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ss2-CK-6uc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3292.5" y="-588.38028169014081"/>
+        </scene>
         <!--...-->
         <scene sceneID="F7G-mB-CEp">
             <objects>
@@ -441,8 +476,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Параметри" id="TFT-AW-iaO">
                         <barButtonItem key="backBarButtonItem" title="Параметри" id="0nH-A1-o8P"/>
-                        <barButtonItem key="rightBarButtonItem" title="..." id="gQc-wV-4c3">
+                        <barButtonItem key="rightBarButtonItem" title="Інформація" id="gQc-wV-4c3">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="s9u-S7-Wpf" kind="show" identifier="showInfoLab" id="gIY-p3-7C2"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

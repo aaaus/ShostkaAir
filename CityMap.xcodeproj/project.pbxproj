@@ -63,6 +63,7 @@
 		2BCB145A22429D4600B8BDE1 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCB145922429D4600B8BDE1 /* GoogleMapsBase.framework */; };
 		2BF4844A22297F310052FE97 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF4844922297F310052FE97 /* DetailNewsViewController.swift */; };
 		2BF95934224F6D2F0050BB84 /* LocalInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95933224F6D2F0050BB84 /* LocalInfoController.swift */; };
+		2BF95936224F85700050BB84 /* LabInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95935224F85700050BB84 /* LabInfoController.swift */; };
 		436E0E6C222460F5003B0E9C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E0E6B222460F5003B0E9C /* SensorsViewController.swift */; };
 		F6F25B299D18C98B301CD5C3 /* Pods_CityMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC66C1C4F0513E2A324313C /* Pods_CityMap.framework */; };
 /* End PBXBuildFile section */
@@ -186,6 +187,7 @@
 		2BF7C4642242A772006C952E /* ShostkaAir-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShostkaAir-Bridging-Header.h"; sourceTree = "<group>"; };
 		2BF7C4652242A772006C952E /* GMUMarkerClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUMarkerClustering.h; sourceTree = "<group>"; };
 		2BF95933224F6D2F0050BB84 /* LocalInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalInfoController.swift; sourceTree = "<group>"; };
+		2BF95935224F85700050BB84 /* LabInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabInfoController.swift; sourceTree = "<group>"; };
 		3BC66C1C4F0513E2A324313C /* Pods_CityMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E0E6B222460F5003B0E9C /* SensorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsViewController.swift; sourceTree = "<group>"; };
 		AD4CC2633A246E1136BFD3C0 /* Pods-CityMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMap/Pods-CityMap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				2B482DDD22241DCE003246E6 /* SensorsViewCell.swift */,
 				436E0E6B222460F5003B0E9C /* SensorsViewController.swift */,
+				2BF95935224F85700050BB84 /* LabInfoController.swift */,
 			);
 			path = Sensors;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				2B5C5FD52242CA9D00664C90 /* GMUPolygon.m in Sources */,
 				2B5C5FD42242CA9D00664C90 /* GQTPointQuadTree.m in Sources */,
 				2B5C5FC42242CA9D00664C90 /* GMUStyleMap.m in Sources */,
+				2BF95936224F85700050BB84 /* LabInfoController.swift in Sources */,
 				0E06CB202028DAB0002E9650 /* City.swift in Sources */,
 				0E69DA6F202F84AC00999974 /* CityMap.xcdatamodeld in Sources */,
 				2B5C5FC32242CA9D00664C90 /* GQTPointQuadTreeChild.m in Sources */,
