@@ -55,11 +55,11 @@
 		2B5C5FD92242CA9D00664C90 /* GMUDefaultClusterRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C5FBB2242CA9C00664C90 /* GMUDefaultClusterRenderer.m */; };
 		2B5C5FDA2242CA9D00664C90 /* GMUWrappingDictionaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C5FBC2242CA9C00664C90 /* GMUWrappingDictionaryKey.m */; };
 		2B5C5FDB2242CA9D00664C90 /* GMUStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5C5FBE2242CA9C00664C90 /* GMUStyle.m */; };
-		2B5C5FDD2242DE3A00664C90 /* stations.json in Resources */ = {isa = PBXBuildFile; fileRef = 2B5C5FDC2242D90F00664C90 /* stations.json */; };
 		2B765B54222D493B00118477 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B765B53222D493B00118477 /* NewsViewController.swift */; };
 		2B765B56222D494E00118477 /* NewsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B765B55222D494E00118477 /* NewsViewCell.swift */; };
 		2B9049AD222AA8CD00530633 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9049AC222AA8CD00530633 /* PostViewController.swift */; };
 		2B9049AF222AA8E500530633 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9049AE222AA8E500530633 /* String+Convenience.swift */; };
+		2BBF06B7224FE57700004D99 /* InfoWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF06B6224FE57700004D99 /* InfoWebView.swift */; };
 		2BCB145A22429D4600B8BDE1 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCB145922429D4600B8BDE1 /* GoogleMapsBase.framework */; };
 		2BF4844A22297F310052FE97 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF4844922297F310052FE97 /* DetailNewsViewController.swift */; };
 		2BF95934224F6D2F0050BB84 /* LocalInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95933224F6D2F0050BB84 /* LocalInfoController.swift */; };
@@ -175,13 +175,13 @@
 		2B5C5FBF2242CA9C00664C90 /* GMUClusterAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUClusterAlgorithm.h; sourceTree = "<group>"; };
 		2B5C5FC02242CA9C00664C90 /* GMUSimpleClusterAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUSimpleClusterAlgorithm.h; sourceTree = "<group>"; };
 		2B5C5FC12242CA9C00664C90 /* GMUDefaultClusterRenderer+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMUDefaultClusterRenderer+Testing.h"; sourceTree = "<group>"; };
-		2B5C5FDC2242D90F00664C90 /* stations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stations.json; sourceTree = "<group>"; };
 		2B765B53222D493B00118477 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		2B765B55222D494E00118477 /* NewsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewCell.swift; sourceTree = "<group>"; };
 		2B90499E222AA61B00530633 /* WordPress */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WordPress; sourceTree = "<group>"; };
 		2B9049A0222AA62700530633 /* WordPress.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WordPress.xcodeproj; path = WordPress/WordPress.xcodeproj; sourceTree = "<group>"; };
 		2B9049AC222AA8CD00530633 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		2B9049AE222AA8E500530633 /* String+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Convenience.swift"; sourceTree = "<group>"; };
+		2BBF06B6224FE57700004D99 /* InfoWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoWebView.swift; sourceTree = "<group>"; };
 		2BCB145922429D4600B8BDE1 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Pods/GoogleMaps/Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		2BF4844922297F310052FE97 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewController.swift; sourceTree = "<group>"; };
 		2BF7C4642242A772006C952E /* ShostkaAir-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShostkaAir-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -238,7 +238,6 @@
 		0E06CAEE202884A8002E9650 /* CityMap */ = {
 			isa = PBXGroup;
 			children = (
-				2B5C5FDC2242D90F00664C90 /* stations.json */,
 				0E06CB01202886EB002E9650 /* Assets */,
 				2BF4844822297F130052FE97 /* News */,
 				0E06CB1B2028DAB0002E9650 /* Model */,
@@ -267,6 +266,7 @@
 				0E06CB232028DB17002E9650 /* Cities */,
 				0E06CB262028DB17002E9650 /* City Detail */,
 				0E2F8BFE202F8DDF00A94BD4 /* Map */,
+				2BBF06B4224FE54F00004D99 /* Info */,
 				0E06CAF3202884A8002E9650 /* Main.storyboard */,
 				0E06CAF8202884A8002E9650 /* LaunchScreen.storyboard */,
 			);
@@ -375,6 +375,14 @@
 				2B9049A5222AA62700530633 /* WordPress.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2BBF06B4224FE54F00004D99 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				2BBF06B6224FE57700004D99 /* InfoWebView.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 		2BF4844822297F130052FE97 /* News */ = {
@@ -557,7 +565,6 @@
 			files = (
 				0E06CAFA202884A8002E9650 /* LaunchScreen.storyboard in Resources */,
 				0E06CAF7202884A8002E9650 /* Assets.xcassets in Resources */,
-				2B5C5FDD2242DE3A00664C90 /* stations.json in Resources */,
 				0E06CAF5202884A8002E9650 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,6 +670,7 @@
 				2B5C5FC72242CA9D00664C90 /* GMUGroundOverlay.m in Sources */,
 				0E06CB222028DAB0002E9650 /* CityService.swift in Sources */,
 				0E69DA6E202F84AC00999974 /* CityEntity+CoreDataProperties.swift in Sources */,
+				2BBF06B7224FE57700004D99 /* InfoWebView.swift in Sources */,
 				0E69DA6C202F84AC00999974 /* CoreDataStack.swift in Sources */,
 				2B5C5FCA2242CA9D00664C90 /* GMUPoint.m in Sources */,
 				2B5C5FC92242CA9D00664C90 /* GMUHeatmapTileLayer.m in Sources */,

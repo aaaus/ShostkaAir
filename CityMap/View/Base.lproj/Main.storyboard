@@ -178,47 +178,41 @@
         <!--Інформація-->
         <scene sceneID="JBN-2g-L7K">
             <objects>
-                <viewController id="WbI-v1-ffB" sceneMemberID="viewController">
+                <viewController id="WbI-v1-ffB" customClass="InfoWebView" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l88-xm-7ob">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="8dN-49-zZk"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Інформація" id="5Ud-e1-4GQ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iWj-3D-daC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-234" y="1593"/>
-        </scene>
-        <!--Map View Controller-->
-        <scene sceneID="UTr-WV-aSk">
-            <objects>
-                <viewController id="UCa-HJ-Twx" customClass="MapViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tGr-Rp-BpD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaG-Ep-ECX">
-                                <rect key="frame" x="0.0" y="111" width="320" height="408"/>
-                            </mapView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0D-2f-s5U">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qaG-Ep-ECX" firstAttribute="top" secondItem="4JX-w7-3jQ" secondAttribute="top" id="Ai5-HX-7em"/>
-                            <constraint firstItem="qaG-Ep-ECX" firstAttribute="bottom" secondItem="4JX-w7-3jQ" secondAttribute="bottom" id="Qed-tJ-yqh"/>
-                            <constraint firstItem="qaG-Ep-ECX" firstAttribute="trailing" secondItem="4JX-w7-3jQ" secondAttribute="trailing" id="cWY-2G-8AE"/>
-                            <constraint firstItem="qaG-Ep-ECX" firstAttribute="leading" secondItem="4JX-w7-3jQ" secondAttribute="leading" id="vL5-tE-gSW"/>
+                            <constraint firstItem="S0D-2f-s5U" firstAttribute="top" secondItem="8dN-49-zZk" secondAttribute="top" id="0uH-aU-pPR"/>
+                            <constraint firstItem="S0D-2f-s5U" firstAttribute="bottom" secondItem="8dN-49-zZk" secondAttribute="bottom" id="3Kx-ay-sc6"/>
+                            <constraint firstItem="S0D-2f-s5U" firstAttribute="trailing" secondItem="8dN-49-zZk" secondAttribute="trailing" id="3qM-rb-zeH"/>
+                            <constraint firstItem="S0D-2f-s5U" firstAttribute="leading" secondItem="8dN-49-zZk" secondAttribute="leading" id="7es-jM-d0U"/>
+                            <constraint firstItem="S0D-2f-s5U" firstAttribute="trailing" secondItem="8dN-49-zZk" secondAttribute="trailing" id="RP7-ha-cX0"/>
+                            <constraint firstItem="S0D-2f-s5U" firstAttribute="top" secondItem="8dN-49-zZk" secondAttribute="top" id="aj7-Gl-CbZ"/>
+                            <constraint firstItem="S0D-2f-s5U" firstAttribute="leading" secondItem="8dN-49-zZk" secondAttribute="leading" id="gzd-IN-hGO"/>
+                            <constraint firstItem="S0D-2f-s5U" firstAttribute="bottom" secondItem="8dN-49-zZk" secondAttribute="bottom" id="zBm-St-kX4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="4JX-w7-3jQ"/>
+                        <viewLayoutGuide key="safeArea" id="8dN-49-zZk"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Інформація" id="5Ud-e1-4GQ"/>
                     <connections>
-                        <outlet property="mapView" destination="qaG-Ep-ECX" id="iKx-i3-qsy"/>
+                        <outlet property="infoWebLink" destination="S0D-2f-s5U" id="ceH-9d-XbO"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3x-zG-Xpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWj-3D-daC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579" y="862"/>
+            <point key="canvasLocation" x="-234.375" y="1592.9577464788733"/>
         </scene>
         <!--Лабораторії-->
         <scene sceneID="F2G-aQ-JZW">
@@ -331,19 +325,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Лабораторії" id="LYh-qI-2ys">
                         <barButtonItem key="backBarButtonItem" title="Лабораторії" id="TNa-mc-9tv"/>
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="bookmarks" id="M1G-n1-HTt">
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <segue destination="UCa-HJ-Twx" kind="show" identifier="ShowMap" id="UaI-2J-c2W"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Map" id="NK6-Xu-DsM">
-                                <connections>
-                                    <segue destination="fCa-Qg-WXj" kind="show" id="YpI-Xf-2kF"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Карта" id="NK6-Xu-DsM">
+                            <connections>
+                                <segue destination="fCa-Qg-WXj" kind="show" id="YpI-Xf-2kF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="MMG-mp-x5a" id="yzz-s6-B9u"/>
@@ -364,6 +350,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wSg-gT-54C"/>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="bgj-eo-lcI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6F-d6-MgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

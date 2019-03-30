@@ -10,6 +10,22 @@ import Foundation
 import GoogleMaps
 import UIKit
 
+struct HeatMapPositions: Codable {
+    
+    let arrXAxis2: [Double?]
+    let arrValue2: [Double?]
+    let arrValueName2: [String?]
+    let four2: Int?
+    
+    
+    private enum CodingKeys: String, CodingKey {
+        case arrXAxis2
+        case arrValue2
+        case arrValueName2
+        case four2
+    }
+}
+
 class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     private var mapView: GMSMapView!
     private var heatmapLayer: GMUHeatmapTileLayer!
@@ -17,6 +33,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     
     private var gradientColors = [UIColor.green, UIColor.red]
     private var gradientStartPoints = [0.2, 1.0] as [NSNumber]
+
     
     override func loadView() {
         let camera = GMSCameraPosition.camera(withLatitude: 51.868849, longitude: 33.473487, zoom: 14)
@@ -29,11 +46,10 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
         mapView.delegate = self
         self.view = mapView
        // makeButton()
-        
-        let position = CLLocationCoordinate2D(latitude: 51.869846, longitude: 33.461001)
+        let position = CLLocationCoordinate2D(latitude: 51.872229, longitude: 33.466743)
         let london = GMSMarker(position: position)
-        london.title = "Лаборатория 1"
-        london.snippet = "Измерение базовых параметров"
+        london.title = "Лабораторія 1"
+        london.snippet = "Вимірювання базових параметрів"
         //london.tracksInfoWindowChanges = true
         //london.tracksViewChanges = true
         
@@ -41,6 +57,9 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     override func viewDidLoad() {
+        
+        myDataChart()
+   
         // Set heatmap options.
         heatmapLayer = GMUHeatmapTileLayer()
         heatmapLayer.radius = 120
@@ -48,39 +67,10 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
         heatmapLayer.gradient = GMUGradient(colors: gradientColors,
                                             startPoints: gradientStartPoints,
                                             colorMapSize: 256)
-        addHeatmap()
-        print("addHeatmap")
-        
-        // Set the heatmap to the mapview.
-        heatmapLayer.map = mapView
+
+        myDataChart()
     }
-    
-    // Parse JSON data and add it to the heatmap layer.
-    func addHeatmap()  {
-        var list = [GMUWeightedLatLng]()
-        do {
-            // Get the data: latitude/longitude positions of police stations.
-            if let path = Bundle.main.url(forResource: "stations", withExtension: "json") {
-                let data = try Data(contentsOf: path)
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                if let object = json as? [[String: Any]] {
-                    for item in object {
-                        let lat = item["lat"]
-                        let lng = item["lng"]
-                        let coords = GMUWeightedLatLng(coordinate: CLLocationCoordinate2DMake(lat as! CLLocationDegrees, lng as! CLLocationDegrees), intensity: 1.0)
-                        list.append(coords)
-                    }
-                } else {
-                    print("Could not read the JSON.")
-                }
-            }
-        } catch {
-            print(error.localizedDescription)
-        }
-        // Add the latlngs to the heatmap layer.
-        heatmapLayer.weightedData = list
-    }
-    
+   
     @objc func removeHeatmap() {
         heatmapLayer.map = nil
         heatmapLayer = nil
@@ -92,15 +82,49 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
         print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
     }
     
-    // Add a button to the view.
-   /* func makeButton() {
-        // A button to test removing the heatmap.
-        button = UIButton(frame: CGRect(x: 5, y: 150, width: 200, height: 35))
-        button.backgroundColor = .blue
-        button.alpha = 0.5
-        button.setTitle("Очистити карту", for: .normal)
-        button.addTarget(self, action: #selector(removeHeatmap), for: .touchUpInside)
-        self.mapView.addSubview(button)
- 
-    }*/
+    func myDataChart() {
+        var list = [GMUWeightedLatLng]()
+        guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?&getFromApp=google&xAxis=10") else { return }
+        
+        URLSession.shared.dataTask(with: gitUrl) { (data, response
+            , error) in
+            
+            guard let data = data else { return }
+            do {
+                
+                let decoder = JSONDecoder()
+                let gitData = try decoder.decode(HeatMapPositions.self, from: data)
+                
+                //print("gitData: \(gitData)")
+                
+               
+                DispatchQueue.main.sync {
+                    
+                    guard var gname1: Array<Double> = gitData.arrXAxis2 as? Array<Double> else { return }
+                    
+                    guard var gname2: Array<Double> = gitData.arrValue2 as? Array<Double>  else { return }
+                    
+                    
+                    _ = (0..<(gname1.count)).map { (i) -> Double in
+                      //  let lat = item["lat"]
+                      //  let lng = item["lng"]
+                        let coords = GMUWeightedLatLng(coordinate: CLLocationCoordinate2DMake(gname1[i] , gname2[i] ), intensity: 1.0)
+                        list.append(coords)
+                       // print(gname1[i])
+                        return 5
+                            }
+            
+                    self.heatmapLayer.weightedData = list
+                    print("addHeatmap")
+                    // Set the heatmap to the mapview.
+                    self.heatmapLayer.map = self.mapView
+                }
+  
+            } catch let err {
+                print("Err", err)
+            }
+            }.resume()
+        
+    }
+   
 }
