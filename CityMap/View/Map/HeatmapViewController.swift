@@ -39,7 +39,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: 51.868849, longitude: 33.473487, zoom: 14)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.settings.compassButton = true
-        mapView.settings.myLocationButton = true
+       // mapView.settings.myLocationButton = true
         //mapView.accessibilityElementsHidden = false
         //mapView.isMyLocationEnabled = true
         mapView.setMinZoom(13, maxZoom: 14)
@@ -48,8 +48,8 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
        // makeButton()
         let position = CLLocationCoordinate2D(latitude: 51.872229, longitude: 33.466743)
         let london = GMSMarker(position: position)
-        london.title = "Лабораторія 1"
-        london.snippet = "Вимірювання базових параметрів"
+        london.title = "Шостка.AIR №1"
+        london.snippet = "вул. Щедріна, 1"
         //london.tracksInfoWindowChanges = true
         //london.tracksViewChanges = true
         

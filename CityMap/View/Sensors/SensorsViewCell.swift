@@ -45,9 +45,15 @@ class SensorsViewCell: UICollectionViewCell {
             cityLabel.backgroundColor = UIColor(red: 245/255, green: 63/255, blue: 12/255, alpha: 0.5)
         }
         
+       // var imgName: String = (city?.imageUrl?.absoluteString)!
         
         // Set image using url to the image view using kingfisher extension.
-        cityImage.kf.setImage(with: city?.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
+        if ((city?.id)! < 10000){
+            cityImage.image = UIImage(named: (city?.imageUrl?.absoluteString)! )
+        }
+        else {
+            cityImage.kf.setImage(with: city?.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
+        }
     }
     
     override func prepareForReuse() {

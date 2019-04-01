@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey("AIzaSyAoiHutAlBWJoTob_5y-Gbh85F1L-nwQWM")
         // Override point for customization after application launch.
-        //sleep(10)
+        sleep(2)
         // Override point for customization after application launch.
         
         /* UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)

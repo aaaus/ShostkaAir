@@ -289,14 +289,14 @@ final class CityDetailViewController: UIViewController {
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
             ll1.labelPosition = .rightTop
-            ll1.valueFont = .systemFont(ofSize: 10)
+            ll1.valueFont = .systemFont(ofSize: 18)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
             let ll2 = ChartLimitLine(limit: 300, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
             ll2.labelPosition = .rightTop
-            ll2.valueFont = .systemFont(ofSize: 10)
+            ll2.valueFont = .systemFont(ofSize: 18)
             ll2.lineColor = .red
             leftAxis.addLimitLine(ll2)
         }
@@ -315,14 +315,14 @@ final class CityDetailViewController: UIViewController {
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
             ll1.labelPosition = .rightTop
-            ll1.valueFont = .systemFont(ofSize: 10)
+            ll1.valueFont = .systemFont(ofSize: 18)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
             let ll2 = ChartLimitLine(limit: 25, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
             ll2.labelPosition = .rightTop
-            ll2.valueFont = .systemFont(ofSize: 10)
+            ll2.valueFont = .systemFont(ofSize: 18)
             ll2.lineColor = .red
             leftAxis.addLimitLine(ll2)
         }
@@ -541,28 +541,44 @@ final class CityDetailViewController: UIViewController {
     
     
 
+       let timeFormatLandscape = "HH:mm dd MMM"
+       let timeFormatPortrait = "dd MMM"
+       let timeFormatPortraitMin = "HH:mm"
+       var timeFormatToChart = ""
     
 
     @IBAction func indexChanged(_ sender: Any) {
+        
+        if UIDevice.current.orientation.isLandscape {
+            //print("Landscape")
+            timeFormatToChart = timeFormatLandscape
+        } else {
+            //print("Portrait")
+            timeFormatToChart = timeFormatPortrait
+        }
+        
         
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
             print("1")
             xAxisDotsCountToGet = 8
-            timeFormat = "HH:mm"
+            timeFormat = timeFormatToChart
+            if UIDevice.current.orientation.isPortrait {
+              timeFormat = "HH:mm"
+            }
         case 1:
             print("2")
             xAxisDotsCountToGet = 100
-            timeFormat = "dd MMM"
+            timeFormat = timeFormatToChart
         case 2:
             print("3")
             xAxisDotsCountToGet = 1000
-            timeFormat = "dd MMM"
+            timeFormat = timeFormatToChart
         case 3:
             print("4")
             xAxisDotsCountToGet = 2000
-            timeFormat = "dd MMM"
+            timeFormat = timeFormatToChart
         default:
             break
         }
@@ -570,6 +586,24 @@ final class CityDetailViewController: UIViewController {
         myDataChart()
     }
     
+    
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            //print("Landscape")
+            timeFormat = timeFormatLandscape
+        } else {
+            //print("Portrait")
+            timeFormat = timeFormatPortrait
+            if xAxisDotsCountToGet < 20 {
+                timeFormat = "HH:mm"
+            }
+        }
+        
+        setupChartFromJSON()
+        myDataChart()
+        
+    }
     
     
     

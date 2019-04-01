@@ -84,7 +84,7 @@
                         <viewLayoutGuide key="safeArea" id="jS0-iv-jDb"/>
                     </view>
                     <navigationItem key="navigationItem" title="..." id="kHe-6a-mE6">
-                        <barButtonItem key="rightBarButtonItem" title="Справка" id="oqW-Qf-3In">
+                        <barButtonItem key="rightBarButtonItem" title="Справка" image="HelpIcon" id="oqW-Qf-3In">
                             <connections>
                                 <segue destination="RNs-Ed-DAh" kind="show" identifier="showInfo" id="qnj-LZ-AxD"/>
                             </connections>
@@ -214,11 +214,11 @@
             </objects>
             <point key="canvasLocation" x="-234.375" y="1592.9577464788733"/>
         </scene>
-        <!--Лабораторії-->
+        <!--Шостка.AIR-->
         <scene sceneID="F2G-aQ-JZW">
             <objects>
                 <navigationController id="x1k-GY-jIR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Лабораторії" image="Laboratory" id="wjl-Lu-DmM"/>
+                    <tabBarItem key="tabBarItem" title="Шостка.AIR" image="Laboratory" id="wjl-Lu-DmM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="e05-Ss-T1v">
                         <rect key="frame" x="0.0" y="20" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -238,7 +238,7 @@
             </objects>
             <point key="canvasLocation" x="-230.625" y="105.63380281690141"/>
         </scene>
-        <!--Лабораторії-->
+        <!--Шостка.AIR-->
         <scene sceneID="agv-0W-uog">
             <objects>
                 <viewController id="Bcs-Vl-7pf" customClass="CitiesViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
@@ -323,8 +323,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T4I-DZ-7pm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Лабораторії" id="LYh-qI-2ys">
-                        <barButtonItem key="backBarButtonItem" title="Лабораторії" id="TNa-mc-9tv"/>
+                    <navigationItem key="navigationItem" title="Шостка.AIR" id="LYh-qI-2ys">
+                        <barButtonItem key="backBarButtonItem" title="Шостка.AIR" id="TNa-mc-9tv"/>
                         <barButtonItem key="rightBarButtonItem" title="Карта" id="NK6-Xu-DsM">
                             <connections>
                                 <segue destination="fCa-Qg-WXj" kind="show" id="YpI-Xf-2kF"/>
@@ -479,11 +479,11 @@
             </objects>
             <point key="canvasLocation" x="2406" y="107"/>
         </scene>
-        <!--Новини-->
+        <!--Шостка.NEWS-->
         <scene sceneID="9vx-24-jvl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NKm-oP-7aO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Новини" image="News" id="GPp-8d-r7a"/>
+                    <tabBarItem key="tabBarItem" title="Шостка.NEWS" image="News" id="GPp-8d-r7a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1XJ-yr-rNe">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -498,11 +498,11 @@
             </objects>
             <point key="canvasLocation" x="-1228" y="864"/>
         </scene>
-        <!--Інформація-->
+        <!--Шостка.CITY-->
         <scene sceneID="d2t-J5-8WF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fD1-vr-mD6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Інформація" image="More" id="KZ9-VL-L5F"/>
+                    <tabBarItem key="tabBarItem" title="Шостка.CITY" image="More" id="KZ9-VL-L5F"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RcT-eS-HTh">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -618,6 +618,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="HelpIcon" width="25" height="24"/>
         <image name="Laboratory" width="25" height="24"/>
         <image name="More" width="25" height="24"/>
         <image name="News" width="25" height="24"/>

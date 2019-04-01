@@ -19,12 +19,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ShostkaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="pGK-kJ-aBX">
-                                <rect key="frame" x="67" y="230" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShostkaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="pGK-kJ-aBX">
+                                <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="3c0-sk-Ell"/>
+                                    <constraint firstAttribute="width" constant="240" id="wDK-rV-8k3"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="ColorAccent"/>
+                        <constraints>
+                            <constraint firstItem="pGK-kJ-aBX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4cy-UD-mjz"/>
+                            <constraint firstItem="pGK-kJ-aBX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="x4k-l0-x7T"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
