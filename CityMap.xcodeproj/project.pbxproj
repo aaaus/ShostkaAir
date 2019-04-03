@@ -60,6 +60,7 @@
 		2B9049AD222AA8CD00530633 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9049AC222AA8CD00530633 /* PostViewController.swift */; };
 		2B9049AF222AA8E500530633 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9049AE222AA8E500530633 /* String+Convenience.swift */; };
 		2BBF06B7224FE57700004D99 /* InfoWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF06B6224FE57700004D99 /* InfoWebView.swift */; };
+		2BC466402254BAE7007E2F22 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC4663E2254BAE7007E2F22 /* WebKit.framework */; };
 		2BCB145A22429D4600B8BDE1 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCB145922429D4600B8BDE1 /* GoogleMapsBase.framework */; };
 		2BF4844A22297F310052FE97 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF4844922297F310052FE97 /* DetailNewsViewController.swift */; };
 		2BF95934224F6D2F0050BB84 /* LocalInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95933224F6D2F0050BB84 /* LocalInfoController.swift */; };
@@ -182,6 +183,7 @@
 		2B9049AC222AA8CD00530633 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		2B9049AE222AA8E500530633 /* String+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Convenience.swift"; sourceTree = "<group>"; };
 		2BBF06B6224FE57700004D99 /* InfoWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoWebView.swift; sourceTree = "<group>"; };
+		2BC4663E2254BAE7007E2F22 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		2BCB145922429D4600B8BDE1 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Pods/GoogleMaps/Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		2BF4844922297F310052FE97 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewController.swift; sourceTree = "<group>"; };
 		2BF7C4642242A772006C952E /* ShostkaAir-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShostkaAir-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC466402254BAE7007E2F22 /* WebKit.framework in Frameworks */,
 				2BCB145A22429D4600B8BDE1 /* GoogleMapsBase.framework in Frameworks */,
 				F6F25B299D18C98B301CD5C3 /* Pods_CityMap.framework in Frameworks */,
 			);
@@ -473,6 +476,7 @@
 		EA411E728FE11043634EC324 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2BC4663E2254BAE7007E2F22 /* WebKit.framework */,
 				2B5C5F7B2242C7EB00664C90 /* Pods */,
 				2B5C5F792242C7D300664C90 /* Charts.framework */,
 				2B5B67B322427D990003EA1B /* GoogleMapsBase.framework */,
@@ -519,7 +523,7 @@
 				TargetAttributes = {
 					0E06CAEB202884A8002E9650 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -848,7 +852,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Google-Maps-iOS-Utils/ShostkaAir-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -872,7 +876,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Google-Maps-iOS-Utils/ShostkaAir-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
