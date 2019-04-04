@@ -384,11 +384,6 @@ final class CityDetailViewController: UIViewController {
     
     func setDataCount(_ count: Int, range: UInt32, set1: LineChartDataSet) {
         
-     /*   let values2 = (0..<count).map { (i) -> ChartDataEntry in
-            let val = Double(arc4random_uniform(range) + 3)
-            return ChartDataEntry(x: Double(i), y: val)
-        }*/
-        
         set1.drawIconsEnabled = false
         set1.lineDashLengths = [5, 2.5]
         set1.highlightLineDashLengths = [5, 2.5]
@@ -514,7 +509,10 @@ final class CityDetailViewController: UIViewController {
                   //  print(gname1 as Any)
     
                     self.values3 = (0..<(gname1.count)).map { (i) -> ChartDataEntry in
+                   // print("((gname2[i])*100).rounded()/100: \(((gname2[i])*100).rounded()/100)")
                         return ChartDataEntry(x: gname1[i], y: gname2[i])
+
+                        
                     }
                     print("values3_12345: \(String(describing: self.values3))")
 

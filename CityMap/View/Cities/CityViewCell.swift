@@ -31,7 +31,7 @@ class CityViewCell: UICollectionViewCell {
     //    let textLabel = String.mentionedUsernames("1@2")
         
         let cityNameFiltered = city?.name.components(separatedBy: "#")
-        print("City namber parameter \(String(describing: cityNameFiltered?[1]))")
+      //  print("City namber parameter \(String(describing: cityNameFiltered?[1]))")
         
         cityLabel.text = cityNameFiltered?[0]
         cityLabel.backgroundColor = UIColor(red: 135/255, green: 135/255, blue: 135/255, alpha: 0.5)

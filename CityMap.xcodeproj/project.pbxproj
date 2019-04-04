@@ -66,6 +66,7 @@
 		2BF95934224F6D2F0050BB84 /* LocalInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95933224F6D2F0050BB84 /* LocalInfoController.swift */; };
 		2BF95936224F85700050BB84 /* LabInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95935224F85700050BB84 /* LabInfoController.swift */; };
 		436E0E6C222460F5003B0E9C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E0E6B222460F5003B0E9C /* SensorsViewController.swift */; };
+		43F242772256769D00D93F80 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F242762256769D00D93F80 /* Reachability.swift */; };
 		F6F25B299D18C98B301CD5C3 /* Pods_CityMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC66C1C4F0513E2A324313C /* Pods_CityMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +193,7 @@
 		2BF95935224F85700050BB84 /* LabInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabInfoController.swift; sourceTree = "<group>"; };
 		3BC66C1C4F0513E2A324313C /* Pods_CityMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		436E0E6B222460F5003B0E9C /* SensorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsViewController.swift; sourceTree = "<group>"; };
+		43F242762256769D00D93F80 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		AD4CC2633A246E1136BFD3C0 /* Pods-CityMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMap/Pods-CityMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -291,6 +293,7 @@
 			children = (
 				0E2F8BFB202F8A1E00A94BD4 /* Web */,
 				0E06CB1F2028DAB0002E9650 /* CityService.swift */,
+				43F242762256769D00D93F80 /* Reachability.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				2B5C5FDB2242CA9D00664C90 /* GMUStyle.m in Sources */,
 				2B5C5FD72242CA9D00664C90 /* GMUGridBasedClusterAlgorithm.m in Sources */,
 				2B5C5FD52242CA9D00664C90 /* GMUPolygon.m in Sources */,
+				43F242772256769D00D93F80 /* Reachability.swift in Sources */,
 				2B5C5FD42242CA9D00664C90 /* GQTPointQuadTree.m in Sources */,
 				2B5C5FC42242CA9D00664C90 /* GMUStyleMap.m in Sources */,
 				2BF95936224F85700050BB84 /* LabInfoController.swift in Sources */,

@@ -45,13 +45,15 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     
     /// Timer Area
-    override func viewWillAppear(_ animated: Bool) {  
+    override func viewWillAppear(_ animated: Bool) {
+        updateUserInterface()
         print("Load")
         startTimer()
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        updateUserInterface()
         print("UnLoad")
         stopTimer()
         
@@ -67,8 +69,15 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     func timerHandler(_ timer: Timer) {
         let hola = "CitiesViewController"
         print(">>>> \(hola)")
+        if (Network.reachability.isReachable && Network.reachability.status.rawValue != "unreachable"){
         setupData()
         self.collectionView.reloadData()
+        }else{
+            print("No server connection!")
+            updateUserInterface()
+        }
+        
+        
         // SensorsViewCell
     }
     
@@ -92,8 +101,51 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupData()
+        
+        NotificationCenter.default
+            .addObserver(self,
+                         selector: #selector(statusManager),
+                         name: .flagsChanged,
+                         object: nil)
+        updateUserInterface()
+ 
+        
+     //  setupData()
     }
+    
+    
+    func updateUserInterface() {
+        switch Network.reachability.status {
+        case .unreachable:
+            view.backgroundColor = .red
+        case .wwan:
+            view.backgroundColor = .yellow
+        case .wifi:
+            view.backgroundColor = .green
+        }
+        print("Reachability Summary")
+        print("Status:", Network.reachability.status)
+        print("HostName:", Network.reachability.hostname ?? "nil")
+        print("Reachable:", Network.reachability.isReachable)
+        print("Wifi:", Network.reachability.isReachableViaWiFi)
+        
+        if (!Network.reachability.isReachable || Network.reachability.status.rawValue == "unreachable"){
+            // create the alert
+            let alert = UIAlertController(title: "Помилка підключення!", message: "Не можу підключиться до сервера.", preferredStyle: UIAlertController.Style.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }else{
+            setupData()
+        }
+    }
+    @objc func statusManager(_ notification: Notification) {
+        updateUserInterface()
+    }
+    
 
     private func setupData() {
         activityIndicator.startAnimating()
