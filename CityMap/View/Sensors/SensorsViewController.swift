@@ -90,6 +90,13 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(appWillEnterForeground),
+                                               name: UIApplication.willEnterForegroundNotification,
+                                               object: nil)
+        
+        
         guard let city = city else {
             return
         }
@@ -101,12 +108,19 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
         
     }
     
-    func myObserverMethod(notification : NSNotification) {
-        print("Observer method called")
-        
-        //You may call your action method here, when the application did enter background.
-        //ie., self.pauseTimer() in your case.
+    
+    @objc func appWillEnterForeground() {
+        print("Observer method called123")
+        setupData()
     }
+    
+    
+//    func myObserverMethod(notification : NSNotification) {
+//        print("Observer method called")
+//
+//        //You may call your action method here, when the application did enter background.
+//        //ie., self.pauseTimer() in your case.
+//    }
     
     private func setupData() {
         activityIndicator.startAnimating()

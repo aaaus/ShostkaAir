@@ -53,6 +53,7 @@ final class CityDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         print("Load")
+        myDataChart()
         startTimer()
         
     }
@@ -602,6 +603,8 @@ final class CityDetailViewController: UIViewController {
         myDataChart()
         
     }
+    
+
     
     
     

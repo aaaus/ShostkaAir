@@ -69,7 +69,7 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     func timerHandler(_ timer: Timer) {
         let hola = "CitiesViewController"
         print(">>>> \(hola)")
-        if (Network.reachability.isReachable && Network.reachability.status.rawValue != "unreachable"){
+        if (Network.reachability.isReachable){
         setupData()
         self.collectionView.reloadData()
         }else{
@@ -115,21 +115,22 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     
     func updateUserInterface() {
-        switch Network.reachability.status {
+        
+       /* switch Network.reachability.status {
         case .unreachable:
             view.backgroundColor = .red
         case .wwan:
             view.backgroundColor = .yellow
         case .wifi:
             view.backgroundColor = .green
-        }
+        }*/
         print("Reachability Summary")
         print("Status:", Network.reachability.status)
         print("HostName:", Network.reachability.hostname ?? "nil")
         print("Reachable:", Network.reachability.isReachable)
         print("Wifi:", Network.reachability.isReachableViaWiFi)
         
-        if (!Network.reachability.isReachable || Network.reachability.status.rawValue == "unreachable"){
+        if (!Network.reachability.isReachable){
             // create the alert
             let alert = UIAlertController(title: "Помилка підключення!", message: "Не можу підключиться до сервера.", preferredStyle: UIAlertController.Style.alert)
             
