@@ -35,28 +35,80 @@ extension String: KingfisherCompatible {
     }
 }
 
+//extension StringProxy {
+//    var md5: String {
+//        if let data = base.data(using: .utf8, allowLossyConversion: true) {
+//
+//            let message = data.withUnsafeBytes { bytes -> [UInt8] in
+//                return Array(UnsafeBufferPointer(start: bytes, count: data.count))
+//            }
+//
+//            let MD5Calculator = MD5(message)
+//            let MD5Data = MD5Calculator.calculate()
+//
+//            var MD5String = String()
+//            for c in MD5Data {
+//                MD5String += String(format: "%02x", c)
+//            }
+//            return MD5String
+//
+//        } else {
+//            return base
+//        }
+//    }
+//}
+
+
 extension StringProxy {
     var md5: String {
         if let data = base.data(using: .utf8, allowLossyConversion: true) {
-
-            let message = data.withUnsafeBytes { bytes -> [UInt8] in
-                return Array(UnsafeBufferPointer(start: bytes, count: data.count))
+            
+            var byteBuffer: [UInt8] = []
+            data.withUnsafeBytes {
+                byteBuffer.append(contentsOf: $0)
             }
-
-            let MD5Calculator = MD5(message)
+            
+            let MD5Calculator = MD5(byteBuffer)
             let MD5Data = MD5Calculator.calculate()
-
+            
             var MD5String = String()
             for c in MD5Data {
                 MD5String += String(format: "%02x", c)
             }
             return MD5String
-
+            
         } else {
             return base
         }
     }
 }
+
+
+
+//extension Kingfisher where Base == String {
+//    public var md5: String {
+//        if let data = base.data(using: .utf8, allowLossyConversion: true) {
+//            
+//            
+//            var byteBuffer: [UInt8] = []
+//            data.withUnsafeBytes {
+//                byteBuffer.append(contentsOf: $0)
+//            }
+//            
+//            let MD5Calculator = MD5(byteBuffer)
+//            let MD5Data = MD5Calculator.calculate()
+//            
+//            var MD5String = String()
+//            for c in MD5Data {
+//                MD5String += String(format: "%02x", c)
+//            }
+//            return MD5String
+//            
+//        } else {
+//            return base
+//        }
+//    }
+//}
 
 
 /** array of bytes, little-endian representation */
