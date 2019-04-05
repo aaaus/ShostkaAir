@@ -10,7 +10,10 @@ import UIKit
 import WebKit
 
 class InfoWebView: UIViewController {
-
+    
+    
+    @IBOutlet weak var cityInfoButton: UIBarButtonItem!
+    
     @IBOutlet weak var infoWebLink: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +22,23 @@ class InfoWebView: UIViewController {
        // print("url: \(String(describing: url))")
         let requestObj = URLRequest(url: url!)
         infoWebLink.load(requestObj)
+    
+//        self.cityInfoButton.isEnabled = true
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    @IBAction func ShostkaCityWebViewAction(_ sender: UIBarButtonItem) {
+        if(infoWebLink.canGoBack) {
+//            self.cityInfoButton.isEnabled = true
+            infoWebLink.goBack()
+        } else {
+//            self.cityInfoButton.isEnabled = false
+          //  self.navigationController?.popViewController(animated:true)
+        }
+        
     }
     
 
