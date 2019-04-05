@@ -55,12 +55,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-pD-XU6" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="111" width="320" height="331"/>
+                                <rect key="frame" x="0.0" y="111" width="320" height="269"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <viewLayoutGuide key="safeArea" id="DcS-1z-iUR"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QL0-7l-YEK">
-                                <rect key="frame" x="28.5" y="486" width="263" height="29"/>
+                                <rect key="frame" x="28.5" y="477" width="263" height="29"/>
                                 <segments>
                                     <segment title="Хвилини" width="65"/>
                                     <segment title="Години" width="65"/>
@@ -77,13 +77,13 @@
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="top" secondItem="jS0-iv-jDb" secondAttribute="top" id="Juu-OJ-MKM"/>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="leading" secondItem="jS0-iv-jDb" secondAttribute="leading" id="NzH-HV-Od2"/>
                             <constraint firstItem="QL0-7l-YEK" firstAttribute="centerX" secondItem="jS0-iv-jDb" secondAttribute="centerX" id="e5r-Ln-SMV"/>
-                            <constraint firstItem="gOD-pD-XU6" firstAttribute="centerY" secondItem="wkm-Al-bTJ" secondAttribute="centerY" constant="-7.5" id="eKb-HA-5zX"/>
-                            <constraint firstItem="jS0-iv-jDb" firstAttribute="bottom" secondItem="QL0-7l-YEK" secondAttribute="bottom" constant="5" id="fI8-pe-1c7"/>
+                            <constraint firstItem="gOD-pD-XU6" firstAttribute="centerY" secondItem="wkm-Al-bTJ" secondAttribute="centerY" constant="-38.5" id="eKb-HA-5zX"/>
+                            <constraint firstItem="jS0-iv-jDb" firstAttribute="bottom" secondItem="QL0-7l-YEK" secondAttribute="bottom" constant="14" id="fI8-pe-1c7"/>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="trailing" secondItem="jS0-iv-jDb" secondAttribute="trailing" id="oUi-Pq-YUS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jS0-iv-jDb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="..." id="kHe-6a-mE6">
+                    <navigationItem key="navigationItem" title="..." largeTitleDisplayMode="always" id="kHe-6a-mE6">
                         <barButtonItem key="rightBarButtonItem" title="Справка" image="HelpIcon" id="oqW-Qf-3In">
                             <connections>
                                 <segue destination="RNs-Ed-DAh" kind="show" identifier="showInfo" id="qnj-LZ-AxD"/>
@@ -238,7 +238,7 @@
             </objects>
             <point key="canvasLocation" x="-230.625" y="105.63380281690141"/>
         </scene>
-        <!--Шостка.AIR-->
+        <!--Cities View Controller-->
         <scene sceneID="agv-0W-uog">
             <objects>
                 <viewController id="Bcs-Vl-7pf" customClass="CitiesViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
@@ -247,7 +247,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oIS-JF-5Sc">
-                                <rect key="frame" x="0.0" y="111" width="320" height="408"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="D1W-Z0-SAB" customClass="CitiesCollectionLayout" customModule="CityMap" customModuleProvider="target">
                                     <size key="itemSize" width="120" height="160"/>
@@ -323,17 +323,27 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T4I-DZ-7pm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Шостка.AIR" id="LYh-qI-2ys">
-                        <barButtonItem key="backBarButtonItem" title="Шостка.AIR" id="TNa-mc-9tv"/>
-                        <barButtonItem key="rightBarButtonItem" title="Карта" id="NK6-Xu-DsM">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="LYh-qI-2ys">
+                        <nil key="title"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="hqP-Yt-uNa"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="fqV-uL-2Ov">
+                            <rect key="frame" x="35" y="7" width="250" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Шостка.AIR"/>
+                                <segment title="Карта"/>
+                            </segments>
+                            <color key="tintColor" red="0.20086640119552612" green="0.45789366960525513" blue="0.63923901319503784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="fCa-Qg-WXj" kind="show" id="YpI-Xf-2kF"/>
+                                <action selector="topMenuSegmentControl:" destination="Bcs-Vl-7pf" eventType="valueChanged" id="sHV-Ky-0P9"/>
                             </connections>
-                        </barButtonItem>
+                        </segmentedControl>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="MMG-mp-x5a" id="yzz-s6-B9u"/>
                         <outlet property="collectionView" destination="oIS-JF-5Sc" id="V8v-Bs-34t"/>
+                        <outlet property="topMenu" destination="fqV-uL-2Ov" id="fmC-Vz-3jK"/>
+                        <segue destination="fCa-Qg-WXj" kind="show" identifier="heatMap" id="cXf-6b-II7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cjr-Y8-4q8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -350,11 +360,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wSg-gT-54C"/>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="bgj-eo-lcI"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="bgj-eo-lcI">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Leq-qJ-bub">
+                            <rect key="frame" x="50" y="7" width="250" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Шостка.AIR"/>
+                                <segment title="Карта"/>
+                            </segments>
+                            <color key="tintColor" red="0.20086640119999999" green="0.4578936696" blue="0.63923901319999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="topMuneMapSegmentControl:" destination="fCa-Qg-WXj" eventType="valueChanged" id="Ubz-tE-Jt8"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="topMenuMap" destination="Leq-qJ-bub" id="H66-g2-sKt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6F-d6-MgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579" y="-279"/>
+            <point key="canvasLocation" x="1494" y="108"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="me7-bh-RaK">

@@ -20,6 +20,7 @@ private enum Constants {
 class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
+    @IBOutlet weak var topMenu: UISegmentedControl!
     
 
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
@@ -221,5 +222,22 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         return cityCell
     }
+    
+    @IBAction func topMenuSegmentControl(_ sender: UISegmentedControl) {
+        
+        switch topMenu.selectedSegmentIndex
+        {
+        case 0:
+            print("1")
+        case 1:
+            print("2")
+            performSegue(withIdentifier: "heatMap", sender: nil)
+            topMenu.selectedSegmentIndex = 0
+        default:
+            break
+        }   
+    }
+    
+    
 }
 

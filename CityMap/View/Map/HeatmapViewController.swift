@@ -27,6 +27,10 @@ struct HeatMapPositions: Codable {
 }
 
 class HeatmapViewController: UIViewController, GMSMapViewDelegate {
+    
+    @IBOutlet weak var topMenuMap: UISegmentedControl!
+    
+    
     private var mapView: GMSMapView!
     private var heatmapLayer: GMUHeatmapTileLayer!
     private var button: UIButton!
@@ -57,6 +61,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     override func viewDidLoad() {
+        topMenuMap.selectedSegmentIndex = 1
         
         myDataChart()
    
@@ -126,5 +131,24 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
             }.resume()
         
     }
+    
+    @IBAction func topMuneMapSegmentControl(_ sender: UISegmentedControl) {
+        
+        switch topMenuMap.selectedSegmentIndex
+        {
+        case 0:
+            print("11")
+           // topMenuMap.selectedSegmentIndex = 0
+//            self.dismiss(animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
+        case 1:
+            print("22")
+        default:
+            break
+        }
+        
+        
+    }
+    
    
 }
