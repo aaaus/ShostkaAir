@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -82,7 +82,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0E06CAEC202884A8002E9650 /* CityMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CityMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E06CAEC202884A8002E9650 /* Shostka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shostka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E06CAEF202884A8002E9650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E06CAF4202884A8002E9650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E06CAF6202884A8002E9650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 			children = (
 				2BF7C4632242A5DA006C952E /* Google-Maps-iOS-Utils */,
 				2BCB145922429D4600B8BDE1 /* GoogleMapsBase.framework */,
-				0E06CAEE202884A8002E9650 /* CityMap */,
+				0E06CAEE202884A8002E9650 /* Shostka */,
 				0E06CAED202884A8002E9650 /* Products */,
 				0414574B59F3620544468750 /* Pods */,
 				EA411E728FE11043634EC324 /* Frameworks */,
@@ -237,12 +237,12 @@
 		0E06CAED202884A8002E9650 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0E06CAEC202884A8002E9650 /* CityMap.app */,
+				0E06CAEC202884A8002E9650 /* Shostka.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0E06CAEE202884A8002E9650 /* CityMap */ = {
+		0E06CAEE202884A8002E9650 /* Shostka */ = {
 			isa = PBXGroup;
 			children = (
 				0E06CB01202886EB002E9650 /* Assets */,
@@ -253,7 +253,7 @@
 				0E06CB042028871B002E9650 /* View */,
 				0E06CAFB202884A8002E9650 /* Info.plist */,
 			);
-			path = CityMap;
+			path = Shostka;
 			sourceTree = "<group>";
 		};
 		0E06CB01202886EB002E9650 /* Assets */ = {
@@ -505,9 +505,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0E06CAEB202884A8002E9650 /* CityMap */ = {
+		0E06CAEB202884A8002E9650 /* Shostka */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E06CAFE202884A8002E9650 /* Build configuration list for PBXNativeTarget "CityMap" */;
+			buildConfigurationList = 0E06CAFE202884A8002E9650 /* Build configuration list for PBXNativeTarget "Shostka" */;
 			buildPhases = (
 				E6C10FC672FA3A94DB8E7D82 /* [CP] Check Pods Manifest.lock */,
 				0E06CAE8202884A8002E9650 /* Sources */,
@@ -520,9 +520,9 @@
 			);
 			dependencies = (
 			);
-			name = CityMap;
+			name = Shostka;
 			productName = CityMap;
-			productReference = 0E06CAEC202884A8002E9650 /* CityMap.app */;
+			productReference = 0E06CAEC202884A8002E9650 /* Shostka.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -533,7 +533,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "it-shark";
+				ORGANIZATIONNAME = "Aleksandr Andrusenko";
 				TargetAttributes = {
 					0E06CAEB202884A8002E9650 = {
 						CreatedOnToolsVersion = 9.2;
@@ -542,8 +542,8 @@
 					};
 				};
 			};
-			buildConfigurationList = 0E06CAE7202884A8002E9650 /* Build configuration list for PBXProject "CityMap" */;
-			compatibilityVersion = "Xcode 8.0";
+			buildConfigurationList = 0E06CAE7202884A8002E9650 /* Build configuration list for PBXProject "Shostka" */;
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -561,7 +561,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				0E06CAEB202884A8002E9650 /* CityMap */,
+				0E06CAEB202884A8002E9650 /* Shostka */,
 			);
 		};
 /* End PBXProject section */
@@ -844,7 +844,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -861,10 +862,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleMaps/Base/Frameworks",
 				);
-				INFOPLIST_FILE = CityMap/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Shostka/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pro.it-shark.CityMap";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "aaaus.it-group.Shostka";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Google-Maps-iOS-Utils/ShostkaAir-Bridging-Header.h";
@@ -885,10 +889,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/GoogleMaps/Base/Frameworks",
 				);
-				INFOPLIST_FILE = CityMap/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Shostka/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pro.it-shark.CityMap";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "aaaus.it-group.Shostka";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Google-Maps-iOS-Utils/ShostkaAir-Bridging-Header.h";
@@ -900,7 +907,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E06CAE7202884A8002E9650 /* Build configuration list for PBXProject "CityMap" */ = {
+		0E06CAE7202884A8002E9650 /* Build configuration list for PBXProject "Shostka" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E06CAFC202884A8002E9650 /* Debug */,
@@ -909,7 +916,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E06CAFE202884A8002E9650 /* Build configuration list for PBXNativeTarget "CityMap" */ = {
+		0E06CAFE202884A8002E9650 /* Build configuration list for PBXNativeTarget "Shostka" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0E06CAFF202884A8002E9650 /* Debug */,
