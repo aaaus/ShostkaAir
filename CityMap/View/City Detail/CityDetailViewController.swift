@@ -48,6 +48,7 @@ final class CityDetailViewController: UIViewController {
     var xAxisDotsCountToGet: Int = 8
     var timeFormat: String = "HH:mm"
     
+    var getParametrID: Int = 0
     
     /// Timer Area
     
@@ -96,6 +97,12 @@ final class CityDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getParametrID = city!.id
+        while getParametrID > 99 {
+            getParametrID -= 100
+        }
+        
           setupData()
           setupChartFromJSON()
         }
@@ -177,7 +184,7 @@ final class CityDetailViewController: UIViewController {
         leftAxis.axisMaximum = 200
         leftAxis.axisMinimum = 0
         
-        if city?.id == 100 { //Температура
+        if getParametrID == 0 { //Температура
             leftAxis.axisMaximum = 80
             leftAxis.axisMinimum = -40
             let ll1 = ChartLimitLine(limit: 0, label: "")
@@ -188,13 +195,13 @@ final class CityDetailViewController: UIViewController {
             ll1.lineColor = .black
             leftAxis.addLimitLine(ll1)
         }
-        if city?.id == 101 { //Влажность
+        if getParametrID == 1 { //Влажность
             leftAxis.axisMaximum = 100
         }
-        if city?.id == 102 { //Атмосферное давление
+        if getParametrID == 2 { //Атмосферное давление
             leftAxis.axisMaximum = 1000
         }
-        if city?.id == 103 { //TVOC
+        if getParametrID == 3 { //TVOC
             leftAxis.axisMaximum = 1200
             let ll1 = ChartLimitLine(limit: 600, label: "Задовільно")
             ll1.lineWidth = 4
@@ -212,7 +219,7 @@ final class CityDetailViewController: UIViewController {
             leftAxis.addLimitLine(ll2)
         }
         
-        if city?.id == 104 { //Формальдегид
+        if getParametrID == 4 { //Формальдегид
             leftAxis.axisMaximum = 2
             let ll1 = ChartLimitLine(limit: 0.4, label: "Задовільно")
             ll1.lineWidth = 4
@@ -230,7 +237,7 @@ final class CityDetailViewController: UIViewController {
             leftAxis.addLimitLine(ll2)
         }
         
-        if city?.id == 105 { //ECO2
+        if getParametrID == 5 { //ECO2
             leftAxis.axisMaximum = 500
             let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
             ll1.lineWidth = 4
@@ -248,7 +255,7 @@ final class CityDetailViewController: UIViewController {
             leftAxis.addLimitLine(ll2)
         }
         
-        if city?.id == 106 { //PM1
+        if getParametrID == 6 { //PM1
             leftAxis.axisMaximum = 400
             let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
             ll1.lineWidth = 4
@@ -266,7 +273,7 @@ final class CityDetailViewController: UIViewController {
             leftAxis.addLimitLine(ll2)
         }
         
-        if city?.id == 107 { //PM2
+        if getParametrID == 7 { //PM2
             leftAxis.axisMaximum = 400
             let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
             ll1.lineWidth = 4
@@ -284,7 +291,7 @@ final class CityDetailViewController: UIViewController {
             leftAxis.addLimitLine(ll2)
         }
         
-        if city?.id == 108 { //PM10
+        if getParametrID == 8 { //PM10
             leftAxis.axisMaximum = 400
             let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
             ll1.lineWidth = 4
@@ -302,15 +309,15 @@ final class CityDetailViewController: UIViewController {
             leftAxis.addLimitLine(ll2)
         }
         
-        if city?.id == 109 { //Дождь
+        if getParametrID == 9 { //Дождь
             leftAxis.axisMaximum = 1
         }
         
-        if city?.id == 110 { //Напрвление ветра
+        if getParametrID == 10 { //Напрвление ветра
             leftAxis.axisMaximum = 1
         }
         
-        if city?.id == 111 { //Скорость ветра
+        if getParametrID == 11 { //Скорость ветра
             leftAxis.axisMaximum = 30
             let ll1 = ChartLimitLine(limit: 15, label: "Задовільно")
             ll1.lineWidth = 4
@@ -421,48 +428,50 @@ final class CityDetailViewController: UIViewController {
     func myDataChart() {
     
         var getParametr = "data"
-        if city?.id == 100 {
+        if getParametrID == 0 {
             getParametr = "tempDS"
         }
-        if city?.id == 101 {
+        if getParametrID == 1 {
             getParametr = "humidity"
         }
-        if city?.id == 102 {
+        if getParametrID == 2 {
             getParametr = "pressure"
         }
-        if city?.id == 103 {
+        if getParametrID == 3 {
             getParametr = "tvoc"
         }
-        if city?.id == 104 {
+        if getParametrID == 4 {
             getParametr = "ch2o"
         }
-        if city?.id == 105 {
+        if getParametrID == 5 {
             getParametr = "oaq"
         }
-        if city?.id == 106 {
+        if getParametrID == 6 {
             getParametr = "pm1"
         }
-        if city?.id == 107 {
+        if getParametrID == 7 {
             getParametr = "pm2"
         }
-        if city?.id == 108 {
+        if getParametrID == 8 {
             getParametr = "pm10"
         }
-        if city?.id == 109 {
+        if getParametrID == 9 {
             getParametr = "rain"
         }
-        if city?.id == 110 {
+        if getParametrID == 10 {
             getParametr = "winddirect"
         }
-        if city?.id == 111 {
+        if getParametrID == 11 {
             getParametr = "windspeed"
           // getParametr = "uvlevel"
         }
         
         
         //".$_GET[$co2].", ".$_GET[$tvoc].", ".$_GET[$pm1].", ".$_GET[$pm2].", ".$_GET[$pm10]
+        let labNamberFromID: Int = city!.id / 100
 
-        guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?&getFromApp=\(getParametr)&xAxis=\(xAxisDotsCountToGet)") else { return }
+        guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?&labNamberFromID=\(labNamberFromID)&getFromApp=\(getParametr)&xAxis=\(xAxisDotsCountToGet)") else { return }
+       // print(gitUrl)
         
         URLSession.shared.dataTask(with: gitUrl) { (data, response
             , error) in
@@ -473,7 +482,7 @@ final class CityDetailViewController: UIViewController {
                 let decoder = JSONDecoder()
                 let gitData = try decoder.decode(MyGitHub.self, from: data)
                 
-                print("gitData: \(gitData)")
+              //  print("gitData: \(gitData)")
                 
                 
                 
@@ -495,7 +504,7 @@ final class CityDetailViewController: UIViewController {
                     } else {
                     self.title = gname3[0] + String(Int(gname2[0])) + gname3[1]
                     }
-                        print(gname3)
+                      //  print(gname3)
                         // self.name.text = gname
     
                     if let gname4 = gitData.four {
