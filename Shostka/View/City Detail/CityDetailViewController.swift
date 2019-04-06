@@ -99,9 +99,17 @@ final class CityDetailViewController: UIViewController {
         super.viewDidLoad()
         
         getParametrID = city!.id
+
+        
         while getParametrID > 99 {
             getParametrID -= 100
         }
+        
+        
+//        if (getParametrID == 9) || (getParametrID == 10) {
+//            performSegue(withIdentifier: "showInfo", sender: nil)
+//        }
+//
         
           setupData()
           setupChartFromJSON()
@@ -314,7 +322,15 @@ final class CityDetailViewController: UIViewController {
         }
         
         if getParametrID == 10 { //Напрвление ветра
-            leftAxis.axisMaximum = 1
+            leftAxis.axisMaximum = 3
+            leftAxis.axisMinimum = -3
+            let ll1 = ChartLimitLine(limit: 0, label: "")
+            ll1.lineWidth = 4
+            ll1.lineDashLengths = [5, 5]
+            ll1.labelPosition = .rightTop
+            ll1.valueFont = .systemFont(ofSize: 14)
+            ll1.lineColor = .black
+            leftAxis.addLimitLine(ll1)
         }
         
         if getParametrID == 11 { //Скорость ветра

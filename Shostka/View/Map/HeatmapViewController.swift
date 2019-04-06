@@ -16,6 +16,10 @@ struct HeatMapPositions: Codable {
     let arrValue2: [Double?]
     let arrValueName2: [String?]
     let four2: Int?
+    let markerString1: [String?]
+    let markerString2: [String?]
+    let markerDouble1: [Double?]
+    let markerDouble2: [Double?]
     
     
     private enum CodingKeys: String, CodingKey {
@@ -23,6 +27,10 @@ struct HeatMapPositions: Codable {
         case arrValue2
         case arrValueName2
         case four2
+        case markerString1
+        case markerString2
+        case markerDouble1
+        case markerDouble2
     }
 }
 
@@ -30,7 +38,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     
     @IBOutlet weak var topMenuMap: UISegmentedControl!
     
-    
+    var startStatus: Bool = true
     private var mapView: GMSMapView!
     private var heatmapLayer: GMUHeatmapTileLayer!
     private var button: UIButton!
@@ -50,20 +58,57 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
         mapView.delegate = self
         self.view = mapView
        // makeButton()
-        let position = CLLocationCoordinate2D(latitude: 51.872229, longitude: 33.466743)
-        let london = GMSMarker(position: position)
-        london.title = "Шостка.AIR №1"
-        london.snippet = "вул. Щедріна, 1"
-        //london.tracksInfoWindowChanges = true
-        //london.tracksViewChanges = true
-        
-        london.map = mapView
     }
+    
+    
+    /// Timer Area
+    override func viewWillAppear(_ animated: Bool) {
+        startTimer()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        stopTimer()
+    }
+    
+    
+    weak var timer: Timer?
+    
+    deinit {
+        timer?.invalidate()
+    }
+    
+    func timerHandler(_ timer: Timer) {
+        if (Network.reachability.isReachable){
+//            heatmapLayer.map = nil
+         myDataChart()
+        }else{
+            print("No server connection!")
+        }
+    }
+    
+    func startTimer() {
+        timer?.invalidate()   // stops previous timer, if any
+        
+        let seconds = 180.0
+        timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] timer in
+            self?.timerHandler(timer)
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+    }
+    
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         topMenuMap.selectedSegmentIndex = 1
         
-        myDataChart()
+//        myDataChart()
    
         // Set heatmap options.
         heatmapLayer = GMUHeatmapTileLayer()
@@ -87,7 +132,13 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
 //        print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
     }
     
+    
+    
+    
     func myDataChart() {
+       // mapView.clear()
+
+     
         var list = [GMUWeightedLatLng]()
         guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?&getFromApp=google&xAxis=10") else { return }
         
@@ -106,10 +157,13 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
                 DispatchQueue.main.sync {
                     
                     guard var gname1: Array<Double> = gitData.arrXAxis2 as? Array<Double> else { return }
-                    
                     guard var gname2: Array<Double> = gitData.arrValue2 as? Array<Double>  else { return }
+                    guard var mString1: Array<String> = gitData.markerString1 as? Array<String>  else { return }
+                    guard var mString2: Array<String> = gitData.markerString2 as? Array<String>  else { return }
+                    guard var mDouble1: Array<Double> = gitData.markerDouble1 as? Array<Double>  else { return }
+                    guard var mDouble2: Array<Double> = gitData.markerDouble2 as? Array<Double>  else { return }
                     
-                    
+                 //   print(mString1, mString2, mDouble1, mDouble2)
                     _ = (0..<(gname1.count)).map { (i) -> Double in
                       //  let lat = item["lat"]
                       //  let lng = item["lng"]
@@ -118,10 +172,22 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
                        // print(gname1[i])
                         return 5
                             }
+                    
+                    if self.startStatus {
+                        self.startStatus = false
+                    _ = (0..<(mDouble1.count)).map { (i) -> Double in
+                        let position = CLLocationCoordinate2D(latitude: mDouble1[i], longitude: mDouble2[i])
+                        let shostka = GMSMarker(position: position)
+                        shostka.title = mString1[i]
+                        shostka.snippet = mString2[i]
+                        shostka.map = self.mapView
+                        return 10
+                    }
+                    }
             
+
+                    self.heatmapLayer.map = nil
                     self.heatmapLayer.weightedData = list
-//                    print("addHeatmap")
-                    // Set the heatmap to the mapview.
                     self.heatmapLayer.map = self.mapView
                 }
   

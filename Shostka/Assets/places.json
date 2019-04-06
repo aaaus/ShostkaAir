@@ -1,0 +1,292 @@
+{
+    "photos": [
+               {
+               "id": 1,
+               "title": "AIR 1#1",
+               "description": "City Paris",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "station"
+               },
+               {
+               "id": 2,
+               "title": "AIR 2#1",
+               "description": "City Kyiv",
+               "latitude": 51.862990,
+               "longitude": 33.540716,
+               "url": "station"
+               },
+               {
+               "id": 100,
+               "title": "25 °С",
+               "description": "Температура повітря лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "temperature"
+               },
+               {
+               "id": 101,
+               "title": "100 %",
+               "description": "Вологість повітря лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "humidity"
+               },
+               {
+               "id": 102,
+               "title": "785 мм.рт.ст.",
+               "description": "Тиск лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "pressure"
+               },
+               {
+               "id": 103,
+               "title": "ЛОС",
+               "description": "TVOC: 0…1187 ppb Забрудненість повітря хімічна лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "quality_chem"
+               },
+               {
+               "id": 104,
+               "title": "Формальдегід",
+               "description": "Формальдегід лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "formaldeg"
+               },
+               {
+               "id": 105,
+               "title": "eCO2",
+               "description": "eCO2: 400…8192 ppm лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "quality"
+               },
+               {
+               "id": 106,
+               "title": "1 мкг/м3",
+               "description": "Якість повітря лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "polutionsPM1"
+               },
+               {
+               "id": 107,
+               "title": "2.5 мкг/м3",
+               "description": "Якість повітря лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "polutionsPM2"
+               },
+               {
+               "id": 108,
+               "title": "10 мкг/м3",
+               "description": "Якість повітря лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "polutionsPM10"
+               },
+               {
+               "id": 109,
+               "title": "Сухо",
+               "description": "Опади лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "fallout"
+               },
+               {
+               "id": 110,
+               "title": "Пд-Зах",
+               "description": "Напрямок вітру лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "wind_dir"
+               },
+               {
+               "id": 111,
+               "title": "5 м/с",
+               "description": "Швидкість вітру лабораторія 1",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "wind"
+               },
+               {
+               "id": 200,
+               "title": "25 °С",
+               "description": "Температура повітря лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "temperature"
+               },
+               {
+               "id": 201,
+               "title": "100 %",
+               "description": "Вологість повітря лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "humidity"
+               },
+               {
+               "id": 202,
+               "title": "785 мм.рт.ст.",
+               "description": "Тиск лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "pressure"
+               },
+               {
+               "id": 203,
+               "title": "ЛОС",
+               "description": "TVOC: 0…1187 ppb Забрудненість повітря хімічна лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "quality_chem"
+               },
+               {
+               "id": 204,
+               "title": "Формальдегід",
+               "description": "Формальдегід лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "formaldeg"
+               },
+               {
+               "id": 205,
+               "title": "eCO2",
+               "description": "eCO2: 400…8192 ppm лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "quality"
+               },
+               {
+               "id": 206,
+               "title": "1 мкг/м3",
+               "description": "Якість повітря лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "polutionsPM1"
+               },
+               {
+               "id": 207,
+               "title": "2.5 мкг/м3",
+               "description": "Якість повітря лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "polutionsPM2"
+               },
+               {
+               "id": 208,
+               "title": "10 мкг/м3",
+               "description": "Якість повітря лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "polutionsPM10"
+               },
+               {
+               "id": 209,
+               "title": "Сухо",
+               "description": "Опади лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "fallout"
+               },
+               {
+               "id": 210,
+               "title": "Пд-Зах",
+               "description": "Напрямок вітру лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "wind_dir"
+               },
+               {
+               "id": 211,
+               "title": "5 м/с",
+               "description": "Швидкість вітру лабораторія 2",
+               "latitude": 51.861990,
+               "longitude": 33.510716,
+               "url": "wind"
+               },
+               {
+               "id": 300,
+               "title": "12 °С",
+               "description": "Температура повітря лабораторія 3",
+               "latitude": 51.875159,
+               "longitude": 33.483964,
+               "url": "https://shostka.in/shostka/images/Temperature.jpg"
+               },
+               {
+               "id": 301,
+               "title": "12 %",
+               "description": "Вологість повітря лабораторія 3",
+               "latitude": 51.875159,
+               "longitude": 33.483964,
+               "url": "https://shostka.in/shostka/images/humidity.jpg"
+               },
+               {
+               "id": 302,
+               "title": "748 мм.рт.ст",
+               "description": "Тиск лабораторія 3",
+               "latitude": 51.875159,
+               "longitude": 33.483964,
+               "url": "https://shostka.in/shostka/images/pressure.jpg"
+               },
+               {
+               "id": 303,
+               "title": "25 мм",
+               "description": "Опади лабораторія 3",
+               "latitude": 51.875159,
+               "longitude": 33.483964,
+               "url": "https://shostka.in/shostka/images/fallout.jpg"
+               },
+               {
+               "id": 304,
+               "title": "Пн-Сх",
+               "description": "Напрямок вітру лабораторія 3",
+               "latitude": 51.875159,
+               "longitude": 33.483964,
+               "url": "https://shostka.in/shostka/images/wind.jpg"
+               },
+               {
+               "id": 305,
+               "title": "10 мг/м3",
+               "description": "Забрудненість повітря хімічна лабораторія 3",
+               "latitude": 51.875159,
+               "longitude": 33.483964,
+               "url": "https://shostka.in/shostka/images/polutions.jpg"
+               },
+               {
+               "id": 306,
+               "title": "25 мкг/м3",
+               "description": "Якість повітря лабораторія 3",
+               "latitude": 51.875159,
+               "longitude": 33.483964,
+               "url": "https://shostka.in/shostka/images/quality.jpg"
+               },
+               {
+               "id": 10001,
+               "title": "Шостка NEWS",
+               "description": "http://www.shostka-news.com",
+               "latitude": 51.865133,
+               "longitude": 33.486750,
+               "url": "https://shostka.in/shostka/images/shostka-news1.jpg"
+               },
+               {
+               "id": 10002,
+               "title": "Перекрёсток",
+               "description": "http://perekres.tk/",
+               "latitude": 51.864187,
+               "longitude": 33.487098,
+               "url": "https://shostka.in/shostka/images/perekrestok.jpg"
+               },
+               {
+               "id": 10003,
+               "title": "Shostka.life",
+               "description": "http://shostka.life/",
+               "latitude": 51.864187,
+               "longitude": 33.487098,
+               "url": "https://shostka.in/shostka/images/shostka-life.jpg"
+               }
+               ]
+}

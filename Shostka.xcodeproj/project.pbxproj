@@ -65,6 +65,8 @@
 		2BF4844A22297F310052FE97 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF4844922297F310052FE97 /* DetailNewsViewController.swift */; };
 		2BF95934224F6D2F0050BB84 /* LocalInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95933224F6D2F0050BB84 /* LocalInfoController.swift */; };
 		2BF95936224F85700050BB84 /* LabInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95935224F85700050BB84 /* LabInfoController.swift */; };
+		433A482E2259268700F3D225 /* gps.php in Sources */ = {isa = PBXBuildFile; fileRef = 433A482D2259268700F3D225 /* gps.php */; };
+		433A4830225926EA00F3D225 /* places.json in Sources */ = {isa = PBXBuildFile; fileRef = 433A482F225926EA00F3D225 /* places.json */; };
 		43680B7B2257DE55006900AD /* SupportFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43680B7A2257DE55006900AD /* SupportFB.swift */; };
 		436E0E6C222460F5003B0E9C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E0E6B222460F5003B0E9C /* SensorsViewController.swift */; };
 		43F242772256769D00D93F80 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F242762256769D00D93F80 /* Reachability.swift */; };
@@ -193,6 +195,8 @@
 		2BF95933224F6D2F0050BB84 /* LocalInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalInfoController.swift; sourceTree = "<group>"; };
 		2BF95935224F85700050BB84 /* LabInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabInfoController.swift; sourceTree = "<group>"; };
 		3BC66C1C4F0513E2A324313C /* Pods_CityMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CityMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		433A482D2259268700F3D225 /* gps.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = gps.php; sourceTree = "<group>"; };
+		433A482F225926EA00F3D225 /* places.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = places.json; sourceTree = "<group>"; };
 		43680B7A2257DE55006900AD /* SupportFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportFB.swift; sourceTree = "<group>"; };
 		436E0E6B222460F5003B0E9C /* SensorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsViewController.swift; sourceTree = "<group>"; };
 		43F242762256769D00D93F80 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -261,6 +265,8 @@
 			children = (
 				0E06CAF6202884A8002E9650 /* Assets.xcassets */,
 				0E06CAEF202884A8002E9650 /* AppDelegate.swift */,
+				433A482D2259268700F3D225 /* gps.php */,
+				433A482F225926EA00F3D225 /* places.json */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -688,6 +694,7 @@
 				2B5C5FD02242CA9D00664C90 /* GMULineString.m in Sources */,
 				2B5C5FC72242CA9D00664C90 /* GMUGroundOverlay.m in Sources */,
 				0E06CB222028DAB0002E9650 /* CityService.swift in Sources */,
+				433A4830225926EA00F3D225 /* places.json in Sources */,
 				0E69DA6E202F84AC00999974 /* CityEntity+CoreDataProperties.swift in Sources */,
 				2BBF06B7224FE57700004D99 /* InfoWebView.swift in Sources */,
 				0E69DA6C202F84AC00999974 /* CoreDataStack.swift in Sources */,
@@ -708,6 +715,7 @@
 				2B5B67B022427B800003EA1B /* HeatmapViewController.swift in Sources */,
 				0E69DA6D202F84AC00999974 /* CoreDataProvider.swift in Sources */,
 				0E2F8BFD202F8A1E00A94BD4 /* CityWebService.swift in Sources */,
+				433A482E2259268700F3D225 /* gps.php in Sources */,
 				2B5C5FD82242CA9D00664C90 /* GMUFeature.m in Sources */,
 				0E2F8C00202F8DDF00A94BD4 /* MapViewController.swift in Sources */,
 				2BF4844A22297F310052FE97 /* DetailNewsViewController.swift in Sources */,

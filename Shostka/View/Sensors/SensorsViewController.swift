@@ -141,10 +141,9 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
                 let detailsController = segue.destination as? CityDetailViewController else {
                     return
             }
-            
             detailsController.city = cityCell.city
             detailsController.sensorStationNumber = sensorStationNumber
-
+            
         case Segues.showInfoLab.rawValue:
             guard let infoLabController = segue.destination as? LabInfoController else {
                 return

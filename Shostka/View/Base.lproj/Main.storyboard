@@ -14,7 +14,7 @@
         <!--Lab Info Controller-->
         <scene sceneID="wxN-f0-M4n">
             <objects>
-                <viewController id="s9u-S7-Wpf" customClass="LabInfoController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="s9u-S7-Wpf" customClass="LabInfoController" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H2P-MN-Zqn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,13 +49,13 @@
         <!--...-->
         <scene sceneID="F7G-mB-CEp">
             <objects>
-                <viewController id="Uyt-9q-BeH" customClass="CityDetailViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Uyt-9q-BeH" customClass="CityDetailViewController" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wkm-Al-bTJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-pD-XU6" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="111" width="320" height="269"/>
+                                <rect key="frame" x="0.0" y="111" width="320" height="289"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <viewLayoutGuide key="safeArea" id="DcS-1z-iUR"/>
                             </view>
@@ -77,7 +77,7 @@
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="top" secondItem="jS0-iv-jDb" secondAttribute="top" id="Juu-OJ-MKM"/>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="leading" secondItem="jS0-iv-jDb" secondAttribute="leading" id="NzH-HV-Od2"/>
                             <constraint firstItem="QL0-7l-YEK" firstAttribute="centerX" secondItem="jS0-iv-jDb" secondAttribute="centerX" id="e5r-Ln-SMV"/>
-                            <constraint firstItem="gOD-pD-XU6" firstAttribute="centerY" secondItem="wkm-Al-bTJ" secondAttribute="centerY" constant="-38.5" id="eKb-HA-5zX"/>
+                            <constraint firstItem="gOD-pD-XU6" firstAttribute="centerY" secondItem="wkm-Al-bTJ" secondAttribute="centerY" constant="-28.5" id="eKb-HA-5zX"/>
                             <constraint firstItem="jS0-iv-jDb" firstAttribute="bottom" secondItem="QL0-7l-YEK" secondAttribute="bottom" constant="14" id="fI8-pe-1c7"/>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="trailing" secondItem="jS0-iv-jDb" secondAttribute="trailing" id="oUi-Pq-YUS"/>
                         </constraints>
@@ -102,7 +102,7 @@
         <!--Local Info Controller-->
         <scene sceneID="YCB-14-Ie5">
             <objects>
-                <viewController id="RNs-Ed-DAh" customClass="LocalInfoController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RNs-Ed-DAh" customClass="LocalInfoController" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zEZ-2B-cL0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
         <!--Новини-->
         <scene sceneID="9Mb-34-ZKO">
             <objects>
-                <viewController id="sxS-jk-cyf" customClass="DetailNewsViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sxS-jk-cyf" customClass="DetailNewsViewController" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x6z-ZZ-c6j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +178,7 @@
         <!--Шостка.CITY-->
         <scene sceneID="JBN-2g-L7K">
             <objects>
-                <viewController id="WbI-v1-ffB" customClass="InfoWebView" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WbI-v1-ffB" customClass="InfoWebView" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l88-xm-7ob">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,7 +242,7 @@
         <!--Технічна підтримка-->
         <scene sceneID="uBq-Oz-GlS">
             <objects>
-                <viewController id="Ptx-b4-Fhf" customClass="SupportFB" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ptx-b4-Fhf" customClass="SupportFB" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TJk-TL-SqO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -307,7 +307,7 @@
         <!--Cities View Controller-->
         <scene sceneID="agv-0W-uog">
             <objects>
-                <viewController id="Bcs-Vl-7pf" customClass="CitiesViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Bcs-Vl-7pf" customClass="CitiesViewController" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wnm-Sh-sCY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,14 +315,14 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oIS-JF-5Sc">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="D1W-Z0-SAB" customClass="CitiesCollectionLayout" customModule="CityMap" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="D1W-Z0-SAB" customClass="CitiesCollectionLayout" customModule="Shostka" customModuleProvider="target">
                                     <size key="itemSize" width="120" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="4"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCellIdentifier" id="mbQ-Zj-cVm" customClass="CityViewCell" customModule="CityMap" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCellIdentifier" id="mbQ-Zj-cVm" customClass="CityViewCell" customModule="Shostka" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="120" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -419,7 +419,7 @@
         <!--Heatmap View Controller-->
         <scene sceneID="hLn-hx-rKO">
             <objects>
-                <viewController id="fCa-Qg-WXj" customClass="HeatmapViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fCa-Qg-WXj" customClass="HeatmapViewController" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0tG-Os-WuH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -473,7 +473,7 @@
         <!--Параметри-->
         <scene sceneID="87O-RR-3TL">
             <objects>
-                <viewController id="tYv-pJ-EMd" customClass="SensorsViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tYv-pJ-EMd" customClass="SensorsViewController" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iuq-K5-lEB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -481,14 +481,14 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yjf-Sf-wpC">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="V9L-Kj-6Gd" customClass="CitiesCollectionLayout" customModule="CityMap" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="V9L-Kj-6Gd" customClass="CitiesCollectionLayout" customModule="Shostka" customModuleProvider="target">
                                     <size key="itemSize" width="120" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="4"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCellIdentifier" id="R7P-32-K61" customClass="SensorsViewCell" customModule="CityMap" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCellIdentifier" id="R7P-32-K61" customClass="SensorsViewCell" customModule="Shostka" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="120" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -614,7 +614,7 @@
         <!--Новини-->
         <scene sceneID="lQD-tV-Fqf">
             <objects>
-                <viewController id="2or-dB-hgt" customClass="NewsViewController" customModule="CityMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2or-dB-hgt" customClass="NewsViewController" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qdg-hh-vaF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -622,14 +622,14 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h2O-ti-030">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="GNA-MV-AFB" customClass="CitiesCollectionLayout" customModule="CityMap" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="GNA-MV-AFB" customClass="CitiesCollectionLayout" customModule="Shostka" customModuleProvider="target">
                                     <size key="itemSize" width="120" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="4"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCellIdentifier" id="n4a-Mr-5cq" customClass="NewsViewCell" customModule="CityMap" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CityCellIdentifier" id="n4a-Mr-5cq" customClass="NewsViewCell" customModule="Shostka" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="120" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
