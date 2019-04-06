@@ -39,6 +39,9 @@ final class CityWebService {
             callback([], nil)
             return
         }
+        
+        
+        if (Network.reachability.isReachable){
         let urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30)
         let task = session.dataTask(with: urlRequest) { [weak self] (data, response, error) in
             guard let strongSelf = self else {
@@ -62,7 +65,8 @@ final class CityWebService {
                 callback([], decodeError)
             }
         }
-
+        
         task.resume()
+        }
     }
 }

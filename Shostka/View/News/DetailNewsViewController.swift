@@ -28,7 +28,7 @@ class DetailNewsViewController: UIViewController {
          return
          }
         urlFromCityDiscription = city.description
-        print("city.d \(city.description)")
+//        print("city.d \(city.description)")
         self.navigationItem.title = city.name
         
         //self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true

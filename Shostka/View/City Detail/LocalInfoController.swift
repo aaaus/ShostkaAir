@@ -21,7 +21,7 @@ class LocalInfoController: UIViewController {
     var id: Int! {
         didSet {
             //update()
-            print(id as Any)
+//            print(id as Any)
         }
     }
 
@@ -34,7 +34,7 @@ class LocalInfoController: UIViewController {
         
         let sensorID = String(id)
         let url = URL (string: "https://shostka.in/shostka/info/\(sensorID).html")
-        print("url: \(String(describing: url))")
+//        print("url: \(String(describing: url))")
         let requestObj = URLRequest(url: url!)
         WebViewInfo.load(requestObj)
     }

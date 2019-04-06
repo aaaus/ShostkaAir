@@ -86,7 +86,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
             
             if (city.id >= 10000 && city.id < 10100){  // Сколько плиток сайтов
                 citiesCount += 1
-                print(city.id)
+//                print(city.id)
             }
             if city.id < 10000 {  // Сколько объектов в массиве до сайтов
                 sensorsArrayCountBeforeCurentSensors += 1
@@ -110,7 +110,7 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         let capitalToDisplay = cities[indexPath.row + sensorsArrayCountBeforeCurentSensors]
         cityCell.city = capitalToDisplay
-        print("cityCell\(cityCell)")
+//        print("cityCell\(cityCell)")
         return cityCell
     }
 }

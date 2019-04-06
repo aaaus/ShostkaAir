@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey("AIzaSyAoiHutAlBWJoTob_5y-Gbh85F1L-nwQWM")
         // Override point for customization after application launch.
-        sleep(2)
+        sleep(1)
                 
         do {
             try Network.reachability = Reachability(hostname: "www.google.com")

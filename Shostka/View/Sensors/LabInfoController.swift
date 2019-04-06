@@ -15,7 +15,7 @@ class LabInfoController: UIViewController {
     
     var id: Int! {
         didSet {
-            print(id as Any)
+//            print(id as Any)
         }
     }
     
@@ -28,7 +28,7 @@ class LabInfoController: UIViewController {
         
         let sensorID = String(id)
         let url = URL (string: "https://shostka.in/shostka/info/\(sensorID).html")
-        print("url: \(String(describing: url))")
+//        print("url: \(String(describing: url))")
         let requestObj = URLRequest(url: url!)
         WebViewLabInfo.load(requestObj)
     }

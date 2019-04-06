@@ -84,7 +84,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
+//        print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
     }
     
     func myDataChart() {
@@ -120,7 +120,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
                             }
             
                     self.heatmapLayer.weightedData = list
-                    print("addHeatmap")
+//                    print("addHeatmap")
                     // Set the heatmap to the mapview.
                     self.heatmapLayer.map = self.mapView
                 }
@@ -137,7 +137,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
         switch topMenuMap.selectedSegmentIndex
         {
         case 0:
-            print("11")
+//            print("11")
            // topMenuMap.selectedSegmentIndex = 0
 //            self.dismiss(animated: true, completion: nil)
             self.navigationController?.popViewController(animated: true)

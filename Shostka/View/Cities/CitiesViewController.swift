@@ -48,14 +48,14 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     /// Timer Area
     override func viewWillAppear(_ animated: Bool) {
         updateUserInterface()
-        print("Load")
+//        print("Load")
         startTimer()
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         updateUserInterface()
-        print("UnLoad")
+//        print("UnLoad")
         stopTimer()
         
     }
@@ -68,8 +68,8 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     func timerHandler(_ timer: Timer) {
-        let hola = "CitiesViewController"
-        print(">>>> \(hola)")
+//        let hola = "CitiesViewController"
+//        print(">>>> \(hola)")
         if (Network.reachability.isReachable){
         setupData()
         self.collectionView.reloadData()
@@ -85,7 +85,7 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     func startTimer() {
         timer?.invalidate()   // stops previous timer, if any
         
-        let seconds = 5.0
+        let seconds = 30.0
         timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] timer in
             self?.timerHandler(timer)
         }
@@ -125,11 +125,11 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
         case .wifi:
             view.backgroundColor = .green
         }*/
-        print("Reachability Summary")
-        print("Status:", Network.reachability.status)
-        print("HostName:", Network.reachability.hostname ?? "nil")
-        print("Reachable:", Network.reachability.isReachable)
-        print("Wifi:", Network.reachability.isReachableViaWiFi)
+//        print("Reachability Summary")
+//        print("Status:", Network.reachability.status)
+//        print("HostName:", Network.reachability.hostname ?? "nil")
+//        print("Reachable:", Network.reachability.isReachable)
+//        print("Wifi:", Network.reachability.isReachableViaWiFi)
         
         if (!Network.reachability.isReachable){
             // create the alert
@@ -144,6 +144,8 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
             setupData()
         }
     }
+    
+    
     @objc func statusManager(_ notification: Notification) {
         updateUserInterface()
     }
@@ -194,7 +196,7 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
         for city in cities {
             if city.id < 100{
             citiesCount += 1
-            print(city.id)
+//            print(city.id)
             }
         laboratoryCount = citiesCount
         }

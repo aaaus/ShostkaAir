@@ -53,14 +53,14 @@ final class CityDetailViewController: UIViewController {
     /// Timer Area
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Load")
+//        print("Load")
         myDataChart()
         startTimer()
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("UnLoad")
+//        print("UnLoad")
         stopTimer()
         
     }
@@ -73,15 +73,15 @@ final class CityDetailViewController: UIViewController {
     }
     
     func timerHandler(_ timer: Timer) {
-        let hola = "myDataChartTimer"
-        print(">>>> \(hola)")
+//        let hola = "myDataChartTimer"
+//        print(">>>> \(hola)")
         myDataChart()
     }
     
     func startTimer() {
         timer?.invalidate()   // stops previous timer, if any
         
-        let seconds = 5.0
+        let seconds = 30.0
         timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] timer in
             self?.timerHandler(timer)
         }
@@ -507,10 +507,10 @@ final class CityDetailViewController: UIViewController {
                       //  print(gname3)
                         // self.name.text = gname
     
-                    if let gname4 = gitData.four {
-                         print(gname4)
-                        // self.name.text = gname
-                    }
+//                    if let gname4 = gitData.four {
+//                         print(gname4)
+//                        // self.name.text = gname
+//                    }
                     
 
                     gname1 = gname1.reversed()
@@ -524,7 +524,7 @@ final class CityDetailViewController: UIViewController {
 
                         
                     }
-                    print("values3_12345: \(String(describing: self.values3))")
+//                    print("values3_12345: \(String(describing: self.values3))")
 
                    // self.dataChartUpdate()
                     let set3 = LineChartDataSet(values: self.values3, label: gname3[2])
@@ -569,22 +569,22 @@ final class CityDetailViewController: UIViewController {
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-            print("1")
+//            print("1")
             xAxisDotsCountToGet = 8
             timeFormat = timeFormatToChart
             if UIDevice.current.orientation.isPortrait {
               timeFormat = "HH:mm"
             }
         case 1:
-            print("2")
+//            print("2")
             xAxisDotsCountToGet = 100
             timeFormat = timeFormatToChart
         case 2:
-            print("3")
+//            print("3")
             xAxisDotsCountToGet = 1000
             timeFormat = timeFormatToChart
         case 3:
-            print("4")
+//            print("4")
             xAxisDotsCountToGet = 2000
             timeFormat = timeFormatToChart
         default:

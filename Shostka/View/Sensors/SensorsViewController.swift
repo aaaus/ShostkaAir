@@ -44,13 +44,13 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
   /// Timer Area
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Load")
+//        print("Load")
         startTimer()
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("UnLoad")
+//        print("UnLoad")
         stopTimer()
 
     }
@@ -63,8 +63,8 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func timerHandler(_ timer: Timer) {
-        let hola = "hola"
-        print(">>>> \(hola)")
+//        let hola = "hola"
+//        print(">>>> \(hola)")
         setupData()
         self.collectionView.reloadData()
        // SensorsViewCell
@@ -73,7 +73,7 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
     func startTimer() {
         timer?.invalidate()   // stops previous timer, if any
         
-        let seconds = 5.0
+        let seconds = 30.0
         timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] timer in
             self?.timerHandler(timer)
         }
@@ -110,7 +110,7 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     
     @objc func appWillEnterForeground() {
-        print("Observer method called123")
+//        print("Observer method called123")
         setupData()
     }
     
