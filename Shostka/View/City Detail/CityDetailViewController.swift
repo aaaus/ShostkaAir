@@ -198,7 +198,7 @@ final class CityDetailViewController: UIViewController {
             let ll1 = ChartLimitLine(limit: 0, label: "")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
-            ll1.labelPosition = .rightTop
+            ll1.labelPosition = .topRight
             ll1.valueFont = .systemFont(ofSize: 14)
             ll1.lineColor = .black
             leftAxis.addLimitLine(ll1)
@@ -214,14 +214,14 @@ final class CityDetailViewController: UIViewController {
             let ll1 = ChartLimitLine(limit: 600, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
-            ll1.labelPosition = .rightTop
+            ll1.labelPosition = .topRight
             ll1.valueFont = .systemFont(ofSize: 14)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
             let ll2 = ChartLimitLine(limit: 1100, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
-            ll2.labelPosition = .rightTop
+            ll2.labelPosition = .topRight
             ll2.valueFont = .systemFont(ofSize: 14)
             ll2.lineColor = .red
             leftAxis.addLimitLine(ll2)
@@ -232,14 +232,14 @@ final class CityDetailViewController: UIViewController {
             let ll1 = ChartLimitLine(limit: 0.4, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
-            ll1.labelPosition = .rightTop
+            ll1.labelPosition = .topRight
             ll1.valueFont = .systemFont(ofSize: 14)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
             let ll2 = ChartLimitLine(limit: 0.8, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
-            ll2.labelPosition = .rightTop
+            ll2.labelPosition = .topRight
             ll2.valueFont = .systemFont(ofSize: 14)
             ll2.lineColor = .red
             leftAxis.addLimitLine(ll2)
@@ -250,14 +250,14 @@ final class CityDetailViewController: UIViewController {
             let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
-            ll1.labelPosition = .rightTop
+            ll1.labelPosition = .topRight
             ll1.valueFont = .systemFont(ofSize: 14)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
             let ll2 = ChartLimitLine(limit: 300, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
-            ll2.labelPosition = .rightTop
+            ll2.labelPosition = .topRight
             ll2.valueFont = .systemFont(ofSize: 14)
             ll2.lineColor = .red
             leftAxis.addLimitLine(ll2)
@@ -268,14 +268,14 @@ final class CityDetailViewController: UIViewController {
             let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
-            ll1.labelPosition = .rightTop
+            ll1.labelPosition = .topRight
             ll1.valueFont = .systemFont(ofSize: 14)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
             let ll2 = ChartLimitLine(limit: 300, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
-            ll2.labelPosition = .rightTop
+            ll2.labelPosition = .topRight
             ll2.valueFont = .systemFont(ofSize: 14)
             ll2.lineColor = .red
             leftAxis.addLimitLine(ll2)
@@ -286,14 +286,14 @@ final class CityDetailViewController: UIViewController {
             let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
-            ll1.labelPosition = .rightTop
+            ll1.labelPosition = .topRight
             ll1.valueFont = .systemFont(ofSize: 14)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
             let ll2 = ChartLimitLine(limit: 300, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
-            ll2.labelPosition = .rightTop
+            ll2.labelPosition = .topRight
             ll2.valueFont = .systemFont(ofSize: 14)
             ll2.lineColor = .red
             leftAxis.addLimitLine(ll2)
@@ -304,14 +304,14 @@ final class CityDetailViewController: UIViewController {
             let ll1 = ChartLimitLine(limit: 150, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
-            ll1.labelPosition = .rightTop
+            ll1.labelPosition = .topRight
             ll1.valueFont = .systemFont(ofSize: 14)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
             let ll2 = ChartLimitLine(limit: 300, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
-            ll2.labelPosition = .rightTop
+            ll2.labelPosition = .topRight
             ll2.valueFont = .systemFont(ofSize: 14)
             ll2.lineColor = .red
             leftAxis.addLimitLine(ll2)
@@ -327,7 +327,7 @@ final class CityDetailViewController: UIViewController {
             let ll1 = ChartLimitLine(limit: 0, label: "")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
-            ll1.labelPosition = .rightTop
+            ll1.labelPosition = .topRight
             ll1.valueFont = .systemFont(ofSize: 14)
             ll1.lineColor = .black
             leftAxis.addLimitLine(ll1)
@@ -338,14 +338,14 @@ final class CityDetailViewController: UIViewController {
             let ll1 = ChartLimitLine(limit: 15, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
-            ll1.labelPosition = .rightTop
+            ll1.labelPosition = .topRight
             ll1.valueFont = .systemFont(ofSize: 14)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
             let ll2 = ChartLimitLine(limit: 25, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
-            ll2.labelPosition = .rightTop
+            ll2.labelPosition = .topRight
             ll2.valueFont = .systemFont(ofSize: 14)
             ll2.lineColor = .red
             leftAxis.addLimitLine(ll2)
@@ -543,7 +543,8 @@ final class CityDetailViewController: UIViewController {
 //                    print("values3_12345: \(String(describing: self.values3))")
 
                    // self.dataChartUpdate()
-                    let set3 = LineChartDataSet(values: self.values3, label: gname3[2])
+                   // let set3 = LineChartDataSet(values: self.values3, label: gname3[2])
+                    let set3 = LineChartDataSet(entries: self.values3, label: gname3[2])
                     // print("values3_11111: \(String(describing: self.values3))")
                     // print("set3_11111: \(set3))")
                     self.setDataCount(10, range: 1, set1: set3)

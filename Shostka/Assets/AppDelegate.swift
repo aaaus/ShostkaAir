@@ -1,3 +1,7 @@
+// CityDetailViewController - добавить получение названия текущего датчика if getParametrID == 0 из URL json
+
+
+
 import UIKit
 
 @UIApplicationMain
