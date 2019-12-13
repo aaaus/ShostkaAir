@@ -12,7 +12,8 @@ import WebKit
 class SupportFB: UIViewController {
 
     @IBOutlet weak var supportWebView: WKWebView!
-    let url = URL (string: "https://www.facebook.com/sigma.centr.today/")
+    let url = URL (string: "https://shostka.in/shostka/info/info.html")
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

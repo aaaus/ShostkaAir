@@ -207,36 +207,32 @@ final class CityDetailViewController: UIViewController {
             leftAxis.axisMaximum = 100
         }
         if getParametrID == 2 { //Атмосферное давление
-            leftAxis.axisMaximum = 1000
+            leftAxis.axisMaximum = 800
+            leftAxis.axisMinimum = 600
         }
-        if getParametrID == 3 { //TVOC
-            leftAxis.axisMaximum = 1200
-            let ll1 = ChartLimitLine(limit: 600, label: "Задовільно")
+        if getParametrID == 3 { //senstemp
+            leftAxis.axisMaximum = 80
+            leftAxis.axisMinimum = -40
+            let ll1 = ChartLimitLine(limit: 0, label: "")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
             ll1.labelPosition = .topRight
             ll1.valueFont = .systemFont(ofSize: 14)
-            ll1.lineColor = .orange
+            ll1.lineColor = .black
             leftAxis.addLimitLine(ll1)
-            let ll2 = ChartLimitLine(limit: 1100, label: "Верхня межа")
-            ll2.lineWidth = 4
-            ll2.lineDashLengths = [5, 5]
-            ll2.labelPosition = .topRight
-            ll2.valueFont = .systemFont(ofSize: 14)
-            ll2.lineColor = .red
-            leftAxis.addLimitLine(ll2)
+
         }
         
-        if getParametrID == 4 { //Формальдегид
-            leftAxis.axisMaximum = 2
-            let ll1 = ChartLimitLine(limit: 0.4, label: "Задовільно")
+        if getParametrID == 4 { //TVOC
+            leftAxis.axisMaximum = 5
+            let ll1 = ChartLimitLine(limit: 2.4, label: "Задовільно")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
             ll1.labelPosition = .topRight
             ll1.valueFont = .systemFont(ofSize: 14)
             ll1.lineColor = .orange
             leftAxis.addLimitLine(ll1)
-            let ll2 = ChartLimitLine(limit: 0.8, label: "Верхня межа")
+            let ll2 = ChartLimitLine(limit: 4, label: "Верхня межа")
             ll2.lineWidth = 4
             ll2.lineDashLengths = [5, 5]
             ll2.labelPosition = .topRight
@@ -318,12 +314,11 @@ final class CityDetailViewController: UIViewController {
         }
         
         if getParametrID == 9 { //Дождь
-            leftAxis.axisMaximum = 1
+            leftAxis.axisMaximum = 100
         }
         
         if getParametrID == 10 { //Напрвление ветра
-            leftAxis.axisMaximum = 3
-            leftAxis.axisMinimum = -3
+            leftAxis.axisMaximum = 360
             let ll1 = ChartLimitLine(limit: 0, label: "")
             ll1.lineWidth = 4
             ll1.lineDashLengths = [5, 5]
@@ -365,6 +360,8 @@ final class CityDetailViewController: UIViewController {
         leftAxis.gridLineDashLengths = [5, 5]
         leftAxis.drawLimitLinesBehindDataEnabled = true
         
+
+        
         chartView.rightAxis.enabled = false
         
         //[_chartView.viewPortHandler setMaximumScaleY: 2.f];
@@ -381,7 +378,7 @@ final class CityDetailViewController: UIViewController {
         /* sliderX.value = 45
          sliderY.value = 100
          slidersValueChanged(nil)*/
-        chartView.animate(xAxisDuration: 2.5)
+        chartView.animate(xAxisDuration: 0.5)
         //self.setDataCount(5, range: 5, curentPoint: 5)
         myDataChart()
         
@@ -429,7 +426,7 @@ final class CityDetailViewController: UIViewController {
         
         set1.fillAlpha = 1
         set1.fill = Fill(linearGradient: gradient, angle: 90) //.linearGradient(gradient, angle: 90)
-        set1.drawFilledEnabled = true
+        set1.drawFilledEnabled = false
   
        // LineChartData(dataSets: set1.ad)
         
@@ -454,10 +451,10 @@ final class CityDetailViewController: UIViewController {
             getParametr = "pressure"
         }
         if getParametrID == 3 {
-            getParametr = "tvoc"
+            getParametr = "senstemp"
         }
         if getParametrID == 4 {
-            getParametr = "ch2o"
+            getParametr = "tvoc"
         }
         if getParametrID == 5 {
             getParametr = "oaq"
