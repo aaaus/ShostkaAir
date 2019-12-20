@@ -159,9 +159,9 @@
                         <viewLayoutGuide key="safeArea" id="b7U-1Y-4KZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Новини" id="wi8-pc-37d">
-                        <barButtonItem key="leftBarButtonItem" systemItem="reply" id="Y6p-Pq-XK7">
+                        <barButtonItem key="leftBarButtonItem" image="homeBtn" id="Y6p-Pq-XK7">
                             <connections>
-                                <action selector="backUrlWebView:" destination="sxS-jk-cyf" id="l5r-4s-qrS"/>
+                                <action selector="backUrlWebView:" destination="sxS-jk-cyf" id="y97-m4-hbs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uzc-zA-SvF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="861.97183098591552"/>
+            <point key="canvasLocation" x="-133" y="863"/>
         </scene>
         <!--Шостка.CITY-->
         <scene sceneID="JBN-2g-L7K">
@@ -390,7 +390,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="LYh-qI-2ys">
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="hqP-Yt-uNa"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="fqV-uL-2Ov">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="fqV-uL-2Ov">
                             <rect key="frame" x="35" y="6" width="250" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
@@ -426,7 +426,7 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="bgj-eo-lcI">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Leq-qJ-bub">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Leq-qJ-bub">
                             <rect key="frame" x="50" y="6" width="250" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
@@ -458,10 +458,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="x1k-GY-jIR" kind="relationship" relationship="viewControllers" id="0CQ-OL-KeY"/>
                         <segue destination="NKm-oP-7aO" kind="relationship" relationship="viewControllers" id="sS4-Rz-esO"/>
-                        <segue destination="fD1-vr-mD6" kind="relationship" relationship="viewControllers" id="rLT-4r-0i7"/>
-                        <segue destination="nQ6-UG-qVK" kind="relationship" relationship="viewControllers" id="rT4-fP-Uur"/>
+                        <segue destination="x1k-GY-jIR" kind="relationship" relationship="viewControllers" id="Hm6-u0-vjk"/>
+                        <segue destination="fD1-vr-mD6" kind="relationship" relationship="viewControllers" id="EYk-Qg-ZnC"/>
+                        <segue destination="nQ6-UG-qVK" kind="relationship" relationship="viewControllers" id="48u-l1-PVi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EUR-K2-Mc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -571,11 +571,11 @@
             </objects>
             <point key="canvasLocation" x="2406" y="107"/>
         </scene>
-        <!--Шостка.NEWS-->
+        <!--Новини-->
         <scene sceneID="9vx-24-jvl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NKm-oP-7aO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Шостка.NEWS" image="News" id="GPp-8d-r7a"/>
+                    <tabBarItem key="tabBarItem" title="Новини" image="News" id="GPp-8d-r7a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1XJ-yr-rNe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -583,7 +583,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2or-dB-hgt" kind="relationship" relationship="rootViewController" id="EVj-oD-nMq"/>
+                        <segue destination="sxS-jk-cyf" kind="relationship" relationship="rootViewController" id="Jh1-s5-gDY"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bbw-pj-SXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -618,7 +618,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h2O-ti-030">
-                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="GNA-MV-AFB" customClass="CitiesCollectionLayout" customModule="Shostka" customModuleProvider="target">
                                     <size key="itemSize" width="120" height="160"/>
@@ -670,7 +670,6 @@
                                         <connections>
                                             <outlet property="cityImage" destination="mCV-My-UqC" id="JRt-8e-isk"/>
                                             <outlet property="cityLabel" destination="2pq-MM-VG1" id="YWk-0a-3xT"/>
-                                            <segue destination="sxS-jk-cyf" kind="show" identifier="showNews" id="uVC-Ow-LCe"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -706,7 +705,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IO6-o9-SZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="863"/>
+            <point key="canvasLocation" x="1434" y="863"/>
         </scene>
     </scenes>
     <resources>

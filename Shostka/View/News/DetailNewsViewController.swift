@@ -12,33 +12,34 @@ import WebKit
 
 class DetailNewsViewController: UIViewController {
     
-    //@IBOutlet weak var newsWebViev: UIWebView!
 
     @IBOutlet weak var newsWebView: WKWebView!
-    // @IBOutlet weak var newsWebView: WKWebView!
-    // @IBOutlet weak var newsWebView: WKWebView!
+
     
-    var city: City?
+    //var city: City?
     var urlFromCityDiscription: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-          guard let city = city else {
-         return
-         }
-        urlFromCityDiscription = city.description
-//        print("city.d \(city.description)")
-        self.navigationItem.title = city.name
+        //  guard let city = city else {
+        // return
+       //  }
+      //  urlFromCityDiscription = city.description
+        //self.navigationItem.title = city.name
+        
         
         //self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+ 
+        self.navigationItem.title = "Наші новини"
         loadHtmlCode()
     }
     
     func loadHtmlCode() {
         
         
-        let url = URL (string: urlFromCityDiscription)
+        //let url = URL (string: urlFromCityDiscription)
+        let url = URL (string: "https://shostka.in")
         let requestObj = URLRequest(url: url!)
         newsWebView.load(requestObj)
     }

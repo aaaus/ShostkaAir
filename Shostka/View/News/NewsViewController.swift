@@ -63,8 +63,9 @@ class NewsViewController: UIViewController, UICollectionViewDelegate, UICollecti
                     return
             }
             
-            detailsController.city = cityCell.city
-            //detailsController.sensorStationNumber = sensorStationNumber
+            
+          //  detailsController.city = cityCell.city
+
         case Segues.showMap.rawValue:
             guard let mapController = segue.destination as? MapViewController else {
                 return
