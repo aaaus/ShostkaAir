@@ -45,29 +45,35 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     
     private var gradientColors = [UIColor.green, UIColor.red]
     private var gradientStartPoints = [0.2, 1.0] as [NSNumber]
+    
+    private let locationManager = CLLocationManager()
 
     
     override func loadView() {
         let camera = GMSCameraPosition.camera(withLatitude: 51.868849, longitude: 33.473487, zoom: 14)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        
+        locationManager.startUpdatingLocation()
+                  
         mapView.settings.compassButton = true
-       // mapView.settings.myLocationButton = true
-        //mapView.accessibilityElementsHidden = false
-        //mapView.isMyLocationEnabled = true
-        mapView.setMinZoom(13, maxZoom: 14)
+        mapView.settings.myLocationButton = true
+        mapView.accessibilityElementsHidden = false
+        mapView.isMyLocationEnabled = true
+        mapView.setMinZoom(13, maxZoom: 17)
         mapView.delegate = self
         self.view = mapView
-       // makeButton()
+        //makeButton()
+        
     }
     
     
     /// Timer Area
     override func viewWillAppear(_ animated: Bool) {
-        startTimer()
+       // startTimer()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        stopTimer()
+      //  stopTimer()
     }
     
     
@@ -80,6 +86,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     func timerHandler(_ timer: Timer) {
         if (Network.reachability.isReachable){
 //            heatmapLayer.map = nil
+         //locationManager.startUpdatingLocation()
          myDataChart()
         }else{
             print("No server connection!")
@@ -89,7 +96,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     func startTimer() {
         timer?.invalidate()   // stops previous timer, if any
         
-        let seconds = 180.0
+        let seconds = 10.0
         timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] timer in
             self?.timerHandler(timer)
         }
@@ -119,6 +126,15 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
                                             colorMapSize: 256)
 
         myDataChart()
+        
+        locationManager.delegate = self as? CLLocationManagerDelegate
+        locationManager.requestWhenInUseAuthorization()
+        
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.pausesLocationUpdatesAutomatically = false
+        locationManager.showsBackgroundLocationIndicator = false
+        
+        startTimer()
     }
    
     @objc func removeHeatmap() {
@@ -129,7 +145,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-//        print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
+        print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
     }
     
     
@@ -137,10 +153,17 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     
     func myDataChart() {
        // mapView.clear()
-
-     
+        // print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
+         let userTel: String = "0671234567"
+         let userPswd: String = "2222"
+        
+         let userLocationLatitude = self.locationManager.location?.coordinate.latitude
+         let userLocationLongitude = self.locationManager.location?.coordinate.longitude
+         print("You Location is: \(String(describing: userLocationLatitude)), \(String(describing: userLocationLongitude))")
+         //locationManager.stopUpdatingLocation()
+        
         var list = [GMUWeightedLatLng]()
-        guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?&getFromApp=google&xAxis=10") else { return }
+        guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?&getFromApp=google&xAxis=10&userTel=\(userTel)&userPswd=\(userPswd)&userLat=\(userLocationLatitude ?? 10)&userLong=\(userLocationLongitude ?? 10)") else { return }
         
         URLSession.shared.dataTask(with: gitUrl) { (data, response
             , error) in
@@ -163,7 +186,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
                     guard var mDouble1: Array<Double> = gitData.markerDouble1 as? Array<Double>  else { return }
                     guard var mDouble2: Array<Double> = gitData.markerDouble2 as? Array<Double>  else { return }
                     
-                 //   print(mString1, mString2, mDouble1, mDouble2)
+                    //   print(mString1, mString2, mDouble1, mDouble2)
                     _ = (0..<(gname1.count)).map { (i) -> Double in
                       //  let lat = item["lat"]
                       //  let lng = item["lng"]
@@ -189,6 +212,8 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
                     self.heatmapLayer.map = nil
                     self.heatmapLayer.weightedData = list
                     self.heatmapLayer.map = self.mapView
+                    
+
                 }
   
             } catch let err {
