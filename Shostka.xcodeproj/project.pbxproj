@@ -68,6 +68,7 @@
 		432F49CF23A384B3005C49FA /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 432F49CE23A384B3005C49FA /* Charts */; };
 		432F49D223A3854F005C49FA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 432F49D123A3854F005C49FA /* Kingfisher */; };
 		432F49D423A3854F005C49FA /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 432F49D323A3854F005C49FA /* KingfisherSwiftUI */; };
+		43482A2923B0CC0A00EA4B1D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43482A2823B0CC0A00EA4B1D /* SwiftUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		43680B7B2257DE55006900AD /* SupportFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43680B7A2257DE55006900AD /* SupportFB.swift */; };
 		436E0E6C222460F5003B0E9C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E0E6B222460F5003B0E9C /* SensorsViewController.swift */; };
 		43F242772256769D00D93F80 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F242762256769D00D93F80 /* Reachability.swift */; };
@@ -192,6 +193,7 @@
 		2BF7C4652242A772006C952E /* GMUMarkerClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUMarkerClustering.h; sourceTree = "<group>"; };
 		2BF95933224F6D2F0050BB84 /* LocalInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalInfoController.swift; sourceTree = "<group>"; };
 		2BF95935224F85700050BB84 /* LabInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabInfoController.swift; sourceTree = "<group>"; };
+		43482A2823B0CC0A00EA4B1D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		43680B7A2257DE55006900AD /* SupportFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportFB.swift; sourceTree = "<group>"; };
 		436E0E6B222460F5003B0E9C /* SensorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsViewController.swift; sourceTree = "<group>"; };
 		43F242762256769D00D93F80 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43482A2923B0CC0A00EA4B1D /* SwiftUI.framework in Frameworks */,
 				432F49D223A3854F005C49FA /* Kingfisher in Frameworks */,
 				2BC466402254BAE7007E2F22 /* WebKit.framework in Frameworks */,
 				432F49CF23A384B3005C49FA /* Charts in Frameworks */,
@@ -495,6 +498,7 @@
 		EA411E728FE11043634EC324 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43482A2823B0CC0A00EA4B1D /* SwiftUI.framework */,
 				2BC4663E2254BAE7007E2F22 /* WebKit.framework */,
 				2B5C5F7B2242C7EB00664C90 /* Pods */,
 				2B5B67B322427D990003EA1B /* GoogleMapsBase.framework */,
@@ -853,7 +857,45 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.itgroup.Shostka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -881,7 +923,45 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"GoogleMapsBase\"",
+					"-framework",
+					"\"GoogleMapsCore\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.itgroup.Shostka;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJX-50-R1w">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJX-50-R1w">
+    <device id="retina4_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -132,7 +132,7 @@
             </objects>
             <point key="canvasLocation" x="4192.5" y="107.74647887323944"/>
         </scene>
-        <!--Новини-->
+        <!--Detail News View Controller-->
         <scene sceneID="9Mb-34-ZKO">
             <objects>
                 <viewController id="sxS-jk-cyf" customClass="DetailNewsViewController" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,8 +158,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b7U-1Y-4KZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Новини" id="wi8-pc-37d">
-                        <barButtonItem key="leftBarButtonItem" image="homeBtn" id="Y6p-Pq-XK7">
+                    <navigationItem key="navigationItem" id="wi8-pc-37d">
+                        <barButtonItem key="leftBarButtonItem" image="arrowshape.turn.up.left" catalog="system" id="Y6p-Pq-XK7">
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="backUrlWebView:" destination="sxS-jk-cyf" id="y97-m4-hbs"/>
                             </connections>
@@ -204,7 +205,8 @@
                         <viewLayoutGuide key="safeArea" id="8dN-49-zZk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Шостка.CITY" id="5Ud-e1-4GQ">
-                        <barButtonItem key="leftBarButtonItem" image="homeBtn" id="lYd-zX-2So">
+                        <barButtonItem key="leftBarButtonItem" image="house" catalog="system" id="lYd-zX-2So">
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="ShostkaCityWebViewAction:" destination="WbI-v1-ffB" id="76b-r2-XcG"/>
                             </connections>
@@ -223,7 +225,7 @@
         <scene sceneID="JCh-uK-hRr">
             <objects>
                 <navigationController id="nQ6-UG-qVK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Підтримка" image="supprort" id="nXe-Q2-YPK"/>
+                    <tabBarItem key="tabBarItem" title="Підтримка" image="message" catalog="system" id="nXe-Q2-YPK"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lJb-Iw-4bI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -264,7 +266,8 @@
                         <viewLayoutGuide key="safeArea" id="ypc-wE-tgd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Технічна підтримка" id="vG7-eI-Ovt">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="homeBtn" id="42Y-iD-AJ4">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="house" catalog="system" id="42Y-iD-AJ4">
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="homeSupprortAction:" destination="Ptx-b4-Fhf" id="1Nl-LM-Mf4"/>
                             </connections>
@@ -278,11 +281,11 @@
             </objects>
             <point key="canvasLocation" x="-234.375" y="2288.0281690140846"/>
         </scene>
-        <!--Шостка.AIR-->
+        <!--Сервіси-->
         <scene sceneID="F2G-aQ-JZW">
             <objects>
                 <navigationController id="x1k-GY-jIR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Шостка.AIR" image="Laboratory" id="wjl-Lu-DmM"/>
+                    <tabBarItem key="tabBarItem" title="Сервіси" image="camera.on.rectangle" catalog="system" id="wjl-Lu-DmM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="e05-Ss-T1v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -393,6 +396,7 @@
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="fqV-uL-2Ov">
                             <rect key="frame" x="35" y="6" width="250" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <segments>
                                 <segment title="Шостка.AIR"/>
                                 <segment title="Карта"/>
@@ -429,6 +433,7 @@
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Leq-qJ-bub">
                             <rect key="frame" x="50" y="6" width="250" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <segments>
                                 <segment title="Шостка.AIR"/>
                                 <segment title="Карта"/>
@@ -571,11 +576,11 @@
             </objects>
             <point key="canvasLocation" x="2406" y="107"/>
         </scene>
-        <!--Новини-->
+        <!--Ринок-->
         <scene sceneID="9vx-24-jvl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NKm-oP-7aO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Новини" image="News" id="GPp-8d-r7a"/>
+                    <tabBarItem key="tabBarItem" title="Ринок" image="tray.2" catalog="system" id="GPp-8d-r7a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1XJ-yr-rNe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -590,11 +595,11 @@
             </objects>
             <point key="canvasLocation" x="-1228" y="864"/>
         </scene>
-        <!--Шостка.CITY-->
+        <!--Інформація-->
         <scene sceneID="d2t-J5-8WF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fD1-vr-mD6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Шостка.CITY" image="More" id="KZ9-VL-L5F"/>
+                    <tabBarItem key="tabBarItem" title="Інформація" image="More" id="KZ9-VL-L5F"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RcT-eS-HTh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -710,11 +715,12 @@
     </scenes>
     <resources>
         <image name="HelpIcon" width="25" height="24"/>
-        <image name="Laboratory" width="25" height="24"/>
         <image name="More" width="25" height="24"/>
-        <image name="News" width="25" height="24"/>
-        <image name="homeBtn" width="25" height="24"/>
-        <image name="supprort" width="25" height="24"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
+        <image name="camera.on.rectangle" catalog="system" width="64" height="48"/>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="message" catalog="system" width="64" height="56"/>
+        <image name="tray.2" catalog="system" width="64" height="56"/>
         <namedColor name="ColorAccent">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -31,7 +31,7 @@ class DetailNewsViewController: UIViewController {
         
         //self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
  
-        self.navigationItem.title = "Наші новини"
+        self.navigationItem.title = "Афіша"
         loadHtmlCode()
     }
     
