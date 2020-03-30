@@ -53,7 +53,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: 51.868849, longitude: 33.473487, zoom: 14)
         mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         
-        locationManager.startUpdatingLocation()
+      //  locationManager.startUpdatingLocation()
                   
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
@@ -69,11 +69,11 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     
     /// Timer Area
     override func viewWillAppear(_ animated: Bool) {
-       // startTimer()
+        startTimer()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-      //  stopTimer()
+        stopTimer()
     }
     
     
@@ -127,12 +127,12 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
 
         myDataChart()
         
-        locationManager.delegate = self as? CLLocationManagerDelegate
-        locationManager.requestWhenInUseAuthorization()
+       // locationManager.delegate = self as? CLLocationManagerDelegate
+       // locationManager.requestWhenInUseAuthorization()
         
-        locationManager.allowsBackgroundLocationUpdates = true
-        locationManager.pausesLocationUpdatesAutomatically = false
-        locationManager.showsBackgroundLocationIndicator = false
+       // locationManager.allowsBackgroundLocationUpdates = true
+       // locationManager.pausesLocationUpdatesAutomatically = false
+       // locationManager.showsBackgroundLocationIndicator = false
         
         startTimer()
     }
@@ -154,8 +154,11 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     func myDataChart() {
        // mapView.clear()
         // print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
-         let userTel: String = "0671234567"
-         let userPswd: String = "2222"
+        let userTel: String = UserDefaults.standard.string(forKey: "userTel") ?? ""
+        let userPswd: String = UserDefaults.standard.string(forKey: "userPswd") ?? ""
+        
+    //     let userTel: String = "0671234567"
+    //     let userPswd: String = "2222"
         
          let userLocationLatitude = self.locationManager.location?.coordinate.latitude
          let userLocationLongitude = self.locationManager.location?.coordinate.longitude

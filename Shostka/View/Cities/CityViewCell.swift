@@ -57,6 +57,10 @@ class CityViewCell: UICollectionViewCell {
         else {
             cityImage.kf.setImage(with: city?.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
         }
+        //let dID = CFUUIDCreate(kCFAllocatorDefault)
+        //let deviceID = CFUUIDCreateString(kCFAllocatorDefault, dID) as NSString
+        //print("City namber parameter \(String(describing: dID)), two \(deviceID)")
+        
         
 
         //

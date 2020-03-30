@@ -1,7 +1,7 @@
 import UIKit
 
 private enum Constants {
-    static let cellsInRow: CGFloat = 3
+    static let cellsInRow: CGFloat = 2
     static let cellAspectRatio: CGFloat = 16 / 12
     static let cellSpacing: CGFloat = 4
 }

@@ -142,7 +142,9 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
                     return
             }
             detailsController.city = cityCell.city
+            print("cityCell.city \(String(describing: cityCell.city?.id))")
             detailsController.sensorStationNumber = sensorStationNumber
+            print("sensorStationNumber \(sensorStationNumber)")
             
         case Segues.showInfoLab.rawValue:
             guard let infoLabController = segue.destination as? LabInfoController else {

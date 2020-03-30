@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJX-50-R1w">
-    <device id="retina4_0" orientation="portrait" appearance="dark"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -183,7 +183,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0D-2f-s5U">
-                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -219,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWj-3D-daC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234.375" y="1592.9577464788733"/>
+            <point key="canvasLocation" x="1433" y="1593"/>
         </scene>
         <!--Підтримка-->
         <scene sceneID="JCh-uK-hRr">
@@ -279,13 +279,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdK-Xg-zQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234.375" y="2288.0281690140846"/>
+            <point key="canvasLocation" x="-133" y="2287"/>
         </scene>
         <!--Сервіси-->
         <scene sceneID="F2G-aQ-JZW">
             <objects>
                 <navigationController id="x1k-GY-jIR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Сервіси" image="camera.on.rectangle" catalog="system" id="wjl-Lu-DmM"/>
+                    <tabBarItem key="tabBarItem" title="Сервіси" image="command" catalog="system" id="wjl-Lu-DmM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="e05-Ss-T1v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -394,11 +394,11 @@
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title=" " id="hqP-Yt-uNa"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="fqV-uL-2Ov">
-                            <rect key="frame" x="35" y="6" width="250" height="32"/>
+                            <rect key="frame" x="35" y="5.5" width="250" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <segments>
-                                <segment title="Шостка.AIR"/>
+                                <segment title="Сервіси"/>
                                 <segment title="Карта"/>
                             </segments>
                             <color key="tintColor" red="0.20086640119552612" green="0.45789366960525513" blue="0.63923901319503784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -595,11 +595,11 @@
             </objects>
             <point key="canvasLocation" x="-1228" y="864"/>
         </scene>
-        <!--Інформація-->
+        <!--Налаштування-->
         <scene sceneID="d2t-J5-8WF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fD1-vr-mD6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Інформація" image="More" id="KZ9-VL-L5F"/>
+                    <tabBarItem key="tabBarItem" title="Налаштування" image="gear" catalog="system" id="KZ9-VL-L5F"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RcT-eS-HTh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -607,12 +607,112 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="WbI-v1-ffB" kind="relationship" relationship="rootViewController" id="wWe-4k-Zg0"/>
+                        <segue destination="A3M-0u-GzD" kind="relationship" relationship="rootViewController" id="Ku6-TK-4xt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5n0-4p-z0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1228" y="1593"/>
+        </scene>
+        <!--Налаштування-->
+        <scene sceneID="17D-qy-wVT">
+            <objects>
+                <viewController id="A3M-0u-GzD" customClass="UserSettings" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T13-MT-Cbw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bft-4V-d0U">
+                                <rect key="frame" x="192" y="443" width="93" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Зберегти"/>
+                                <connections>
+                                    <action selector="saveBTNaction:" destination="A3M-0u-GzD" eventType="touchUpInside" id="aSU-5Z-H4H"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефону" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpG-Fk-emg">
+                                <rect key="frame" x="92" y="75" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Особистий PIN-код" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyi-nE-zs6">
+                                <rect key="frame" x="82" y="209" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0671234567" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-Tx-5x6">
+                                <rect key="frame" x="73" y="104" width="174" height="34"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1111" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZN-pO-7iV">
+                                <rect key="frame" x="133" y="246" width="54" height="34"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C4d-Mb-nfI">
+                                <rect key="frame" x="135.5" y="375" width="51" height="31"/>
+                                <connections>
+                                    <action selector="useGPSaction:" destination="A3M-0u-GzD" eventType="valueChanged" id="mLA-rL-ghQ"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Надсилати координати" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CY-Pw-mLA">
+                                <rect key="frame" x="66.5" y="346" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RZ-AC-86t">
+                                <rect key="frame" x="51" y="443" width="100" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Відмінити"/>
+                                <connections>
+                                    <action selector="cancelBTNaction:" destination="A3M-0u-GzD" eventType="touchUpInside" id="mEc-el-6Nr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="ColorAccent"/>
+                        <constraints>
+                            <constraint firstItem="XpG-Fk-emg" firstAttribute="centerX" secondItem="YZN-pO-7iV" secondAttribute="centerX" id="79l-Yi-RaH"/>
+                            <constraint firstItem="XO8-Tx-5x6" firstAttribute="top" secondItem="XpG-Fk-emg" secondAttribute="bottom" constant="8" id="APH-JU-Ptx"/>
+                            <constraint firstItem="Bft-4V-d0U" firstAttribute="top" secondItem="C4d-Mb-nfI" secondAttribute="bottom" constant="37" id="D04-pL-Puy"/>
+                            <constraint firstItem="Bft-4V-d0U" firstAttribute="centerX" secondItem="T13-MT-Cbw" secondAttribute="centerX" constant="78.5" id="EsX-Bf-V4k"/>
+                            <constraint firstItem="nyi-nE-zs6" firstAttribute="top" secondItem="XO8-Tx-5x6" secondAttribute="bottom" constant="71" id="I0e-F1-WNr"/>
+                            <constraint firstItem="5RZ-AC-86t" firstAttribute="centerX" secondItem="T13-MT-Cbw" secondAttribute="centerX" constant="-59" id="JqP-RM-9si"/>
+                            <constraint firstItem="YZN-pO-7iV" firstAttribute="centerX" secondItem="T13-MT-Cbw" secondAttribute="centerX" id="Pl6-E1-adq"/>
+                            <constraint firstItem="5RZ-AC-86t" firstAttribute="baseline" secondItem="Bft-4V-d0U" secondAttribute="baseline" id="TBk-es-VQ1"/>
+                            <constraint firstItem="XpG-Fk-emg" firstAttribute="centerX" secondItem="T13-MT-Cbw" secondAttribute="centerX" id="WNo-ON-B3j"/>
+                            <constraint firstItem="nyi-nE-zs6" firstAttribute="centerX" secondItem="T13-MT-Cbw" secondAttribute="centerX" id="aUs-IS-hJJ"/>
+                            <constraint firstItem="XpG-Fk-emg" firstAttribute="centerX" secondItem="Bft-4V-d0U" secondAttribute="centerX" constant="-78.5" id="clM-hz-VPg"/>
+                            <constraint firstItem="XO8-Tx-5x6" firstAttribute="leading" secondItem="2NI-Zp-1Yz" secondAttribute="leading" constant="73" id="fRa-Ce-E8R"/>
+                            <constraint firstItem="XpG-Fk-emg" firstAttribute="centerX" secondItem="XO8-Tx-5x6" secondAttribute="centerX" id="hOg-yq-u3r"/>
+                            <constraint firstItem="XpG-Fk-emg" firstAttribute="centerX" secondItem="nyi-nE-zs6" secondAttribute="centerX" id="hYk-ix-XrF"/>
+                            <constraint firstItem="XpG-Fk-emg" firstAttribute="centerX" secondItem="8CY-Pw-mLA" secondAttribute="centerX" id="hh3-NS-kyW"/>
+                            <constraint firstItem="C4d-Mb-nfI" firstAttribute="centerX" secondItem="T13-MT-Cbw" secondAttribute="centerX" id="jid-wI-tyO"/>
+                            <constraint firstItem="8CY-Pw-mLA" firstAttribute="centerX" secondItem="T13-MT-Cbw" secondAttribute="centerX" id="mbY-Xi-8Tw"/>
+                            <constraint firstItem="8CY-Pw-mLA" firstAttribute="top" secondItem="YZN-pO-7iV" secondAttribute="bottom" constant="66" id="mp8-Gf-iMD"/>
+                            <constraint firstItem="XpG-Fk-emg" firstAttribute="top" secondItem="2NI-Zp-1Yz" secondAttribute="top" constant="31" id="qyy-z2-6Z9"/>
+                            <constraint firstItem="C4d-Mb-nfI" firstAttribute="top" secondItem="8CY-Pw-mLA" secondAttribute="bottom" constant="8" id="ruN-KB-oUe"/>
+                            <constraint firstItem="YZN-pO-7iV" firstAttribute="top" secondItem="nyi-nE-zs6" secondAttribute="bottom" constant="16" id="wG4-dM-lJ9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2NI-Zp-1Yz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Налаштування" id="vPA-aV-Igd"/>
+                    <connections>
+                        <outlet property="cancelBTN" destination="5RZ-AC-86t" id="0D7-Zu-fuk"/>
+                        <outlet property="saveBTN" destination="Bft-4V-d0U" id="Mha-9f-qFS"/>
+                        <outlet property="useGPSbtn" destination="C4d-Mb-nfI" id="QJQ-rp-bQJ"/>
+                        <outlet property="userPswdText" destination="YZN-pO-7iV" id="0ps-kA-aJD"/>
+                        <outlet property="userTelText" destination="XO8-Tx-5x6" id="khj-UW-G1u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJA-0R-Lfq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-133.125" y="1592.9577464788733"/>
         </scene>
         <!--Новини-->
         <scene sceneID="lQD-tV-Fqf">
@@ -715,9 +815,9 @@
     </scenes>
     <resources>
         <image name="HelpIcon" width="25" height="24"/>
-        <image name="More" width="25" height="24"/>
         <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
-        <image name="camera.on.rectangle" catalog="system" width="64" height="48"/>
+        <image name="command" catalog="system" width="64" height="56"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="house" catalog="system" width="64" height="54"/>
         <image name="message" catalog="system" width="64" height="56"/>
         <image name="tray.2" catalog="system" width="64" height="56"/>
