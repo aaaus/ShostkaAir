@@ -19,6 +19,7 @@ class DetailNewsViewController: UIViewController {
     
     //var city: City?
     var urlFromCityDiscription: String = ""
+    var flagFirstStartForSartGPS = true
     
     
       
@@ -65,7 +66,9 @@ class DetailNewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager.startUpdatingLocation()
+        if (UserDefaults.standard.bool(forKey: "useGPS")) {
+           locationManager.startUpdatingLocation()
+           }
         
         locationManager.delegate = self as? CLLocationManagerDelegate
         locationManager.requestWhenInUseAuthorization()
