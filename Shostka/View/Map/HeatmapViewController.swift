@@ -96,7 +96,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     func startTimer() {
         timer?.invalidate()   // stops previous timer, if any
         
-        let seconds = 10.0
+        let seconds = 120.0
         timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] timer in
             self?.timerHandler(timer)
         }

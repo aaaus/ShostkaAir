@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJX-50-R1w">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -53,12 +53,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-pD-XU6" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="91" width="320" height="329"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="511"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <viewLayoutGuide key="safeArea" id="DcS-1z-iUR"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QL0-7l-YEK">
-                                <rect key="frame" x="28.5" y="474" width="263" height="32"/>
+                                <rect key="frame" x="28.5" y="523" width="263" height="32"/>
                                 <segments>
                                     <segment title="Хвилини" width="65"/>
                                     <segment title="Години" width="65"/>
@@ -102,11 +102,11 @@
             <objects>
                 <viewController id="RNs-Ed-DAh" customClass="LocalInfoController" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zEZ-2B-cL0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCF-23-pj3">
-                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -289,7 +289,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="e05-Ss-T1v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="ColorAccent"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -398,7 +397,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <segments>
-                                <segment title="Сервіси"/>
+                                <segment title="Corona-монітор"/>
                                 <segment title="Карта"/>
                             </segments>
                             <color key="tintColor" red="0.20086640119552612" green="0.45789366960525513" blue="0.63923901319503784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -435,7 +434,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <segments>
-                                <segment title="Шостка.AIR"/>
+                                <segment title="Corona-монітор"/>
                                 <segment title="Карта"/>
                             </segments>
                             <color key="tintColor" red="0.20086640119999999" green="0.4578936696" blue="0.63923901319999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -473,7 +472,7 @@
             </objects>
             <point key="canvasLocation" x="-1228.125" y="105.63380281690141"/>
         </scene>
-        <!--Параметри-->
+        <!--Sensors View Controller-->
         <scene sceneID="87O-RR-3TL">
             <objects>
                 <viewController id="tYv-pJ-EMd" customClass="SensorsViewController" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
@@ -534,7 +533,6 @@
                                         <connections>
                                             <outlet property="cityImage" destination="0FB-r8-FKN" id="4We-3o-2pA"/>
                                             <outlet property="cityLabel" destination="wII-9C-0SF" id="aos-wW-fWa"/>
-                                            <segue destination="Uyt-9q-BeH" kind="show" identifier="ShowCityDetail" id="vgA-GS-Lq8"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -558,7 +556,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2rr-5B-MSV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Параметри" id="TFT-AW-iaO">
+                    <navigationItem key="navigationItem" id="TFT-AW-iaO">
                         <barButtonItem key="backBarButtonItem" title="Параметри" id="0nH-A1-o8P"/>
                         <barButtonItem key="rightBarButtonItem" title="Інформація" id="gQc-wV-4c3">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -622,7 +620,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIN-код пристрою" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyi-nE-zs6">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIN-код пристрою" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyi-nE-zs6">
                                 <rect key="frame" x="94.5" y="93" width="131.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -646,13 +644,13 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0671234567" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-Tx-5x6">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Приклад: 0671234567" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-Tx-5x6">
                                 <rect key="frame" x="73" y="192" width="174" height="34"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFU-xF-U98">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFU-xF-U98">
                                 <rect key="frame" x="116" y="119" width="88" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -689,16 +687,25 @@
                                     <action selector="userAgreeLicenceBtn:" destination="A3M-0u-GzD" eventType="touchUpInside" id="7z8-nB-FbU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сервіси не підключені!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wun-fL-U1I">
+                                <rect key="frame" x="38" y="44" width="244" height="21"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="ColorAccent"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="Wun-fL-U1I" firstAttribute="top" secondItem="2NI-Zp-1Yz" secondAttribute="top" id="5fV-Jx-BGI"/>
                             <constraint firstItem="XO8-Tx-5x6" firstAttribute="top" secondItem="XpG-Fk-emg" secondAttribute="bottom" constant="8" id="APH-JU-Ptx"/>
                             <constraint firstItem="eWB-Sc-AdP" firstAttribute="centerX" secondItem="Bft-4V-d0U" secondAttribute="centerX" id="EtO-Fc-gcq"/>
                             <constraint firstItem="nyi-nE-zs6" firstAttribute="top" secondItem="XO8-Tx-5x6" secondAttribute="bottom" constant="-133" id="I0e-F1-WNr"/>
                             <constraint firstItem="m6S-pD-cyj" firstAttribute="top" secondItem="8CY-Pw-mLA" secondAttribute="bottom" constant="23" id="J1e-gq-hIu"/>
                             <constraint firstItem="eWB-Sc-AdP" firstAttribute="top" secondItem="C4d-Mb-nfI" secondAttribute="bottom" constant="86" id="KUT-wK-eR4"/>
                             <constraint firstItem="m6S-pD-cyj" firstAttribute="centerX" secondItem="C4d-Mb-nfI" secondAttribute="centerX" id="Oul-7Q-tI7"/>
+                            <constraint firstItem="Wun-fL-U1I" firstAttribute="centerX" secondItem="2NI-Zp-1Yz" secondAttribute="centerX" id="PgB-qQ-N6Y"/>
                             <constraint firstItem="nFU-xF-U98" firstAttribute="top" secondItem="nyi-nE-zs6" secondAttribute="bottom" constant="8" id="VPs-q9-RCd"/>
                             <constraint firstItem="XpG-Fk-emg" firstAttribute="centerX" secondItem="T13-MT-Cbw" secondAttribute="centerX" id="WNo-ON-B3j"/>
                             <constraint firstItem="8CY-Pw-mLA" firstAttribute="leading" secondItem="2NI-Zp-1Yz" secondAttribute="leading" constant="39" id="Zqa-El-8A0"/>
@@ -713,6 +720,7 @@
                             <constraint firstItem="Bft-4V-d0U" firstAttribute="centerX" secondItem="C4d-Mb-nfI" secondAttribute="centerX" id="qWg-qe-wqA"/>
                             <constraint firstItem="XpG-Fk-emg" firstAttribute="top" secondItem="2NI-Zp-1Yz" secondAttribute="top" constant="122" id="qyy-z2-6Z9"/>
                             <constraint firstItem="2NI-Zp-1Yz" firstAttribute="bottom" secondItem="Bft-4V-d0U" secondAttribute="bottom" constant="35" id="roV-u7-A5Y"/>
+                            <constraint firstItem="Wun-fL-U1I" firstAttribute="width" secondItem="T13-MT-Cbw" secondAttribute="width" multiplier="0.13125" constant="202" id="rtZ-Yh-NTl"/>
                             <constraint firstItem="C4d-Mb-nfI" firstAttribute="top" secondItem="8CY-Pw-mLA" secondAttribute="bottom" constant="8" id="ruN-KB-oUe"/>
                             <constraint firstItem="nFU-xF-U98" firstAttribute="centerX" secondItem="nyi-nE-zs6" secondAttribute="centerX" id="t9i-yT-5Xr"/>
                             <constraint firstItem="8CY-Pw-mLA" firstAttribute="top" secondItem="XO8-Tx-5x6" secondAttribute="bottom" constant="33" id="vUV-RB-Vk4"/>
@@ -726,11 +734,13 @@
                     <connections>
                         <outlet property="saveBTN" destination="Bft-4V-d0U" id="Mha-9f-qFS"/>
                         <outlet property="tapRecognizer" destination="7Gc-tN-UMP" id="UZK-Ta-0Mw"/>
+                        <outlet property="topBarTextColor" destination="Wun-fL-U1I" id="XNh-U5-ElR"/>
                         <outlet property="useGPSLbl" destination="8CY-Pw-mLA" id="uKF-9G-Q79"/>
                         <outlet property="useGPSbtn" destination="C4d-Mb-nfI" id="QJQ-rp-bQJ"/>
                         <outlet property="userAgreeTextBtn" destination="eWB-Sc-AdP" id="Gq1-Tv-7jL"/>
                         <outlet property="userLicenceText" destination="m6S-pD-cyj" id="OfQ-9m-qpE"/>
                         <outlet property="userPswdField" destination="nFU-xF-U98" id="Ush-Nm-Jzq"/>
+                        <outlet property="userPswdLbl" destination="nyi-nE-zs6" id="73B-X2-f92"/>
                         <outlet property="userTelText" destination="XO8-Tx-5x6" id="khj-UW-G1u"/>
                         <outlet property="userTelTextLbl" destination="XpG-Fk-emg" id="1lA-xF-WGx"/>
                     </connections>

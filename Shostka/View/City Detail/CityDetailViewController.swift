@@ -31,6 +31,9 @@ private enum Constants {
  City detail controller to show information about specific city.
  */
 final class CityDetailViewController: UIViewController {
+    
+    
+    
     @IBOutlet private weak var cityImage: UIImageView!
    // @IBOutlet private weak var descriptionLabel: UILabel!
     
@@ -96,6 +99,7 @@ final class CityDetailViewController: UIViewController {
 
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         getParametrID = city!.id

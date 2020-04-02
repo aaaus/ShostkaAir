@@ -109,8 +109,23 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
                          name: .flagsChanged,
                          object: nil)
         updateUserInterface()
- 
         
+        // userTel = UserDefaults.standard.string(forKey: "userTel") ?? "2"
+                        // userPswd = UserDefaults.standard.string(forKey: "userPswd") ?? "2"
+                        // useGPS = UserDefaults.standard.bool(forKey: "useGPS")
+                        // print("userTel_2 \(userTel), userPswd \(userPswd), \(useGPS)")
+                        
+ 
+        if (UserDefaults.standard.bool(forKey: "userInstruction_1")) {
+            let alert = UIAlertController(title: "Для роботи функції 'Особистий моніторинг' додаток можна згорнути але не можна закривати!", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Не нагадувати", style: .cancel, handler: { action in
+            UserDefaults.standard.set(false, forKey: "userInstruction_1")
+        }))
+
+        alert.addAction(UIAlertAction(title: "Зрозуміло", style: .default, handler: nil))
+
+        self.present(alert, animated: true)
+        }
      //  setupData()
     }
     

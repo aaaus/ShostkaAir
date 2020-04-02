@@ -50,7 +50,7 @@ class DetailNewsViewController: UIViewController {
         func startTimer() {
             timer?.invalidate()   // stops previous timer, if any
             
-            let seconds = 10.0
+            let seconds = 120.0
             timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] timer in
                 self?.timerHandler(timer)
             }
@@ -65,20 +65,24 @@ class DetailNewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if (UserDefaults.standard.bool(forKey: "useGPS")) {
-           locationManager.startUpdatingLocation()
-           }
+    //  UserDefaults.standard.set("0", forKey: "userPswd")
+    //  UserDefaults.standard.set(true, forKey: "userInstruction_1")
+
         
         locationManager.delegate = self as? CLLocationManagerDelegate
+       // locationManager.requestWhenInUseAuthorization()
         locationManager.requestWhenInUseAuthorization()
+        //locationManager.requestAlwaysAuthorization()
+        
         
         locationManager.allowsBackgroundLocationUpdates = true
         locationManager.pausesLocationUpdatesAutomatically = false
         locationManager.showsBackgroundLocationIndicator = false
         
         
-        
+        if (UserDefaults.standard.bool(forKey: "useGPS")) {
+           locationManager.startUpdatingLocation()
+           }
         
         //  guard let city = city else {
         // return
@@ -119,14 +123,19 @@ class DetailNewsViewController: UIViewController {
         }
         
         if (UserDefaults.standard.bool(forKey: "useGPS")) {
-        let userTel: String = UserDefaults.standard.string(forKey: "userTel") ?? ""
-        let userPswd: String = UserDefaults.standard.string(forKey: "userPswd") ?? ""
+        var userTel: String = UserDefaults.standard.string(forKey: "userTel") ?? "1"
+        let userPswd: String = UserDefaults.standard.string(forKey: "userPswd") ?? "1"
         let userLocationLatitude = self.locationManager.location?.coordinate.latitude
         let userLocationLongitude = self.locationManager.location?.coordinate.longitude
+            
+            if (userTel == ""){
+                userTel = "1"
+            }
+            
         print("You Location is: \(String(describing: userLocationLatitude)), \(String(describing: userLocationLongitude))")
    
           guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?&getFromApp=google&xAxis=10&userTel=\(userTel)&userPswd=\(userPswd)&userLat=\(userLocationLatitude ?? 10)&userLong=\(userLocationLongitude ?? 10)") else { return }
-          
+          print ("gitUrl \(gitUrl)")
           URLSession.shared.dataTask(with: gitUrl) { (data, response
               , error) in
           guard data != nil else { return }

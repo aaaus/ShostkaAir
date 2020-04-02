@@ -134,7 +134,7 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
         guard let segueIdentifier = segue.identifier else {
             return
         }
-        
+
         switch segueIdentifier {
         case Segues.showCityDetail.rawValue:
             guard let cityCell = sender as? SensorsViewCell,
@@ -145,7 +145,7 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
             print("cityCell.city \(String(describing: cityCell.city?.id))")
             detailsController.sensorStationNumber = sensorStationNumber
             print("sensorStationNumber \(sensorStationNumber)")
-            
+   
         case Segues.showInfoLab.rawValue:
             guard let infoLabController = segue.destination as? LabInfoController else {
                 return
@@ -155,6 +155,7 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
         default:
             break
         }
+ 
     }
     
     // MARK: UICollectionViewDataSource

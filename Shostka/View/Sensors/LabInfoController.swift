@@ -27,7 +27,10 @@ class LabInfoController: UIViewController {
     func loadHtmlCode() {
         
         let sensorID = String(id)
-        let url = URL (string: "https://shostka.in/shostka/info/\(sensorID).html")
+        //let url = URL (string: "https://shostka.in/shostka/info/\(sensorID).html")
+        let url = URL (string: "https://api.shostka.in/app/info/\(sensorID).html")
+        
+        
 //        print("url: \(String(describing: url))")
         let requestObj = URLRequest(url: url!)
         WebViewLabInfo.load(requestObj)

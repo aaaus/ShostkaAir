@@ -28,7 +28,8 @@
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Get my location</string>
+	<string>Визначення геопозіціі пристрою для особистого моніторингу
+Будь ласка, виберіть: "Дозволити за використання"  / "Разрешить при использовании"</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

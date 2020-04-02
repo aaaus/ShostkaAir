@@ -33,6 +33,9 @@ class SensorsViewCell: UICollectionViewCell {
         
         let parametrStatus = city?.location.latitude
         cityLabel.text = city?.name
+        print("city?.name  \(String(describing: city?.name))")
+        print("city?.name  \(String(describing: city?.id))")
+        //cityLabel.text = "123"
         
         cityLabel.backgroundColor = UIColor(red: 135/255, green: 135/255, blue: 135/255, alpha: 0.5)
         if (parametrStatus == 1) {
@@ -49,7 +52,8 @@ class SensorsViewCell: UICollectionViewCell {
         
         // Set image using url to the image view using kingfisher extension.
         if ((city?.id)! < 10000){
-            cityImage.image = UIImage(named: (city?.imageUrl?.absoluteString)! )
+          //  cityImage.image = UIImage(named: (city?.imageUrl?.absoluteString)! )
+            cityImage.kf.setImage(with: city?.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
         }
         else {
             cityImage.kf.setImage(with: city?.imageUrl, placeholder: UIImage(named: Constants.cityImagePlaceholder))
