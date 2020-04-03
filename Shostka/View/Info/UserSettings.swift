@@ -62,8 +62,14 @@ class UserSettings: UIViewController {
             useGPSbtn.isHidden = false
             useGPSLbl.isHidden = false
             
-            topBarTextColor.text = "Сервіс підключений"
-            topBarTextColor.backgroundColor = .green
+            if (Network.reachability.isReachable){
+                topBarTextColor.text = "Сервіс підключений"
+                topBarTextColor.backgroundColor = .green
+            }else{
+                //print("No server connection!")
+                topBarTextColor.text = "Відсутнє підключення!"
+                topBarTextColor.backgroundColor = .red
+            }
             
             
             saveBTN.setTitle("Зберегти", for: .normal)
@@ -175,8 +181,14 @@ class UserSettings: UIViewController {
             self.userPswdField.text = UserDefaults.standard.string(forKey: "userPswd") ?? ""
             self.useGPSbtn.isOn = UserDefaults.standard.bool(forKey: "useGPS")
             self.saveBTN.setTitle("Зберегти", for: .normal)
-            self.topBarTextColor.text = "Сервіс підключений"
-            self.topBarTextColor.backgroundColor = .green
+            if (Network.reachability.isReachable){
+                self.topBarTextColor.text = "Сервіс підключений"
+                self.topBarTextColor.backgroundColor = .green
+            }else{
+                print("No server connection!")
+                self.topBarTextColor.text = "Відсутнє підключення!"
+                self.topBarTextColor.backgroundColor = .red
+            }
         }
         
                 
@@ -196,10 +208,22 @@ class UserSettings: UIViewController {
     @IBAction func saveBTNaction(_ sender: Any) {
         view.endEditing(true)
         
+        var msgSettingSave = "Налаштування збережені"
+        
+        if (Network.reachability.isReachable){
+            topBarTextColor.text = "Сервіс підключений"
+            topBarTextColor.backgroundColor = .green
+            msgSettingSave = "Налаштування збережені"
+        }else{
+            print("No server connection!")
+            topBarTextColor.text = "Відсутнє підключення!"
+            topBarTextColor.backgroundColor = .red
+            msgSettingSave = "Відсутнє підключення!"
+        }
         
         
         if ((Int(UserDefaults.standard.string(forKey: "userPswd") ?? "") ?? 0) > 5) {
-            let alert = UIAlertController(title: "Налаштування збережені", message: nil, preferredStyle: .alert)
+            let alert = UIAlertController(title: msgSettingSave, message: nil, preferredStyle: .alert)
             //alert.addAction(UIAlertAction(title: "Ні", style: .cancel, handler: nil))
 
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in

@@ -20,6 +20,7 @@ class DetailNewsViewController: UIViewController {
     //var city: City?
     var urlFromCityDiscription: String = ""
     var flagFirstStartForSartGPS = true
+    var secondsCounter = 120
     
     
       
@@ -50,7 +51,7 @@ class DetailNewsViewController: UIViewController {
         func startTimer() {
             timer?.invalidate()   // stops previous timer, if any
             
-            let seconds = 120.0
+            let seconds = 1.0
             timer = Timer.scheduledTimer(withTimeInterval: seconds, repeats: true) { [weak self] timer in
                 self?.timerHandler(timer)
             }
@@ -112,6 +113,12 @@ class DetailNewsViewController: UIViewController {
     
     func getUserLocation() {
         
+        secondsCounter -= 1
+        
+        if ((UserDefaults.standard.bool(forKey: "setNewGPSmode")) || (secondsCounter<0)) {
+            
+            secondsCounter = 120
+        
         if (UserDefaults.standard.bool(forKey: "setNewGPSmode")) {
             UserDefaults.standard.set(false, forKey: "setNewGPSmode")
             if (UserDefaults.standard.bool(forKey: "useGPS")) {
@@ -142,8 +149,8 @@ class DetailNewsViewController: UIViewController {
 
               }.resume()
         }
-          
-      }
+       }
+   }
     
     
     

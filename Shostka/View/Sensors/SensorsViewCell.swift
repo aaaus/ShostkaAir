@@ -9,6 +9,12 @@
 import UIKit
 import Kingfisher
 
+struct AllInfoGet: Codable {
+    var arrUserResp: [String?]
+  //  var points: Int
+  //  var description: String?
+}
+
 private enum Constants {
     // Placeholder image for the cities that don't have photo (has the same name as appropriate image in assets folder).
     static let cityImagePlaceholder = "CityPlaceholder"
@@ -30,13 +36,53 @@ class SensorsViewCell: UICollectionViewCell {
     }
     
     private func update() {
+      
         
-        let parametrStatus = city?.location.latitude
+        if (city?.id ?? 50 > 150) {
+            guard let gitUrl = URL(string:
+                      "http://sun.shostka.in/gps.php/?&allinfo=allinfo"
+                       ) else { return }
+                   print ("gitUrl \(gitUrl)")
+                   
+                   URLSession.shared.dataTask(with: gitUrl) { (data, response
+                       , error) in
+                   guard let data = data else { return }
+                                 do {
+                                     let decoder = JSONDecoder()
+                                     let gitData = try decoder.decode(AllInfoGet.self, from: data)
+                                     //print("gitData: \(gitData)")
+                                     DispatchQueue.main.sync {
+                                         
+                                       guard let arrUserResp: Array<String> = gitData.arrUserResp as? Array<String> else { return }
+                                         _ = (0..<(arrUserResp.count)).map { (i) -> String in
+                 
+                                           UserDefaults.standard.set(arrUserResp[1], forKey: "confirmedInfo")
+                                           UserDefaults.standard.set(arrUserResp[2], forKey: "suspicionInfo")
+                                           UserDefaults.standard.set(arrUserResp[3], forKey: "diedInfo")
+                                           UserDefaults.standard.set(arrUserResp[4], forKey: "recoveredInfo")
+                                           print("arrUserResp[i] \(arrUserResp[i]), \(i)")
+                                             return "5"
+                                                 }
+                                     }
+                                   
+                    
+                                 } catch let err {
+                                     print("Err", err)
+                                 }
+                       //self.saveBTN.sendActions(for: .touchUpInside)
+                       
+                       }.resume()
+        
+        
+    }
+        
+        
+        // let parametrStatus = city?.location.latitude
         cityLabel.text = city?.name
         print("city?.name  \(String(describing: city?.name))")
         print("city?.name  \(String(describing: city?.id))")
         //cityLabel.text = "123"
-        
+ /*
         cityLabel.backgroundColor = UIColor(red: 135/255, green: 135/255, blue: 135/255, alpha: 0.5)
         if (parametrStatus == 1) {
             cityLabel.backgroundColor = UIColor(red: 67/255, green: 227/255, blue: 27/255, alpha: 0.5)
@@ -47,6 +93,46 @@ class SensorsViewCell: UICollectionViewCell {
         if (parametrStatus == 3) {
             cityLabel.backgroundColor = UIColor(red: 245/255, green: 63/255, blue: 12/255, alpha: 0.5)
         }
+*/
+        
+        
+        //  let cityNameFiltered = city?.name.components(separatedBy: "#")
+         if (city?.id ?? 50 < 150) {
+          cityLabel.text = "Зареєструйтесь"
+          cityLabel.backgroundColor = UIColor(red: 135/255, green: 135/255, blue: 135/255, alpha: 0.5)
+          if (UserDefaults.standard.string(forKey: "warningHigh") == "1") {
+              cityLabel.backgroundColor = UIColor(red: 67/255, green: 227/255, blue: 27/255, alpha: 0.5)
+              cityLabel.text = "Не виявлено"
+          }
+          if (UserDefaults.standard.string(forKey: "warningHigh") == "2") {
+              cityLabel.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 12/255, alpha: 0.4)
+              cityLabel.text = "Є підозра"
+          }
+          if (UserDefaults.standard.string(forKey: "warningHigh") == "3") {
+              cityLabel.backgroundColor = UIColor(red: 245/255, green: 63/255, blue: 12/255, alpha: 0.5)
+              cityLabel.text = "Великий ризик"
+          }
+         } else {
+            cityLabel.text = "Info"
+            if (city?.name == "Info_1") {
+                cityLabel.text = "Підтверджено: \((Int(UserDefaults.standard.string(forKey: "confirmedInfo") ?? "") ?? 0))"
+            }
+            if (city?.name == "Info_2") {
+              cityLabel.text = "Підозра: \((Int(UserDefaults.standard.string(forKey: "suspicionInfo") ?? "") ?? 0))"
+            }
+            if (city?.name == "Info_3") {
+              cityLabel.text = "Померло: \((Int(UserDefaults.standard.string(forKey: "diedInfo") ?? "") ?? 0))"
+            }
+            if (city?.name == "Info_4") {
+              cityLabel.text = "Видужало: \((Int(UserDefaults.standard.string(forKey: "recoveredInfo") ?? "") ?? 0))"
+            }
+         }
+    //    if (UserDefaults.standard.string(forKey: "warningHigh") == "") {
+     //       cityLabel.text = "Зареєструйте пристрій"
+     //   }
+        
+        
+        
         
        // var imgName: String = (city?.imageUrl?.absoluteString)!
         

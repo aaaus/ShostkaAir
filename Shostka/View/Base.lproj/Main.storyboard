@@ -558,7 +558,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="TFT-AW-iaO">
                         <barButtonItem key="backBarButtonItem" title="Параметри" id="0nH-A1-o8P"/>
-                        <barButtonItem key="rightBarButtonItem" title="Інформація" id="gQc-wV-4c3">
+                        <barButtonItem key="rightBarButtonItem" title="Справка" id="gQc-wV-4c3">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="s9u-S7-Wpf" kind="show" identifier="showInfoLab" id="gIY-p3-7C2"/>

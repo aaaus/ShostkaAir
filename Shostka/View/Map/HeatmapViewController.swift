@@ -44,7 +44,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
     private var button: UIButton!
     
     private var gradientColors = [UIColor.green, UIColor.red]
-    private var gradientStartPoints = [0.2, 1.0] as [NSNumber]
+    private var gradientStartPoints = [0.8, 1.0] as [NSNumber]
     
     private let locationManager = CLLocationManager()
 
@@ -59,7 +59,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
         mapView.settings.myLocationButton = true
         mapView.accessibilityElementsHidden = false
         mapView.isMyLocationEnabled = true
-        mapView.setMinZoom(13, maxZoom: 17)
+        mapView.setMinZoom(13, maxZoom: 15)
         mapView.delegate = self
         self.view = mapView
         //makeButton()
