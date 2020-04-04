@@ -66,16 +66,14 @@ class DetailNewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    //  UserDefaults.standard.set("0", forKey: "userPswd")
-    //  UserDefaults.standard.set(true, forKey: "userInstruction_1")
+        
+     //   Privacy - Location When In Use Usage Description
 
-        
+     //   Визначення геопозіціі пристрою для особистого моніторингу
+     //   Будь ласка, виберіть: "Дозволити за використання"  / "Разрешить при использовании”
+   /*
         locationManager.delegate = self as? CLLocationManagerDelegate
-       // locationManager.requestWhenInUseAuthorization()
         locationManager.requestWhenInUseAuthorization()
-        //locationManager.requestAlwaysAuthorization()
-        
-        
         locationManager.allowsBackgroundLocationUpdates = true
         locationManager.pausesLocationUpdatesAutomatically = false
         locationManager.showsBackgroundLocationIndicator = false
@@ -84,22 +82,14 @@ class DetailNewsViewController: UIViewController {
         if (UserDefaults.standard.bool(forKey: "useGPS")) {
            locationManager.startUpdatingLocation()
            }
-        
-        //  guard let city = city else {
-        // return
-       //  }
-      //  urlFromCityDiscription = city.description
-        //self.navigationItem.title = city.name
-        
-        
-        //self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+*/
  
         self.navigationItem.title = "Інтернет Ринок"
         loadHtmlCode()
         
-        getUserLocation()
+    //    getUserLocation()
         
-        startTimer()
+    //    startTimer()
         
     }
     

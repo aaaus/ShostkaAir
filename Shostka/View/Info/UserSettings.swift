@@ -59,8 +59,8 @@ class UserSettings: UIViewController {
             userPswdField.isHidden = false
             userTelText.isHidden = false
             userTelTextLbl.isHidden = false
-            useGPSbtn.isHidden = false
-            useGPSLbl.isHidden = false
+            //useGPSbtn.isHidden = false
+            //useGPSLbl.isHidden = false
                 //
             if (Network.reachability.isReachable){
                 topBarTextColor.backgroundColor = .green
@@ -95,8 +95,8 @@ class UserSettings: UIViewController {
         userPswdField.isHidden = false
         userTelText.isHidden = false
         userTelTextLbl.isHidden = false
-        useGPSbtn.isHidden = false
-        useGPSLbl.isHidden = false
+        //useGPSbtn.isHidden = false
+        //useGPSLbl.isHidden = false
         
         
         if ((Int(UserDefaults.standard.string(forKey: "userPswd") ?? "") ?? 0) < 5) {
