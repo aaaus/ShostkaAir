@@ -61,10 +61,18 @@ class UserSettings: UIViewController {
             userTelTextLbl.isHidden = false
             useGPSbtn.isHidden = false
             useGPSLbl.isHidden = false
-            
+                //
             if (Network.reachability.isReachable){
-                topBarTextColor.text = "Сервіс підключений"
                 topBarTextColor.backgroundColor = .green
+                if (UserDefaults.standard.bool(forKey: "useGPS") == true) {
+                    topBarTextColor.text = "Сервіс підключений"
+                } else {
+                    topBarTextColor.text = "Увімкніть геопозіцію"
+                }
+                
+
+                
+                
             }else{
                 //print("No server connection!")
                 topBarTextColor.text = "Відсутнє підключення!"
@@ -211,8 +219,15 @@ class UserSettings: UIViewController {
         var msgSettingSave = "Налаштування збережені"
         
         if (Network.reachability.isReachable){
-            topBarTextColor.text = "Сервіс підключений"
-            topBarTextColor.backgroundColor = .green
+            
+           if ((Int(UserDefaults.standard.string(forKey: "userPswd") ?? "") ?? 0) > 5) {
+              topBarTextColor.backgroundColor = .green
+              if (UserDefaults.standard.bool(forKey: "useGPS") == true) {
+                  topBarTextColor.text = "Сервіс підключений"
+               } else {
+                topBarTextColor.text = "Увімкніть геопозіцію"
+               }
+            }
             msgSettingSave = "Налаштування збережені"
         }else{
             print("No server connection!")
@@ -246,6 +261,15 @@ class UserSettings: UIViewController {
             
         }
         
+        
+        if ((Int(UserDefaults.standard.string(forKey: "userPswd") ?? "") ?? 0) > 5) {
+           topBarTextColor.backgroundColor = .green
+           if (UserDefaults.standard.bool(forKey: "useGPS") == true) {
+               topBarTextColor.text = "Сервіс підключений"
+            } else {
+             topBarTextColor.text = "Увімкніть геопозіцію"
+            }
+         }
     }
     
     
