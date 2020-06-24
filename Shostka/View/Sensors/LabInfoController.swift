@@ -13,9 +13,9 @@ class LabInfoController: UIViewController {
     
     @IBOutlet weak var WebViewLabInfo: WKWebView!
     
-    var id: Int! {
+    var urlGooglePhoto: String! {
         didSet {
-//            print(id as Any)
+            //    print(urlGooglePhoto as Any)
         }
     }
     
@@ -26,9 +26,10 @@ class LabInfoController: UIViewController {
     
     func loadHtmlCode() {
         
-        let sensorID = String(id)
+    //    let sensorID = String(id)
         //let url = URL (string: "https://shostka.in/shostka/info/\(sensorID).html")
-        let url = URL (string: "https://api.shostka.in/app/info/\(sensorID).html")
+        //let url = URL (string: "https://api.shostka.in/app/info/\(sensorID).html")
+        let url = URL (string: urlGooglePhoto)
         
         
 //        print("url: \(String(describing: url))")

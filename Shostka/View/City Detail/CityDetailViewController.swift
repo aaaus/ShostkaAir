@@ -487,7 +487,7 @@ final class CityDetailViewController: UIViewController {
         //".$_GET[$co2].", ".$_GET[$tvoc].", ".$_GET[$pm1].", ".$_GET[$pm2].", ".$_GET[$pm10]
         let labNamberFromID: Int = city!.id / 100
 
-        guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?&labNamberFromID=\(labNamberFromID)&getFromApp=\(getParametr)&xAxis=\(xAxisDotsCountToGet)") else { return }
+        guard let gitUrl = URL(string: "http://api.shostka.in/cam/cam.php/?&labNamberFromID=\(labNamberFromID)&getFromApp=\(getParametr)&xAxis=\(xAxisDotsCountToGet)") else { return }
        // print(gitUrl)
         
         URLSession.shared.dataTask(with: gitUrl) { (data, response

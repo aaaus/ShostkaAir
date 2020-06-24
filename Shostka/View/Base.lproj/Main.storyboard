@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJX-50-R1w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJX-50-R1w">
     <device id="retina4_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -174,7 +174,7 @@
             </objects>
             <point key="canvasLocation" x="-133" y="863"/>
         </scene>
-        <!--Шостка.CITY-->
+        <!--Розумне місто-->
         <scene sceneID="JBN-2g-L7K">
             <objects>
                 <viewController id="WbI-v1-ffB" customClass="InfoWebView" customModule="Shostka" customModuleProvider="target" sceneMemberID="viewController">
@@ -183,7 +183,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0D-2f-s5U">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -204,8 +204,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8dN-49-zZk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Шостка.CITY" id="5Ud-e1-4GQ">
-                        <barButtonItem key="leftBarButtonItem" image="house" catalog="system" id="lYd-zX-2So">
+                    <navigationItem key="navigationItem" title="Розумне місто" id="5Ud-e1-4GQ">
+                        <barButtonItem key="leftBarButtonItem" image="arrowshape.turn.up.left" catalog="system" id="lYd-zX-2So">
                             <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="ShostkaCityWebViewAction:" destination="WbI-v1-ffB" id="76b-r2-XcG"/>
@@ -219,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWj-3D-daC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1433" y="1593"/>
+            <point key="canvasLocation" x="-133" y="1593"/>
         </scene>
         <!--Підтримка-->
         <scene sceneID="JCh-uK-hRr">
@@ -227,7 +227,7 @@
                 <navigationController id="nQ6-UG-qVK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Підтримка" image="message" catalog="system" id="nXe-Q2-YPK"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lJb-Iw-4bI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="lJb-Iw-4bI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -281,12 +281,12 @@
             </objects>
             <point key="canvasLocation" x="-133" y="2287"/>
         </scene>
-        <!--Сервіси-->
+        <!--Камери-->
         <scene sceneID="F2G-aQ-JZW">
             <objects>
                 <navigationController id="x1k-GY-jIR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Сервіси" image="command" catalog="system" id="wjl-Lu-DmM"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="e05-Ss-T1v">
+                    <tabBarItem key="tabBarItem" title="Камери" image="video" catalog="system" id="wjl-Lu-DmM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="e05-Ss-T1v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -397,7 +397,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <segments>
-                                <segment title="Corona-монітор"/>
+                                <segment title="Камери"/>
                                 <segment title="Карта"/>
                             </segments>
                             <color key="tintColor" red="0.20086640119552612" green="0.45789366960525513" blue="0.63923901319503784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -430,11 +430,11 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="bgj-eo-lcI">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Leq-qJ-bub">
-                            <rect key="frame" x="50" y="6" width="250" height="32"/>
+                            <rect key="frame" x="50" y="5.5" width="250" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <segments>
-                                <segment title="Corona-монітор"/>
+                                <segment title="Камери"/>
                                 <segment title="Карта"/>
                             </segments>
                             <color key="tintColor" red="0.20086640119999999" green="0.4578936696" blue="0.63923901319999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -462,9 +462,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="NKm-oP-7aO" kind="relationship" relationship="viewControllers" id="sS4-Rz-esO"/>
-                        <segue destination="x1k-GY-jIR" kind="relationship" relationship="viewControllers" id="Hm6-u0-vjk"/>
                         <segue destination="fD1-vr-mD6" kind="relationship" relationship="viewControllers" id="EYk-Qg-ZnC"/>
+                        <segue destination="x1k-GY-jIR" kind="relationship" relationship="viewControllers" id="Hm6-u0-vjk"/>
+                        <segue destination="NKm-oP-7aO" kind="relationship" relationship="viewControllers" id="sS4-Rz-esO"/>
                         <segue destination="nQ6-UG-qVK" kind="relationship" relationship="viewControllers" id="48u-l1-PVi"/>
                     </connections>
                 </tabBarController>
@@ -481,7 +481,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yjf-Sf-wpC">
-                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
+                                <rect key="frame" x="0.0" y="501" width="320" height="18"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="V9L-Kj-6Gd" customClass="CitiesCollectionLayout" customModule="Shostka" customModuleProvider="target">
                                     <size key="itemSize" width="120" height="160"/>
@@ -544,22 +544,41 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jq0-nf-6P3">
                                 <rect key="frame" x="150" y="274" width="20" height="20"/>
                             </activityIndicatorView>
+                            <wkWebView contentMode="center" semanticContentAttribute="playback" translatesAutoresizingMaskIntoConstraints="NO" id="kee-ye-UGh">
+                                <rect key="frame" x="0.0" y="44" width="320" height="253.5"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kee-ye-UGh" secondAttribute="height" multiplier="140:111" id="TgZ-1V-ztb"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2rr-5B-MSV" firstAttribute="trailing" secondItem="Yjf-Sf-wpC" secondAttribute="trailing" id="6ry-8w-KFP"/>
+                            <constraint firstItem="kee-ye-UGh" firstAttribute="leading" secondItem="2rr-5B-MSV" secondAttribute="leading" id="7Ib-X1-VNg"/>
                             <constraint firstItem="Yjf-Sf-wpC" firstAttribute="leading" secondItem="2rr-5B-MSV" secondAttribute="leading" id="Bbj-U6-aB3"/>
                             <constraint firstItem="Jq0-nf-6P3" firstAttribute="centerX" secondItem="Iuq-K5-lEB" secondAttribute="centerX" id="IMQ-hz-132"/>
+                            <constraint firstItem="Yjf-Sf-wpC" firstAttribute="leading" secondItem="2rr-5B-MSV" secondAttribute="leading" id="LDi-AZ-iQd"/>
+                            <constraint firstItem="Yjf-Sf-wpC" firstAttribute="bottom" secondItem="2rr-5B-MSV" secondAttribute="bottom" id="LFp-4Y-1rC"/>
+                            <constraint firstItem="Yjf-Sf-wpC" firstAttribute="trailing" secondItem="2rr-5B-MSV" secondAttribute="trailing" id="OU4-72-X60"/>
+                            <constraint firstItem="Yjf-Sf-wpC" firstAttribute="centerX" secondItem="Iuq-K5-lEB" secondAttribute="centerX" id="d6w-oc-o2s"/>
+                            <constraint firstItem="2rr-5B-MSV" firstAttribute="trailing" secondItem="kee-ye-UGh" secondAttribute="trailing" id="dju-wV-tHF"/>
+                            <constraint firstItem="kee-ye-UGh" firstAttribute="top" secondItem="2rr-5B-MSV" secondAttribute="top" id="gpi-VT-hZT"/>
+                            <constraint firstItem="Yjf-Sf-wpC" firstAttribute="bottom" secondItem="2rr-5B-MSV" secondAttribute="bottom" id="tfr-LL-XKs"/>
                             <constraint firstItem="2rr-5B-MSV" firstAttribute="bottom" secondItem="Yjf-Sf-wpC" secondAttribute="bottom" id="uxx-p8-mtQ"/>
-                            <constraint firstItem="Yjf-Sf-wpC" firstAttribute="top" secondItem="2rr-5B-MSV" secondAttribute="top" id="ydC-87-isD"/>
+                            <constraint firstItem="Yjf-Sf-wpC" firstAttribute="top" secondItem="2rr-5B-MSV" secondAttribute="top" constant="457" id="ydC-87-isD"/>
                             <constraint firstItem="Jq0-nf-6P3" firstAttribute="centerY" secondItem="Iuq-K5-lEB" secondAttribute="centerY" id="zHP-y4-SFi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2rr-5B-MSV"/>
                     </view>
                     <navigationItem key="navigationItem" id="TFT-AW-iaO">
-                        <barButtonItem key="backBarButtonItem" title="Параметри" id="0nH-A1-o8P"/>
-                        <barButtonItem key="rightBarButtonItem" title="Справка" id="gQc-wV-4c3">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="backBarButtonItem" title="Камера" id="0nH-A1-o8P"/>
+                        <barButtonItem key="rightBarButtonItem" title="Архів" id="gQc-wV-4c3">
+                            <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="s9u-S7-Wpf" kind="show" identifier="showInfoLab" id="gIY-p3-7C2"/>
                             </connections>
@@ -567,20 +586,21 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="Jq0-nf-6P3" id="PAQ-FW-iQM"/>
+                        <outlet property="camsWebView" destination="kee-ye-UGh" id="UOF-wx-NSZ"/>
                         <outlet property="collectionView" destination="Yjf-Sf-wpC" id="DYX-0h-qJF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3V-3E-KHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2406" y="107"/>
+            <point key="canvasLocation" x="2405.625" y="106.69014084507042"/>
         </scene>
-        <!--Ринок-->
+        <!--Каталог-->
         <scene sceneID="9vx-24-jvl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NKm-oP-7aO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Ринок" image="tray.2" catalog="system" id="GPp-8d-r7a"/>
+                    <tabBarItem key="tabBarItem" title="Каталог" image="tray.2" catalog="system" id="GPp-8d-r7a"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1XJ-yr-rNe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="1XJ-yr-rNe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -593,19 +613,19 @@
             </objects>
             <point key="canvasLocation" x="-1228" y="864"/>
         </scene>
-        <!--Налаштування-->
+        <!--Розумне місто-->
         <scene sceneID="d2t-J5-8WF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fD1-vr-mD6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Налаштування" image="gear" catalog="system" id="KZ9-VL-L5F"/>
+                    <tabBarItem key="tabBarItem" title="Розумне місто" image="house" catalog="system" id="KZ9-VL-L5F"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RcT-eS-HTh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="RcT-eS-HTh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="A3M-0u-GzD" kind="relationship" relationship="rootViewController" id="Ku6-TK-4xt"/>
+                        <segue destination="WbI-v1-ffB" kind="relationship" relationship="rootViewController" id="x2z-SO-cYd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5n0-4p-z0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -621,43 +641,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIN-код пристрою" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyi-nE-zs6">
-                                <rect key="frame" x="94.5" y="93" width="131.5" height="18"/>
+                                <rect key="frame" x="94.5" y="49" width="131.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C4d-Mb-nfI">
-                                <rect key="frame" x="135.5" y="285" width="51" height="31"/>
+                                <rect key="frame" x="135.5" y="241" width="51" height="31"/>
                                 <connections>
                                     <action selector="useGPSaction:" destination="A3M-0u-GzD" eventType="valueChanged" id="mLA-rL-ghQ"/>
                                 </connections>
                             </switch>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Надсилати геопозіцію" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CY-Pw-mLA">
-                                <rect key="frame" x="39" y="259" width="242" height="18"/>
+                                <rect key="frame" x="39" y="215" width="242" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вкажіть контактний номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpG-Fk-emg">
-                                <rect key="frame" x="64.5" y="166" width="191.5" height="18"/>
+                                <rect key="frame" x="64.5" y="122" width="191.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Приклад: 0671234567" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-Tx-5x6">
-                                <rect key="frame" x="73" y="192" width="174" height="34"/>
+                                <rect key="frame" x="73" y="148" width="174" height="34"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFU-xF-U98">
-                                <rect key="frame" x="116" y="119" width="88" height="21"/>
+                                <rect key="frame" x="116" y="75" width="88" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bft-4V-d0U">
-                                <rect key="frame" x="38" y="448" width="244" height="36"/>
+                                <rect key="frame" x="38" y="497" width="244" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Зареєструвати пристрій">
                                     <color key="titleColor" name="ColorPrimary"/>
@@ -667,7 +687,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6S-pD-cyj">
-                                <rect key="frame" x="-1" y="300" width="322" height="101.5"/>
+                                <rect key="frame" x="-1" y="256" width="322" height="101.5"/>
                                 <string key="text">Для отримання можливості особистого 
 моніторингу необхідно зареєструвати
 пристрій!
@@ -678,7 +698,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWB-Sc-AdP">
-                                <rect key="frame" x="84" y="402" width="152" height="33"/>
+                                <rect key="frame" x="84" y="358" width="152" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Угода користувача">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -688,7 +708,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сервіси не підключені!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wun-fL-U1I">
-                                <rect key="frame" x="38" y="44" width="244" height="21"/>
+                                <rect key="frame" x="38" y="0.0" width="244" height="21"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -752,7 +772,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-133.125" y="1592.9577464788733"/>
+            <point key="canvasLocation" x="1433" y="1593"/>
         </scene>
         <!--Новини-->
         <scene sceneID="lQD-tV-Fqf">
@@ -853,14 +873,14 @@
             <point key="canvasLocation" x="1434" y="863"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="HelpIcon" width="25" height="24"/>
-        <image name="arrowshape.turn.up.left" catalog="system" width="64" height="52"/>
-        <image name="command" catalog="system" width="64" height="56"/>
-        <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="house" catalog="system" width="64" height="54"/>
-        <image name="message" catalog="system" width="64" height="56"/>
-        <image name="tray.2" catalog="system" width="64" height="56"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="tray.2" catalog="system" width="128" height="114"/>
+        <image name="video" catalog="system" width="128" height="83"/>
         <namedColor name="ColorAccent">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -871,5 +891,4 @@
             <color red="0.17254901960784313" green="0.25098039215686274" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

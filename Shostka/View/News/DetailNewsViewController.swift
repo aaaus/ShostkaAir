@@ -84,7 +84,7 @@ class DetailNewsViewController: UIViewController {
            }
 */
  
-        self.navigationItem.title = "Інтернет Ринок"
+        self.navigationItem.title = "Каталог підприємств"
         loadHtmlCode()
         
     //    getUserLocation()
@@ -131,7 +131,7 @@ class DetailNewsViewController: UIViewController {
             
         print("You Location is: \(String(describing: userLocationLatitude)), \(String(describing: userLocationLongitude))")
    
-          guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?&getFromApp=google&xAxis=10&userTel=\(userTel)&userPswd=\(userPswd)&userLat=\(userLocationLatitude ?? 10)&userLong=\(userLocationLongitude ?? 10)") else { return }
+          guard let gitUrl = URL(string: "http://api.shostka.in/cam/cam.php/?&getFromApp=google&xAxis=10&userTel=\(userTel)&userPswd=\(userPswd)&userLat=\(userLocationLatitude ?? 10)&userLong=\(userLocationLongitude ?? 10)") else { return }
           print ("gitUrl \(gitUrl)")
           URLSession.shared.dataTask(with: gitUrl) { (data, response
               , error) in

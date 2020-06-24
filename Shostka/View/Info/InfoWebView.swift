@@ -18,7 +18,9 @@ class InfoWebView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL (string: "https://shostka.in/shostka/info/99.html")
+//        let url = URL (string: "https://shostka.in/shostka/info/99.html")
+        let url = URL (string: "http://shostka-smartcity.com")
+
        // print("url: \(String(describing: url))")
         let requestObj = URLRequest(url: url!)
         infoWebLink.load(requestObj)

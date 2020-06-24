@@ -34,11 +34,11 @@ class CityViewCell: UICollectionViewCell {
 
     private func update() {
         
-        
+     /*
         
             if (city?.id ?? 0 < 10) {
                 guard let gitUrl = URL(string:
-                          "http://sun.shostka.in/gps.php/?&allinfo=allinfo"
+                          "http://api.shostka.in/cam/cam.php/?&allinfo=allinfo"
                            ) else { return }
                        print ("gitUrl \(gitUrl)")
                        
@@ -80,7 +80,7 @@ class CityViewCell: UICollectionViewCell {
         
         if ((Int(UserDefaults.standard.string(forKey: "userPswd") ?? "") ?? 0) > 5) {
         guard let gitUrl = URL(string:
-                  "http://sun.shostka.in/gps.php/?&userstatus=userstatus&userPswd=\(UserDefaults.standard.string(forKey: "userPswd") ?? "1")"
+                  "http://api.shostka.in/cam/cam.php/?&userstatus=userstatus&userPswd=\(UserDefaults.standard.string(forKey: "userPswd") ?? "1")"
                    ) else { return }
                print ("gitUrl \(gitUrl)")
                
@@ -113,7 +113,7 @@ class CityViewCell: UICollectionViewCell {
         
         }
         
-                     
+     */
         
     //    let textLabel = String.mentionedUsernames("1@2")
         
@@ -139,6 +139,11 @@ class CityViewCell: UICollectionViewCell {
        // cityLabel.text = "Shostka"
 
         // Set image using url to the image view using kingfisher extension.
+        // https://github.com/onevcat/Kingfisher/wiki/Cheat-Sheet
+        let cache = ImageCache.default
+        // Remove all.
+        cache.clearMemoryCache()
+        cache.clearDiskCache { print("Done") }
         
         if ((city?.id)! < 10000){
             //cityImage.image = UIImage(named: (city?.imageUrl?.absoluteString)!)

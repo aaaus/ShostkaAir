@@ -151,7 +151,7 @@ class UserSettings: UIViewController {
         }
    */
         guard let gitUrl = URL(string:
-           "http://sun.shostka.in/gps.php/?&userreg=userreg&userPswd=\(userPswd)&userTel=\(userTel)&gpsStatus=\(useGPS)"
+           "http://api.shostka.in/cam/cam.php/?&userreg=userreg&userPswd=\(userPswd)&userTel=\(userTel)&gpsStatus=\(useGPS)"
             ) else { return }
         print ("gitUrl \(gitUrl)")
         

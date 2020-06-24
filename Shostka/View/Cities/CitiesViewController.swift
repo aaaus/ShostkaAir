@@ -49,7 +49,7 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewWillAppear(_ animated: Bool) {
         updateUserInterface()
 //        print("Load")
-        startTimer()
+        //startTimer()
         
     }
     
@@ -108,7 +108,7 @@ class CitiesViewController: UIViewController, UICollectionViewDelegate, UICollec
                          selector: #selector(statusManager),
                          name: .flagsChanged,
                          object: nil)
-        updateUserInterface()
+       // updateUserInterface()
         
         // userTel = UserDefaults.standard.string(forKey: "userTel") ?? "2"
                         // userPswd = UserDefaults.standard.string(forKey: "userPswd") ?? "2"

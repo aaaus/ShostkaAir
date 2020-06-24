@@ -31,7 +31,7 @@ class SensorsViewCell: UICollectionViewCell {
      */
     var city: City? {
         didSet {
-            update()
+            // update()
         }
     }
     
@@ -40,7 +40,7 @@ class SensorsViewCell: UICollectionViewCell {
         
         if (city?.id ?? 50 > 150) {
             guard let gitUrl = URL(string:
-                      "http://sun.shostka.in/gps.php/?&allinfo=allinfo"
+                      "http://api.shostka.in/cam/cam.php/?&allinfo=allinfo"
                        ) else { return }
                    print ("gitUrl \(gitUrl)")
                    

@@ -1,7 +1,7 @@
 import Foundation
 
 private enum Constants {
-    static let citiesUrl: String = "http://sun.shostka.in/places4.json"
+    static let citiesUrl: String = "http://api.shostka.in/cam/cams.json"
 }
 
 /**

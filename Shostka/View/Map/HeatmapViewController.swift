@@ -59,7 +59,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
         mapView.settings.myLocationButton = true
         mapView.accessibilityElementsHidden = false
         mapView.isMyLocationEnabled = true
-        mapView.setMinZoom(13, maxZoom: 15)
+        mapView.setMinZoom(10, maxZoom: 18)
         mapView.delegate = self
         self.view = mapView
         //makeButton()
@@ -166,7 +166,7 @@ class HeatmapViewController: UIViewController, GMSMapViewDelegate {
          //locationManager.stopUpdatingLocation()
         
         var list = [GMUWeightedLatLng]()
-        guard let gitUrl = URL(string: "http://sun.shostka.in/gps.php/?&getFromApp=google&xAxis=10&userTel=\(userTel)&userPswd=\(userPswd)&userLat=\(userLocationLatitude ?? 10)&userLong=\(userLocationLongitude ?? 10)") else { return }
+        guard let gitUrl = URL(string: "http://api.shostka.in/cam/cam.php/?&getFromApp=google&xAxis=10&userTel=\(userTel)&userPswd=\(userPswd)&userLat=\(userLocationLatitude ?? 10)&userLong=\(userLocationLongitude ?? 10)") else { return }
         
         URLSession.shared.dataTask(with: gitUrl) { (data, response
             , error) in

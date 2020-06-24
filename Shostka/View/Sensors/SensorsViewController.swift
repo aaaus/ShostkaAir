@@ -1,4 +1,5 @@
 import UIKit
+import WebKit
 
 private enum Segues: String {
     // Segue name that navigates to city detail page (has the same value as the segue in storyboard).
@@ -19,6 +20,9 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var camsWebView: WKWebView!
+    
     
     var city: City?
     
@@ -66,7 +70,7 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
 //        let hola = "hola"
 //        print(">>>> \(hola)")
         setupData()
-        self.collectionView.reloadData()
+        //self.collectionView.reloadData()
        // SensorsViewCell
     }
     
@@ -103,9 +107,20 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
        // print("city.id: \(city.id)")
         
         title = (city.name.components(separatedBy: "#"))[0]
+
         sensorStationNumber = city.id
         setupData()
         
+        loadHtmlCode()
+        
+    }
+    
+    func loadHtmlCode() {
+        //let url = URL (string: urlFromCityDiscription)
+        //let url = URL (string: "https://shostka.in")
+        let url = URL (string: "http://vpn.shostka.in:8765/picture/\(sensorStationNumber)/frame/")
+        let requestObj = URLRequest(url: url!)
+        camsWebView.load(requestObj)
     }
     
     
@@ -151,7 +166,8 @@ class SensorsViewController: UIViewController, UICollectionViewDelegate, UIColle
                 return
             }
             
-            infoLabController.id = city?.id
+        //  infoLabController.id = city?.id
+            infoLabController.urlGooglePhoto = city?.description
         default:
             break
         }
