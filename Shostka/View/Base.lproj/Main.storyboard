@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJX-50-R1w">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QJX-50-R1w">
     <device id="retina4_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,6 +27,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="REP-ej-LIm"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Qoo-gh-Ddr" firstAttribute="bottom" secondItem="REP-ej-LIm" secondAttribute="bottom" id="Jju-1E-qyC"/>
@@ -33,7 +35,6 @@
                             <constraint firstItem="Qoo-gh-Ddr" firstAttribute="top" secondItem="REP-ej-LIm" secondAttribute="top" id="XNv-iE-Aop"/>
                             <constraint firstItem="Qoo-gh-Ddr" firstAttribute="leading" secondItem="REP-ej-LIm" secondAttribute="leading" id="sYC-eo-0AE"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="REP-ej-LIm"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="i3k-SE-hXQ"/>
                     <connections>
@@ -54,8 +55,8 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-pD-XU6" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="511"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <viewLayoutGuide key="safeArea" id="DcS-1z-iUR"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QL0-7l-YEK">
                                 <rect key="frame" x="28.5" y="523" width="263" height="32"/>
@@ -70,6 +71,7 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="jS0-iv-jDb"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="top" secondItem="jS0-iv-jDb" secondAttribute="top" id="Juu-OJ-MKM"/>
@@ -79,7 +81,6 @@
                             <constraint firstItem="jS0-iv-jDb" firstAttribute="bottom" secondItem="QL0-7l-YEK" secondAttribute="bottom" constant="14" id="fI8-pe-1c7"/>
                             <constraint firstItem="gOD-pD-XU6" firstAttribute="trailing" secondItem="jS0-iv-jDb" secondAttribute="trailing" id="oUi-Pq-YUS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="jS0-iv-jDb"/>
                     </view>
                     <navigationItem key="navigationItem" title="..." largeTitleDisplayMode="always" id="kHe-6a-mE6">
                         <barButtonItem key="rightBarButtonItem" title="Справка" image="HelpIcon" id="oqW-Qf-3In">
@@ -114,6 +115,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ptY-X4-6xk"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bCF-23-pj3" firstAttribute="bottom" secondItem="ptY-X4-6xk" secondAttribute="bottom" id="A4v-qf-KdR"/>
@@ -121,7 +123,6 @@
                             <constraint firstItem="bCF-23-pj3" firstAttribute="leading" secondItem="ptY-X4-6xk" secondAttribute="leading" id="wOu-s9-6mI"/>
                             <constraint firstItem="bCF-23-pj3" firstAttribute="top" secondItem="ptY-X4-6xk" secondAttribute="top" id="wqy-4K-KAP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ptY-X4-6xk"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="sZG-EF-CBZ"/>
                     <connections>
@@ -149,6 +150,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="b7U-1Y-4KZ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DYt-Le-JI4" firstAttribute="leading" secondItem="x6z-ZZ-c6j" secondAttribute="leading" id="5kp-Bz-hZJ"/>
@@ -156,7 +158,6 @@
                             <constraint firstAttribute="trailing" secondItem="DYt-Le-JI4" secondAttribute="trailing" id="XIl-ps-foH"/>
                             <constraint firstItem="DYt-Le-JI4" firstAttribute="centerY" secondItem="x6z-ZZ-c6j" secondAttribute="centerY" constant="2" id="apb-Zk-cvb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="b7U-1Y-4KZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="wi8-pc-37d">
                         <barButtonItem key="leftBarButtonItem" image="arrowshape.turn.up.left" catalog="system" id="Y6p-Pq-XK7">
@@ -191,6 +192,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="8dN-49-zZk"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="S0D-2f-s5U" firstAttribute="top" secondItem="8dN-49-zZk" secondAttribute="top" id="0uH-aU-pPR"/>
@@ -202,7 +204,6 @@
                             <constraint firstItem="S0D-2f-s5U" firstAttribute="leading" secondItem="8dN-49-zZk" secondAttribute="leading" id="gzd-IN-hGO"/>
                             <constraint firstItem="S0D-2f-s5U" firstAttribute="bottom" secondItem="8dN-49-zZk" secondAttribute="bottom" id="zBm-St-kX4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="8dN-49-zZk"/>
                     </view>
                     <navigationItem key="navigationItem" title="Розумне місто" id="5Ud-e1-4GQ">
                         <barButtonItem key="leftBarButtonItem" image="arrowshape.turn.up.left" catalog="system" id="lYd-zX-2So">
@@ -256,6 +257,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ypc-wE-tgd"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BrT-GL-1h1" firstAttribute="leading" secondItem="ypc-wE-tgd" secondAttribute="leading" id="Hgb-hz-fZn"/>
@@ -263,7 +265,6 @@
                             <constraint firstItem="BrT-GL-1h1" firstAttribute="top" secondItem="ypc-wE-tgd" secondAttribute="top" id="m8b-Q5-KEb"/>
                             <constraint firstItem="BrT-GL-1h1" firstAttribute="bottom" secondItem="ypc-wE-tgd" secondAttribute="bottom" id="z67-It-uWJ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ypc-wE-tgd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Технічна підтримка" id="vG7-eI-Ovt">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="house" catalog="system" id="42Y-iD-AJ4">
@@ -378,6 +379,7 @@
                                 <rect key="frame" x="150" y="274" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="T4I-DZ-7pm"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="MMG-mp-x5a" firstAttribute="centerX" secondItem="Wnm-Sh-sCY" secondAttribute="centerX" id="7xK-qI-u0S"/>
@@ -387,7 +389,6 @@
                             <constraint firstItem="MMG-mp-x5a" firstAttribute="centerY" secondItem="Wnm-Sh-sCY" secondAttribute="centerY" id="xm1-Tz-68R"/>
                             <constraint firstItem="oIS-JF-5Sc" firstAttribute="top" secondItem="T4I-DZ-7pm" secondAttribute="top" id="ygi-Rb-W2U"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="T4I-DZ-7pm"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="LYh-qI-2ys">
                         <nil key="title"/>
@@ -424,8 +425,8 @@
                     <view key="view" contentMode="scaleToFill" id="0tG-Os-WuH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wSg-gT-54C"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="bgj-eo-lcI">
                         <nil key="title"/>
@@ -556,6 +557,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="2rr-5B-MSV"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2rr-5B-MSV" firstAttribute="trailing" secondItem="Yjf-Sf-wpC" secondAttribute="trailing" id="6ry-8w-KFP"/>
@@ -573,12 +575,11 @@
                             <constraint firstItem="Yjf-Sf-wpC" firstAttribute="top" secondItem="2rr-5B-MSV" secondAttribute="top" constant="457" id="ydC-87-isD"/>
                             <constraint firstItem="Jq0-nf-6P3" firstAttribute="centerY" secondItem="Iuq-K5-lEB" secondAttribute="centerY" id="zHP-y4-SFi"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2rr-5B-MSV"/>
                     </view>
                     <navigationItem key="navigationItem" id="TFT-AW-iaO">
                         <barButtonItem key="backBarButtonItem" title="Камера" id="0nH-A1-o8P"/>
                         <barButtonItem key="rightBarButtonItem" title="Архів" id="gQc-wV-4c3">
-                            <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="linkColor"/>
                             <connections>
                                 <segue destination="s9u-S7-Wpf" kind="show" identifier="showInfoLab" id="gIY-p3-7C2"/>
                             </connections>
@@ -594,11 +595,11 @@
             </objects>
             <point key="canvasLocation" x="2405.625" y="106.69014084507042"/>
         </scene>
-        <!--Каталог-->
+        <!--Транспорт-->
         <scene sceneID="9vx-24-jvl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NKm-oP-7aO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Каталог" image="tray.2" catalog="system" id="GPp-8d-r7a"/>
+                    <tabBarItem key="tabBarItem" title="Транспорт" image="location.viewfinder" catalog="system" id="GPp-8d-r7a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="1XJ-yr-rNe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -671,12 +672,12 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFU-xF-U98">
-                                <rect key="frame" x="116" y="75" width="88" height="21"/>
+                                <rect key="frame" x="116.5" y="75" width="87" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bft-4V-d0U">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bft-4V-d0U">
                                 <rect key="frame" x="38" y="497" width="244" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Зареєструвати пристрій">
@@ -687,7 +688,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6S-pD-cyj">
-                                <rect key="frame" x="-1" y="256" width="322" height="101.5"/>
+                                <rect key="frame" x="0.0" y="256" width="320" height="101.5"/>
                                 <string key="text">Для отримання можливості особистого 
 моніторингу необхідно зареєструвати
 пристрій!
@@ -697,11 +698,11 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWB-Sc-AdP">
-                                <rect key="frame" x="84" y="358" width="152" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWB-Sc-AdP">
+                                <rect key="frame" x="84.5" y="358" width="151" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Угода користувача">
-                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="linkColor"/>
                                 </state>
                                 <connections>
                                     <action selector="userAgreeLicenceBtn:" destination="A3M-0u-GzD" eventType="touchUpInside" id="7z8-nB-FbU"/>
@@ -709,12 +710,13 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сервіси не підключені!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wun-fL-U1I">
                                 <rect key="frame" x="38" y="0.0" width="244" height="21"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="2NI-Zp-1Yz"/>
                         <color key="backgroundColor" name="ColorAccent"/>
                         <gestureRecognizers/>
                         <constraints>
@@ -745,7 +747,6 @@
                             <constraint firstItem="nFU-xF-U98" firstAttribute="centerX" secondItem="nyi-nE-zs6" secondAttribute="centerX" id="t9i-yT-5Xr"/>
                             <constraint firstItem="8CY-Pw-mLA" firstAttribute="top" secondItem="XO8-Tx-5x6" secondAttribute="bottom" constant="33" id="vUV-RB-Vk4"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="2NI-Zp-1Yz"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="7Gc-tN-UMP" appends="YES" id="vGR-JN-stJ"/>
                         </connections>
@@ -847,6 +848,7 @@
                                 <rect key="frame" x="150" y="274" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7nv-F6-WSo"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="h2O-ti-030" firstAttribute="leading" secondItem="7nv-F6-WSo" secondAttribute="leading" id="F00-L3-bb6"/>
@@ -856,7 +858,6 @@
                             <constraint firstItem="h2O-ti-030" firstAttribute="top" secondItem="7nv-F6-WSo" secondAttribute="top" id="pcx-ux-Unu"/>
                             <constraint firstItem="7nv-F6-WSo" firstAttribute="bottom" secondItem="h2O-ti-030" secondAttribute="bottom" id="wiC-C2-HZT"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="7nv-F6-WSo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Новини" id="yE5-um-Wdg">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Xwc-du-Kq0">
@@ -877,9 +878,9 @@
     <resources>
         <image name="HelpIcon" width="25" height="24"/>
         <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
-        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="location.viewfinder" catalog="system" width="128" height="115"/>
         <image name="message" catalog="system" width="128" height="113"/>
-        <image name="tray.2" catalog="system" width="128" height="114"/>
         <image name="video" catalog="system" width="128" height="83"/>
         <namedColor name="ColorAccent">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -890,5 +891,11 @@
         <namedColor name="ColorPrimaryDark">
             <color red="0.17254901960784313" green="0.25098039215686274" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

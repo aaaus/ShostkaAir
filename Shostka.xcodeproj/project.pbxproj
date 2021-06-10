@@ -61,7 +61,6 @@
 		2B9049AF222AA8E500530633 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9049AE222AA8E500530633 /* String+Convenience.swift */; };
 		2BBF06B7224FE57700004D99 /* InfoWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBF06B6224FE57700004D99 /* InfoWebView.swift */; };
 		2BC466402254BAE7007E2F22 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC4663E2254BAE7007E2F22 /* WebKit.framework */; };
-		2BCB145A22429D4600B8BDE1 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCB145922429D4600B8BDE1 /* GoogleMapsBase.framework */; };
 		2BF4844A22297F310052FE97 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF4844922297F310052FE97 /* DetailNewsViewController.swift */; };
 		2BF95934224F6D2F0050BB84 /* LocalInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95933224F6D2F0050BB84 /* LocalInfoController.swift */; };
 		2BF95936224F85700050BB84 /* LabInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF95935224F85700050BB84 /* LabInfoController.swift */; };
@@ -72,6 +71,8 @@
 		43680B7B2257DE55006900AD /* SupportFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43680B7A2257DE55006900AD /* SupportFB.swift */; };
 		436E0E6C222460F5003B0E9C /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E0E6B222460F5003B0E9C /* SensorsViewController.swift */; };
 		439CA9E324328BAB00F66E15 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439CA9E224328BAB00F66E15 /* UserSettings.swift */; };
+		43C818772672B4500051F6D7 /* Pods_Shostka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7241097514A235CD862D4410 /* Pods_Shostka.framework */; };
+		43C8187B2672B4610051F6D7 /* Pods_Shostka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C8187A2672B4610051F6D7 /* Pods_Shostka.framework */; };
 		43F242772256769D00D93F80 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F242762256769D00D93F80 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,7 +108,6 @@
 		0E69DA68202F84AC00999974 /* CityEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CityEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0E69DA6A202F84AC00999974 /* CityMap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CityMap.xcdatamodel; sourceTree = "<group>"; };
 		0E69DA6B202F84AC00999974 /* CityEntity+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CityEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		0F596EF00E414900B379394D /* Pods-CityMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-CityMap/Pods-CityMap.release.xcconfig"; sourceTree = "<group>"; };
 		2B1BCF4022396AAD00CEF0B8 /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		2B482DDD22241DCE003246E6 /* SensorsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsViewCell.swift; sourceTree = "<group>"; };
 		2B5B67AF22427B800003EA1B /* HeatmapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatmapViewController.swift; sourceTree = "<group>"; };
@@ -198,10 +198,12 @@
 		43680B7A2257DE55006900AD /* SupportFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportFB.swift; sourceTree = "<group>"; };
 		436E0E6B222460F5003B0E9C /* SensorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorsViewController.swift; sourceTree = "<group>"; };
 		439CA9E224328BAB00F66E15 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		43C818722672B3150051F6D7 /* GoogleMaps */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoogleMaps; path = Pods/GoogleMaps; sourceTree = "<group>"; };
+		43C8187A2672B4610051F6D7 /* Pods_Shostka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Shostka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F242762256769D00D93F80 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		523B183567C90183E4998A05 /* Pods-Shostka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shostka.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shostka/Pods-Shostka.debug.xcconfig"; sourceTree = "<group>"; };
+		7241097514A235CD862D4410 /* Pods_Shostka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shostka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2E62E846ED0944770CF87B /* Pods-Shostka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shostka.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shostka/Pods-Shostka.release.xcconfig"; sourceTree = "<group>"; };
-		AD4CC2633A246E1136BFD3C0 /* Pods-CityMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CityMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CityMap/Pods-CityMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,10 +212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				43482A2923B0CC0A00EA4B1D /* SwiftUI.framework in Frameworks */,
+				43C8187B2672B4610051F6D7 /* Pods_Shostka.framework in Frameworks */,
 				432F49D223A3854F005C49FA /* Kingfisher in Frameworks */,
+				43C818772672B4500051F6D7 /* Pods_Shostka.framework in Frameworks */,
 				2BC466402254BAE7007E2F22 /* WebKit.framework in Frameworks */,
 				432F49CF23A384B3005C49FA /* Charts in Frameworks */,
-				2BCB145A22429D4600B8BDE1 /* GoogleMapsBase.framework in Frameworks */,
 				432F49D423A3854F005C49FA /* KingfisherSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,8 +227,6 @@
 		0414574B59F3620544468750 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AD4CC2633A246E1136BFD3C0 /* Pods-CityMap.debug.xcconfig */,
-				0F596EF00E414900B379394D /* Pods-CityMap.release.xcconfig */,
 				523B183567C90183E4998A05 /* Pods-Shostka.debug.xcconfig */,
 				7B2E62E846ED0944770CF87B /* Pods-Shostka.release.xcconfig */,
 			);
@@ -501,12 +502,15 @@
 		EA411E728FE11043634EC324 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43C8187A2672B4610051F6D7 /* Pods_Shostka.framework */,
+				43C818722672B3150051F6D7 /* GoogleMaps */,
 				43482A2823B0CC0A00EA4B1D /* SwiftUI.framework */,
 				2BC4663E2254BAE7007E2F22 /* WebKit.framework */,
 				2B5C5F7B2242C7EB00664C90 /* Pods */,
 				2B5B67B322427D990003EA1B /* GoogleMapsBase.framework */,
 				2B9049A0222AA62700530633 /* WordPress.xcodeproj */,
 				2B90499E222AA61B00530633 /* WordPress */,
+				7241097514A235CD862D4410 /* Pods_Shostka.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -522,7 +526,7 @@
 				0E06CAE8202884A8002E9650 /* Sources */,
 				0E06CAE9202884A8002E9650 /* Frameworks */,
 				0E06CAEA202884A8002E9650 /* Resources */,
-				EF5A064F1CEF5198FEB1AE60 /* [CP] Copy Pods Resources */,
+				8F4553A44C60DF80B9D89FE6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -607,6 +611,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8F4553A44C60DF80B9D89FE6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shostka/Pods-Shostka-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shostka/Pods-Shostka-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shostka/Pods-Shostka-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E6C10FC672FA3A94DB8E7D82 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -623,23 +644,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF5A064F1CEF5198FEB1AE60 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shostka/Pods-Shostka-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shostka/Pods-Shostka-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shostka/Pods-Shostka-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -850,6 +854,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4CX5GQ6RWH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -861,7 +866,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.2;
+				MARKETING_VERSION = 1.7.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -916,6 +921,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 4CX5GQ6RWH;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -927,7 +933,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5.2;
+				MARKETING_VERSION = 1.7.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

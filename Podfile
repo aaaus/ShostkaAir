@@ -6,6 +6,6 @@ target 'Shostka' do
   use_frameworks!
 
   # Pods for CityMap
-  pod 'GoogleMaps'
+  pod 'GoogleMaps', '3.9.0'
 end
 

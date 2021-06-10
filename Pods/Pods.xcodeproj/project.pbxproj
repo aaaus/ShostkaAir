@@ -19,13 +19,13 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		184D9AFF2544F4AB65387C7372DB8A9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		1B727B3EBA4EB0DC5DD73C7E0029BE27 /* Pods-Shostka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 025E5D9C375C460F4F7993D73B84553C /* Pods-Shostka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3867E49BCC25E8BB163FD7EEA5DBA5FC /* Pods-Shostka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA74158692A83E5881602518FBB54B94 /* Pods-Shostka-dummy.m */; };
+		53213A664CECDC284C9A4E40F1E16A78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6FEDB580FE885F3CF14BB0E99A24BDC1 /* Pods-Shostka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA74158692A83E5881602518FBB54B94 /* Pods-Shostka-dummy.m */; };
+		F8ACB8BB1901F111BB3160045AA0E84E /* Pods-Shostka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 025E5D9C375C460F4F7993D73B84553C /* Pods-Shostka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		44083C48E2947263EA06E5D81CB1AE92 /* PBXContainerItemProxy */ = {
+		3D46C7D2AE798037FE349383BB00BBD3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -35,37 +35,57 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01AF48CF5646ADAB5D7324A8169AFF03 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		025E5D9C375C460F4F7993D73B84553C /* Pods-Shostka-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Shostka-umbrella.h"; sourceTree = "<group>"; };
 		0AF927B92368D94FA1378EF073E58BBF /* Pods_Shostka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Shostka.framework; path = "Pods-Shostka.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1249F91FBE3E768C40D6326A7A5CBFCF /* Pods-Shostka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shostka.release.xcconfig"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		37F0A7BE6CE1346C479D9B08D176241E /* Pods-Shostka-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Shostka-acknowledgements.plist"; sourceTree = "<group>"; };
 		443A8AD2F4BACD2727D134894A9F5D99 /* Pods-Shostka-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Shostka-acknowledgements.markdown"; sourceTree = "<group>"; };
-		521C05AB6AE7B9910A233B63B560FF70 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		551F63664537853F32071E13FE4CC4FF /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
-		5BEF52437C1E4AB431C3FBA86771C36E /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8ADAEDD609E292C7C4074FC1B7939F31 /* Pods-Shostka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Shostka.debug.xcconfig"; sourceTree = "<group>"; };
-		8C2B5D150CEE6BBB83CC0A67F1F8E93A /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		9BA982FCC990796D2525E1B72FCE7642 /* Pods-Shostka-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Shostka-resources.sh"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AA74158692A83E5881602518FBB54B94 /* Pods-Shostka-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Shostka-dummy.m"; sourceTree = "<group>"; };
+		AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.debug.xcconfig; sourceTree = "<group>"; };
 		BC3214222CFA4453BF082B8F38C40190 /* Pods-Shostka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Shostka.modulemap"; sourceTree = "<group>"; };
-		CC0008749F65B05177801A1B72F2F1EC /* GoogleMaps.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.xcconfig; sourceTree = "<group>"; };
+		C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleMaps.release.xcconfig; sourceTree = "<group>"; };
+		CCAF84BDED2FB6E96E950E18E0742136 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		E2309F84CDF17FF87E66D6CDB6B517AB /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		E2F4E7C722407F81715B67A5F9EC4FAD /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		FCAE5782DE469CA563C7F6C39DF17A73 /* Pods-Shostka-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Shostka-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8D4754BBEC81CF89E88A5D0AC88E705C /* Frameworks */ = {
+		877A1D87BD838497DA87CA8153160FD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184D9AFF2544F4AB65387C7372DB8A9A /* Foundation.framework in Frameworks */,
+				53213A664CECDC284C9A4E40F1E16A78 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AEA1CF3E36FF8113F6FFD7526BE5F98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCAF84BDED2FB6E96E950E18E0742136 /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		23258B9441300E23C80256BEEFD1F964 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				5FCC553E82707BA26B1F6EDC00161B0D /* Base */,
+				387015716759109261086A8C0CA736F5 /* Maps */,
+				9601491F11C5653D98D1EB5DF2155DFE /* Support Files */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
 		2443D9AF0CEC224048A397D5EECB0BCC /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,13 +94,29 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2C4EB33A076BB7654667F327222F2A96 /* Support Files */ = {
+		387015716759109261086A8C0CA736F5 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				CC0008749F65B05177801A1B72F2F1EC /* GoogleMaps.xcconfig */,
+				F9621E38CA93CD5E47C3F28B4F0AF3DD /* Frameworks */,
+				E48211C21EA696EBC32B31525F5FFA67 /* Resources */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/GoogleMaps";
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5FCC553E82707BA26B1F6EDC00161B0D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1AEA1CF3E36FF8113F6FFD7526BE5F98 /* Frameworks */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		61563DA7FB0C634000A62855BF9075C1 /* Products */ = {
@@ -91,41 +127,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		635C391EBEDEECEBED7C587C09F80C29 /* Maps */ = {
+		9601491F11C5653D98D1EB5DF2155DFE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7A2FE3E30CF6F7F1C609C86668A4411D /* Frameworks */,
-				CB4FFE30125DB944A69FABB13465CBF9 /* Resources */,
+				AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */,
+				C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */,
 			);
-			name = Maps;
-			sourceTree = "<group>";
-		};
-		6DC984D737DB841E41A9D175E8069AED /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				E31401A986F325F1E4863EC2F7E087C0 /* Frameworks */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		7A2FE3E30CF6F7F1C609C86668A4411D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5BEF52437C1E4AB431C3FBA86771C36E /* GoogleMaps.framework */,
-				8C2B5D150CEE6BBB83CC0A67F1F8E93A /* GoogleMapsCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AEB2EB54AE51001ACA52CF2A5CD80017 /* GoogleMaps */ = {
-			isa = PBXGroup;
-			children = (
-				6DC984D737DB841E41A9D175E8069AED /* Base */,
-				635C391EBEDEECEBED7C587C09F80C29 /* Maps */,
-				2C4EB33A076BB7654667F327222F2A96 /* Support Files */,
-			);
-			name = GoogleMaps;
-			path = GoogleMaps;
+			name = "Support Files";
+			path = "../Target Support Files/GoogleMaps";
 			sourceTree = "<group>";
 		};
 		B0ADD33317F251356E99595FB0AE7885 /* Pods-Shostka */ = {
@@ -145,22 +154,6 @@
 			path = "Target Support Files/Pods-Shostka";
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		CB4FFE30125DB944A69FABB13465CBF9 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				521C05AB6AE7B9910A233B63B560FF70 /* GoogleMaps.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +168,7 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,15 +176,24 @@
 		DF3634087891871FA7B65CC4A8E6DB71 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AEB2EB54AE51001ACA52CF2A5CD80017 /* GoogleMaps */,
+				23258B9441300E23C80256BEEFD1F964 /* GoogleMaps */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E31401A986F325F1E4863EC2F7E087C0 /* Frameworks */ = {
+		E48211C21EA696EBC32B31525F5FFA67 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				551F63664537853F32071E13FE4CC4FF /* GoogleMapsBase.framework */,
+				E2309F84CDF17FF87E66D6CDB6B517AB /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F9621E38CA93CD5E47C3F28B4F0AF3DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01AF48CF5646ADAB5D7324A8169AFF03 /* GoogleMaps.framework */,
+				E2F4E7C722407F81715B67A5F9EC4FAD /* GoogleMapsCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,11 +201,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		A01E753CA20CB40CE38D222295B24BD0 /* Headers */ = {
+		C73BB60F8EE851799DC590E0E8D29FA9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B727B3EBA4EB0DC5DD73C7E0029BE27 /* Pods-Shostka-umbrella.h in Headers */,
+				F8ACB8BB1901F111BB3160045AA0E84E /* Pods-Shostka-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,17 +214,17 @@
 /* Begin PBXNativeTarget section */
 		652BE07F56B7EB147762806E1EB6DDFF /* Pods-Shostka */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2B4225D1951802E03B364D7E77C0AE8C /* Build configuration list for PBXNativeTarget "Pods-Shostka" */;
+			buildConfigurationList = BD2E3D65374FD59DC05D8F8EAAA3D624 /* Build configuration list for PBXNativeTarget "Pods-Shostka" */;
 			buildPhases = (
-				A01E753CA20CB40CE38D222295B24BD0 /* Headers */,
-				FA756B73DE229D57FDFF7277CA5F3B5F /* Sources */,
-				8D4754BBEC81CF89E88A5D0AC88E705C /* Frameworks */,
-				FC2653A457DA0F24CC40189BE35B8659 /* Resources */,
+				C73BB60F8EE851799DC590E0E8D29FA9 /* Headers */,
+				4A61CA77B80DB97B875C7C4361D34F6F /* Sources */,
+				877A1D87BD838497DA87CA8153160FD5 /* Frameworks */,
+				9FD1BDEDB4EDBD95059273854E065EEF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F4AD7853A840ABDB3799438E9CC2BA1A /* PBXTargetDependency */,
+				0A927F5CA8360CAC7F745D20E9301DD1 /* PBXTargetDependency */,
 			);
 			name = "Pods-Shostka";
 			productName = "Pods-Shostka";
@@ -258,7 +260,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FC2653A457DA0F24CC40189BE35B8659 /* Resources */ = {
+		9FD1BDEDB4EDBD95059273854E065EEF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,30 +270,101 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FA756B73DE229D57FDFF7277CA5F3B5F /* Sources */ = {
+		4A61CA77B80DB97B875C7C4361D34F6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3867E49BCC25E8BB163FD7EEA5DBA5FC /* Pods-Shostka-dummy.m in Sources */,
+				6FEDB580FE885F3CF14BB0E99A24BDC1 /* Pods-Shostka-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F4AD7853A840ABDB3799438E9CC2BA1A /* PBXTargetDependency */ = {
+		0A927F5CA8360CAC7F745D20E9301DD1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleMaps;
 			target = E5B4BBC6DD552AC8943C7E22772FC1D3 /* GoogleMaps */;
-			targetProxy = 44083C48E2947263EA06E5D81CB1AE92 /* PBXContainerItemProxy */;
+			targetProxy = 3D46C7D2AE798037FE349383BB00BBD3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		257497152829C177993B5EC99C1D227A /* Release */ = {
+		46F59F0D44FC21E76945DAC7CA82DC69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8ADAEDD609E292C7C4074FC1B7939F31 /* Pods-Shostka.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Shostka/Pods-Shostka-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Shostka/Pods-Shostka.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6CCBCE52FD46D89565DEB676446DB083 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AABE3D21F0BE384435A5D7C08A8FD5BB /* GoogleMaps.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B52AED984E5F96408001A1A7FFB4B3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D0978B919EA2ECF2A2F8466075BB51 /* GoogleMaps.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -314,6 +387,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -348,120 +422,11 @@
 			};
 			name = Release;
 		};
-		4153D2C4AA715B89B025EB2ACF4A7139 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1249F91FBE3E768C40D6326A7A5CBFCF /* Pods-Shostka.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Shostka/Pods-Shostka-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Shostka/Pods-Shostka.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4AA46832D8A16AA4E4811383B204D2A4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC0008749F65B05177801A1B72F2F1EC /* GoogleMaps.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6C872F7B63C56934ADB21A4567FCFF34 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ADAEDD609E292C7C4074FC1B7939F31 /* Pods-Shostka.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Shostka/Pods-Shostka-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Shostka/Pods-Shostka.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C7565AEA7FCD8F66CAF546DC5AF1404F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC0008749F65B05177801A1B72F2F1EC /* GoogleMaps.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
+		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -484,6 +449,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -522,23 +488,52 @@
 			};
 			name = Debug;
 		};
+		EEE999125A882C96429DFB5844658209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1249F91FBE3E768C40D6326A7A5CBFCF /* Pods-Shostka.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Shostka/Pods-Shostka-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Shostka/Pods-Shostka.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2B4225D1951802E03B364D7E77C0AE8C /* Build configuration list for PBXNativeTarget "Pods-Shostka" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6C872F7B63C56934ADB21A4567FCFF34 /* Debug */,
-				4153D2C4AA715B89B025EB2ACF4A7139 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		46921981F609C5BA3CB72EC4EA41299D /* Build configuration list for PBXAggregateTarget "GoogleMaps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4AA46832D8A16AA4E4811383B204D2A4 /* Debug */,
-				C7565AEA7FCD8F66CAF546DC5AF1404F /* Release */,
+				6CCBCE52FD46D89565DEB676446DB083 /* Debug */,
+				7B52AED984E5F96408001A1A7FFB4B3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -546,8 +541,17 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
-				257497152829C177993B5EC99C1D227A /* Release */,
+				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				903A0004D3E6651EFD5D2E16214D101B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD2E3D65374FD59DC05D8F8EAAA3D624 /* Build configuration list for PBXNativeTarget "Pods-Shostka" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F59F0D44FC21E76945DAC7CA82DC69 /* Debug */,
+				EEE999125A882C96429DFB5844658209 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

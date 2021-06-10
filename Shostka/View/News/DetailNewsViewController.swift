@@ -13,7 +13,9 @@ import WebKit
 class DetailNewsViewController: UIViewController {
     
     private let locationManager = CLLocationManager()
-
+    
+    var doneButton = UIBarButtonItem()
+    
     @IBOutlet weak var newsWebView: WKWebView!
 
     
@@ -84,7 +86,9 @@ class DetailNewsViewController: UIViewController {
            }
 */
  
-        self.navigationItem.title = "Каталог підприємств"
+        self.navigationItem.title = "Громадський транспорт"
+        self.navigationItem.leftBarButtonItem = nil
+        
         loadHtmlCode()
         
     //    getUserLocation()
@@ -95,7 +99,7 @@ class DetailNewsViewController: UIViewController {
     
     func loadHtmlCode() {
         //let url = URL (string: urlFromCityDiscription)
-        let url = URL (string: "https://shostka.in")
+        let url = URL (string: "https://www.eway.in.ua/ua/cities/shostka?mobile")
         let requestObj = URLRequest(url: url!)
         newsWebView.load(requestObj)
     }
